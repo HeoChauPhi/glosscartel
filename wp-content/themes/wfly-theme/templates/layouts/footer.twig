@@ -1,0 +1,42 @@
+{% block footer %}
+  <footer id="footer" class="footer footer-wrapper">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-item">
+          {% include 'footer-menu.twig' %}
+          {% for item in acfwidget('group_footer_block', 'footer_widget-2') %}
+            {% if item.acf_fc_layout == "footer_button_link" %}
+              <div class="buttom-footer">
+                <a href="{{item.footer_button_link_url}}" class="btn btn_yello">{{item.footer_button_link_text}}</a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="footer-item">
+          {% for item in acfwidget('group_footer_block', 'footer_widget-2') %}
+            {% if item.acf_fc_layout == "footer_text" %}
+              <div class="block-copyright">
+                <div class="copyright-content">{{item.block_footer_text}}</div>
+              </div>
+            {% endif %}
+            {% if item.acf_fc_layout == "footer_social" %}
+              <div class="box-social">
+                <div class="box-social__list">
+                  {% for items in item.block_footer_social %}
+                    <div class="box-social__item">
+                      <a href="{{items.social_url}}"><span class="icon-{{items.social_name|lower}}"></span>{{items.social_name}}</a>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div id="popup-regiter">
+      {{shortcode('[contact-form-7 id="476" title="Register Interest"]')}}
+    </div>
+  </footer>
+{% endblock %}
