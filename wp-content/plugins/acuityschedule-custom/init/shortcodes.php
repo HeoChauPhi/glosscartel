@@ -28,8 +28,10 @@ function ASCB_acuityscheduling( $atts ) {
     $data = asbc_get_apoiment($user_id, $user_key, $url_api);
     $product = asbc_get_apoiment($user_id, $user_key, $product_url);
 
-    foreach($data as $key => $item) {
-      $ascb_arr[$item['category']][$key] = $item;
+    if (is_array($data) || is_object($data)) {
+      foreach ($data as $key => $item) {
+        $ascb_arr[$item['category']][$key] = $item;
+      }
     }
     $ascb_arr['Product And Package'] = $product;
 
@@ -118,8 +120,10 @@ function ASCB_client_choose( $atts ) {
     $data = asbc_get_apoiment($user_id, $user_key, $url_api);
     $product = asbc_get_apoiment($user_id, $user_key, $product_url);
 
-    foreach ($product as $value) {
-      array_push($data, $value);
+    if (is_array($product) || is_object($product)) {
+      foreach ($product as $value) {
+        array_push($data, $value);
+      }
     }
 
     if(isset($_COOKIE['Client']['Service'])) {

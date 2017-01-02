@@ -18,24 +18,21 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'demowp_gloss-cartel');
+switch ($_SERVER['HTTP_HOST']) {
+  case 'http://glosscartel.com/':
+    $config_file = 'wp-config/wp-config.glosscartel.php';
+    //define('WP_CACHE', true); //Added by WP-Cache Manager
+    break;
 
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', '1');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+  default:
+    $config_file = 'wp-config/wp-config.local.php';
+    //define('WP_CACHE', false); //Added by WP-Cache Manager
+    break;
+}
+$config_file = __DIR__ . '/' . $config_file;
+if (file_exists($config_file)) {
+  include_once($config_file);
+}
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -54,8 +51,6 @@ define('AUTH_SALT',        '832>iU.*+J%o(,;NTv;op!Uy)&lH#c@u}N}>Q50!_SESBt=8d4?2
 define('SECURE_AUTH_SALT', ' +p&oXaS$sU5{V^C$tfP3JC(6gBn7Rb`gJbyM2y%i_x#5dvi~Tb5wiE1ZMYcEzyr');
 define('LOGGED_IN_SALT',   '>BE~9V>>bii.?M=@TMV-,Q,7_/B321PLCo|tzQ17rZ%UU0NYNn0>PH&h)1n^P:gL');
 define('NONCE_SALT',       '4.H3!<VIAl7`[)uqxNC6B?/H,]|N<y&v%Q{5;2V1iRC94%oyqMMP#CE|,//Lw*I#');
-define("WP_HOME", "http://localhost/demowp/gloss-cartel/");
-define("WP_SITEURL", "http://localhost/demowp/gloss-cartel/");
 
 /**#@-*/
 
@@ -79,7 +74,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 define('FS_METHOD', 'direct');
 
 /* That's all, stop editing! Happy blogging. */
