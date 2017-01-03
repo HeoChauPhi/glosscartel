@@ -987,8 +987,128 @@ var acf;
 			
 		},
 		
+		
 		/*
-		*  disable_form
+		*  disable
+		*
+		*  This function will disable an input
+		*
+		*  @type	function
+		*  @date	22/09/2016
+		*  @since	5.4.0
+		*
+		*  @param	$el (jQuery)
+		*  @param	context (string)
+		*  @return	n/a
+		*/
+		
+		disable: function( $input, context ){
+			
+			// defaults
+			context = context || '';
+			
+			
+			// bail early if is .acf-disabled
+			if( $input.hasClass('acf-disabled') ) return false;
+			
+			
+			// always disable input
+			$input.prop('disabled', true);
+			
+			
+			// context
+			if( context ) {
+				
+				// vars
+				var disabled = $input.data('acf_disabled') || [],
+					i = disabled.indexOf(context);
+					
+				
+				// append context if not found
+				if( i < 0 ) {
+					
+					// append
+					disabled.push( context );
+					
+					
+					// update
+					$input.data('acf_disabled', disabled);
+					
+				}
+			}
+			
+			
+			// return
+			return true;
+			
+		}, 
+		
+		
+		/*
+		*  enable
+		*
+		*  This function will enable an input
+		*
+		*  @type	function
+		*  @date	22/09/2016
+		*  @since	5.4.0
+		*
+		*  @param	$el (jQuery)
+		*  @param	context (string)
+		*  @return	n/a
+		*/
+		
+		enable: function( $input, context ){
+			
+			// defaults
+			context = context || '';
+			
+			
+			// bail early if is .acf-disabled
+			if( $input.hasClass('acf-disabled') ) return false;
+			
+			
+			// vars
+			var disabled = $input.data('acf_disabled') || [];
+				
+				
+			// context
+			if( context ) {
+				
+				// vars
+				var i = disabled.indexOf(context);
+				
+				
+				// remove context if found
+				if( i > -1 ) {
+					
+					// delete
+					disabled.splice(i, 1);
+					
+					
+					// update
+					$input.data('acf_disabled', disabled);
+					
+				}
+			}
+			
+			
+			// bail early if other disabled exist
+			if( disabled.length ) return false;
+			
+			
+			// enable input
+			$input.prop('disabled', false);
+			
+			
+			// return
+			return true;
+			
+		},
+		
+		
+		/*
+		*  disable_el
 		*
 		*  This function will disable all inputs within an element
 		*
@@ -997,10 +1117,11 @@ var acf;
 		*  @since	5.4.0
 		*
 		*  @param	$el (jQuery)
+		*  @param	context (string)
 		*  @return	na
 		*/
 		
-		disable_form: function( $el, context ) {
+		disable_el: function( $el, context ) {
 			
 			// defaults
 			context = context || '';
@@ -1015,65 +1136,15 @@ var acf;
 			
 		},
 		
-		
-		/*
-		*  disable
-		*
-		*  This function will disable an input
-		*
-		*  @type	function
-		*  @date	22/09/2016
-		*  @since	5.4.0
-		*
-		*  @param	$el (jQuery)
-		*  @return	n/a
-		*/
-		
-		disable: function( $input, context ){
+		disable_form: function( $el, context ) {
 			
-			// defaults
-			context = context || '';
-			
-			
-			// bail early if is .acf-disabled
-			if( $input.hasClass('acf-disabled') ) return false;
-			
-			
-			// context
-			if( context ) {
-				
-				// vars
-				var attr = $input.attr('data-disabled'),
-					disabled = attr ? attr.split(',') : [],
-					i = disabled.indexOf(context);
-					
-				
-				// bail early if already disabled
-				if( i >= 0 ) return false;
-				
-				
-				// append context
-				disabled.push( context );
-				
-				
-				// join
-				attr = disabled.join(',');
-				
-				
-				// update context
-				$input.attr('data-disabled', attr);
-				
-			}
-			
-			
-			// disable input
-			$input.prop('disabled', true);
+			this.disable_el.apply( this, arguments );
 			
 		},
 		
 		
 		/*
-		*  enable_form
+		*  enable_el
 		*
 		*  This function will enable all inputs within an element
 		*
@@ -1082,10 +1153,11 @@ var acf;
 		*  @since	5.4.0
 		*
 		*  @param	$el (jQuery)
+		*  @param	context (string)
 		*  @return	na
 		*/
 		
-		enable_form: function( $el, context ) {
+		enable_el: function( $el, context ) {
 			
 			// defaults
 			context = context || '';
@@ -1100,63 +1172,9 @@ var acf;
 			
 		},
 		
-		
-		/*
-		*  enable
-		*
-		*  This function will enable an input
-		*
-		*  @type	function
-		*  @date	22/09/2016
-		*  @since	5.4.0
-		*
-		*  @param	$el (jQuery)
-		*  @return	n/a
-		*/
-		
-		enable: function( $input, context ){
+		enable_form: function( $el, context ) {
 			
-			// defaults
-			context = context || '';
-			
-			
-			// bail early if is .acf-disabled
-			if( $input.hasClass('acf-disabled') ) return false;
-			
-			
-			// context
-			if( context ) {
-				
-				// vars
-				var attr = $input.attr('data-disabled'),
-					disabled = attr ? attr.split(',') : [],
-					i = disabled.indexOf(context);
-				
-				
-				// bail early if no content or context does not match
-				if( i < 0 ) return false;
-				
-				
-				// delete
-				disabled.splice(i, 1);
-				
-				
-				// update attr
-				attr = disabled.join(',');
-				
-				
-				// update context
-				$input.attr('data-disabled', attr);
-				
-				
-				// bail early if other disableds exist
-				if( attr ) return false;
-				
-			}
-			
-			
-			// enable input
-			$input.prop('disabled', false);
+			this.enable_el.apply( this, arguments );
 			
 		},
 		
@@ -1592,8 +1610,9 @@ var acf;
 		
 		prepare_for_ajax : function( args ) {
 			
-			// nonce
+			// vars
 			args.nonce = acf.get('nonce');
+			args.post_id = acf.get('post_id');
 			
 			
 			// filter for 3rd party customization
@@ -3301,6 +3320,7 @@ var acf;
 			'change #parent_id':									'_change_parent',
 			'change #post-formats-select input':					'_change_format',
 			'change .categorychecklist input':						'_change_term',
+			'change .categorychecklist select':						'_change_term',
 			'change .acf-taxonomy-field[data-save="1"] input':		'_change_term',
 			'change .acf-taxonomy-field[data-save="1"] select':		'_change_term'
 		},
@@ -3671,14 +3691,53 @@ var acf;
 		type: 'checkbox',
 		
 		events: {
-			'change input':	'change'
+			'change input':				'_change',
+			'click .acf-add-checkbox':	'_add'
 		},
 		
-		change: function( e ){
+		
+		/*
+		*  focus
+		*
+		*  This function will setup variables when focused on a field
+		*
+		*  @type	function
+		*  @date	12/04/2016
+		*  @since	5.3.8
+		*
+		*  @param	n/a
+		*  @return	n/a
+		*/
+		
+		focus: function(){
+			
+			// get elements
+			this.$ul = this.$field.find('ul');
+			this.$input = this.$field.find('input[type="hidden"]');
+			
+		},
+		
+		
+		add: function(){
 			
 			// vars
-			var $ul = e.$el.closest('ul'),
-				$inputs = $ul.find('input[name]'),
+			var name = this.$input.attr('name') + '[]';
+			
+			
+			// vars
+			var html = '<li><input class="acf-checkbox-custom" type="checkbox" checked="checked" /><input type="text" name="'+name+'" /></li>';
+			
+			
+			// append
+			this.$ul.find('.acf-add-checkbox').parent('li').before( html );	
+			
+		},
+		
+		_change: function( e ){
+			
+			// vars
+			var $ul = this.$ul,
+				$inputs = $ul.find('input[type="checkbox"]').not('.acf-checkbox-toggle'),
 				checked = e.$el.is(':checked');
 			
 			
@@ -3686,12 +3745,32 @@ var acf;
 			if( e.$el.hasClass('acf-checkbox-toggle') ) {
 				
 				// toggle all
-				$inputs.prop('checked', checked);
+				$inputs.prop('checked', checked).trigger('change');
 				
 				
 				// return
 				return;
 				
+			}
+			
+			
+			// is custom
+			if( e.$el.hasClass('acf-checkbox-custom') ) {
+				
+				// vars
+				var $text = e.$el.next('input[type="text"]');
+				
+				
+				// toggle disabled
+				e.$el.next('input[type="text"]').prop('disabled', !checked);
+				
+				
+				// remove complelety if no value
+				if( !checked && $text.val() == '' ) {
+					
+					e.$el.parent('li').remove();
+				
+				}
 			}
 			
 			
@@ -3709,6 +3788,12 @@ var acf;
 			
 			// update toggle
 			$ul.find('.acf-checkbox-toggle').prop('checked', checked);
+			
+		},
+		
+		_add: function( e ){
+			
+			this.add();
 			
 		}
 		
@@ -4089,34 +4174,18 @@ var acf;
 			//console.log('show_field(%o)', $field);
 			
 			
-			// bail early if field is already visible
-			// Note: Do not bail early! Instead, allow show_field to run on already visible fields. 
-			// This fixes an issue where showing a repeater field would enable sub field inputs which 
-			// should remain hidden due to another conditiona logic rule
-			/*
-			if( !$field.hasClass('hidden-by-conditional-logic') ) {
-				
-				return;
-				
-			}
-			*/
+			// vars
+			var key = $field.data('key');
 			
 			
 			// remove class
 			$field.removeClass( 'hidden-by-conditional-logic' );
 			
 			
-			// clean up incorrectly hidden inputs
-			// case: Select2 is added after conditioan logic hides the select input.
-			$field.find('.acf-clhi.acf-disabled').removeClass('acf-clhi');
+			// enable
+			acf.enable_form( $field, 'condition_'+key );
 			
-			
-			// remove "disabled"
-			// ignore inputs which have a class of 'acf-disabled'. These inputs are disabled for life
-			// ignore inputs which are hidden by conditiona logic of a sub field
-			$field.find('.acf-clhi').not('.hidden-by-conditional-logic .acf-clhi').removeClass('acf-clhi').prop('disabled', false);
-			
-			
+						
 			// action for 3rd party customization
 			acf.do_action('show_field', $field, 'conditional_logic' );
 			
@@ -4142,28 +4211,23 @@ var acf;
 			//console.log('hide_field(%o)', $field);
 			
 			
-			// bail early if field is already hidden
-			/*
-			if( $field.hasClass('hidden-by-conditional-logic') ) {
-				
-				return;
-				
-			}
-			*/
+			// vars
+			var key = $field.data('key');
 			
 			
 			// add class
 			$field.addClass( 'hidden-by-conditional-logic' );
 			
 			
-			// add "disabled"
-			$field.find('input, textarea, select').not('.acf-disabled').addClass('acf-clhi').prop('disabled', true);
+			// disable
+			acf.disable_form( $field, 'condition_'+key );
 						
 			
 			// action for 3rd party customization
 			acf.do_action('hide_field', $field, 'conditional_logic' );
 			
 		},
+		
 		
 		/*
 		*  get_trigger
@@ -4371,6 +4435,10 @@ var acf;
 			if( !l10n ) return;
 			
 			
+			// bail ealry if no datepicker library
+			if( typeof $.datepicker === 'undefined' ) return;
+			
+			
 			// rtl
 			l10n.isRTL = rtl;
 			
@@ -4397,6 +4465,10 @@ var acf;
 		*/
 		
 		init: function( $input, args ){
+			
+			// bail ealry if no datepicker library
+			if( typeof $.datepicker === 'undefined' ) return;
+			
 			
 			// defaults
 			args = args || {};
@@ -4470,8 +4542,16 @@ var acf;
 		
 		initialize: function(){
 			
+			// save_format - compatibility with ACF < 5.0.0
+			if( this.o.save_format ) {
+				
+				return this.initialize2();
+				
+			}
+			
+			
 			// create options
-			var args =  { 
+			var args = { 
 				dateFormat:			this.o.date_format,
 				altField:			this.$hidden,
 				altFormat:			'yymmdd',
@@ -4489,6 +4569,46 @@ var acf;
 			
 			// add date picker
 			acf.datepicker.init( this.$input, args );
+			
+		},
+		
+		initialize2: function(){
+			
+			// get and set value from alt field
+			this.$input.val( this.$hidden.val() );
+			
+			
+			// create options
+			var args =  { 
+				dateFormat:			this.o.date_format,
+				altField:			this.$hidden,
+				altFormat:			this.o.save_format,
+				changeYear:			true,
+				yearRange:			"-100:+100",
+				changeMonth:		true,
+				showButtonPanel:	true,
+				firstDay:			this.o.first_day
+			};
+			
+			
+			// filter for 3rd party customization
+			args = acf.apply_filters('date_picker_args', args, this.$field);
+			
+			
+			// backup
+			var dateFormat = args.dateFormat;
+			
+			
+			// change args.dateFormat
+			args.dateFormat = this.o.save_format;
+				
+			
+			// add date picker
+			acf.datepicker.init( this.$input, args );
+			
+			
+			// now change the format back to how it should be.
+			this.$input.datepicker( 'option', 'dateFormat', dateFormat );
 			
 		},
 		
@@ -4527,11 +4647,6 @@ var acf;
 			'ready 1': 'ready',
 		},
 		
-		filters: {
-			'date_time_picker_args':	'customize_onClose',
-			'time_picker_args':			'customize_onClose'
-		},
-		
 		ready: function(){
 			
 			// vars
@@ -4542,6 +4657,10 @@ var acf;
 			
 			// bail ealry if no l10n (fiedl groups admin page)
 			if( !l10n ) return;
+			
+			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
 			
 			
 			// rtl
@@ -4570,6 +4689,10 @@ var acf;
 		*/
 		
 		init: function( $input, args ){
+			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
+			
 			
 			// defaults
 			args = args || {};
@@ -4607,58 +4730,6 @@ var acf;
 			// do nothing
 			
 		},
-		
-		
-		/*
-		*  customize_onClose
-		*
-		*  This function will add a custom onClose function to the datetime and time picker args
-		*
-		*  @type	function
-		*  @date	5/07/2016
-		*  @since	5.4.0
-		*
-		*  @param	$post_id (int)
-		*  @return	$post_id (int)
-		*/
-		
-		customize_onClose: function( args ){
-			
-			// change button text
-			args.closeText = acf._e('date_time_picker', 'selectText');
-			
-			
-			// add custom 'Close = Select' functionality
-			args.onClose = function( value, instance ){
-					
-				// vars
-				var $div = instance.dpDiv,
-					$close = $div.find('.ui-datepicker-close');
-				
-				
-				// if clicking close button
-				if( !value && $close.is(':hover') ) {
-					
-					// attempt to find new value
-					value = acf.maybe_get(instance, 'settings.timepicker.formattedTime');
-					
-					
-					// bail early if no value
-					if( !value ) return;
-					
-					
-					// update value
-					acf.val( instance.input, value );
-					
-				}
-									
-			}
-			
-			
-			// return
-			return args;
-			
-		}
 		
 	});
 	
@@ -4710,8 +4781,7 @@ var acf;
 				showButtonPanel:	true,
 				firstDay:			this.o.first_day,
 				controlType: 		'select',
-				oneLine:			true,
-				
+				oneLine:			true
 			};
 			
 			
@@ -5168,6 +5238,7 @@ var acf;
 			
 			// get options
 			this.o = acf.get_data( this.$el );
+			this.o.id = this.$el.attr('id');
 			
 			
 			// get map
@@ -5334,9 +5405,10 @@ var acf;
 			// map
 			var map_args = acf.apply_filters('google_map_args', {
 				
-        		zoom:		parseInt(this.o.zoom),
-        		center:		new google.maps.LatLng(this.o.lat, this.o.lng),
-        		mapTypeId:	google.maps.MapTypeId.ROADMAP
+				scrollwheel:	false,
+        		zoom:			parseInt(this.o.zoom),
+        		center:			new google.maps.LatLng(this.o.lat, this.o.lng),
+        		mapTypeId:		google.maps.MapTypeId.ROADMAP
         		
         	}, this.$field);
         	
@@ -7155,7 +7227,30 @@ var acf;
 					
 				},
 				
+				
+				/*
+				*  toggleSelection
+				*
+				*  This function is called before an attachment is selected
+				*  A good place to check for errors and prevent the 'select' function from being fired
+				*
+				*  @type	function
+				*  @date	29/09/2016
+				*  @since	5.4.0
+				*
+				*  @param	options (object)
+				*  @return	n/a
+				*/
+				
 				toggleSelection: function( options ) {
+					
+					// vars
+					// source: wp-includes/js/media-views.js:2880
+					var collection = this.collection,
+						selection = this.options.selection,
+						model = this.model,
+						single = selection.single();
+					
 					
 					// vars
 					var frame = acf.media.frame(),
@@ -7192,36 +7287,25 @@ var acf;
 							'</div>'
 						].join(''));
 						
+						
+						// reset selection (unselects all attachments)
+						selection.reset();
+						
+						
+						// set single (attachment displayed in sidebar)
+						selection.single( model );
+						
+						
+						// return and prevent 'select' form being fired
+						return;
+						
 					}
 									
 					
 					// return					
 					AttachmentLibrary.prototype.toggleSelection.apply( this, arguments );
 					
-				},
-							
-				select: function( model, collection ) {
-					
-					// vars
-					var frame = acf.media.frame(),
-						state = this.controller.state(),
-						selection = state.get('selection'),
-						errors = acf.maybe_get(this, 'model.attributes.acf_errors');
-					
-					
-					// prevent selection
-					if( frame && errors ) {
-						
-						return selection.remove( model );
-						
-					}
-					
-					
-					//return 
-					return AttachmentLibrary.prototype.select.apply( this, arguments );
-					
 				}
-
 				
 			});
 			
@@ -7254,9 +7338,6 @@ var acf;
 			wp.media.view.AttachmentCompat = AttachmentCompat.extend({
 				
 				render: function() {
-					
-					//console.log('AttachmentCompat.render', this);
-					
 					
 					// reference
 					var self = this;
@@ -7333,8 +7414,6 @@ var acf;
 				
 				dispose: function() {
 					
-					//console.log('AttachmentCompat.dispose', this);
-					
 					// remove
 					acf.do_action('remove', this.$el);
 					
@@ -7346,8 +7425,6 @@ var acf;
 				
 				
 				save: function( e ) {
-				
-					//console.log('AttachmentCompat.save', this);
 				
 					if( e ) {
 						
@@ -7381,41 +7458,132 @@ var acf;
 
 (function($){
 	
-	acf.fields.oembed = {
+	acf.fields.oembed = acf.field.extend({
 		
-		search : function( $el ){ 
+		type: 'oembed',
+		$el: null,
+		
+		events: {
+			'click [data-name="search-button"]': 	'_search',
+			'click [data-name="clear-button"]': 	'_clear',
+			'click [data-name="value-title"]':		'_edit',
+			'keypress [data-name="search-input"]':	'_keypress',
+			'keyup [data-name="search-input"]':		'_keyup',
+			'blur [data-name="search-input"]':		'_blur',
+		},
+		
+		
+		/*
+		*  focus
+		*
+		*  This function will setup variables when focused on a field
+		*
+		*  @type	function
+		*  @date	12/04/2016
+		*  @since	5.3.8
+		*
+		*  @param	n/a
+		*  @return	n/a
+		*/
+		
+		focus: function(){
 			
 			// vars
-			var s = $el.find('[data-name="search-input"]').val();
+			this.$el = this.$field.find('.acf-oembed');
+			this.$search = this.$el.find('[data-name="search-input"]');
+			this.$input = this.$el.find('[data-name="value-input"]');
+			this.$title = this.$el.find('[data-name="value-title"]');
+			this.$embed = this.$el.find('[data-name="value-embed"]');
+			
+			
+			// options
+			this.o = acf.get_data( this.$el );
+			
+		},
+		
+		
+		/*
+		*  maybe_search
+		*
+		*  description
+		*
+		*  @type	function
+		*  @date	14/10/16
+		*  @since	5.4.0
+		*
+		*  @param	$post_id (int)
+		*  @return	$post_id (int)
+		*/
+		
+		maybe_search: function(){
+			
+			// set url and focus
+	        var old_url = this.$input.val(),
+	        	new_url = this.$search.val();
+	        
+	        
+	        // bail early if no value
+	        if( !new_url ) {
+		        
+		        this.clear( $el );
+		        return;
+		        
+	        }
+	        
+	        
+	        // bail early if no change
+	        if( new_url == old_url ) return;
+	        
+	        
+	        // search
+	        this.search();
+	        
+		},
+		
+		
+		/*
+		*  search
+		*
+		*  This function will search for an oembed
+		*
+		*  @type	function
+		*  @date	13/10/16
+		*  @since	5.4.0
+		*
+		*  @param	n/a
+		*  @return	n/a
+		*/
+		
+		search: function(){ 
+			
+			// vars
+			var s = this.$search.val();
 			
 			
 			// fix missing 'http://' - causes the oembed code to error and fail
-			if( s.substr(0, 4) != 'http' )
-			{
+			if( s.substr(0, 4) != 'http' ) {
+				
 				s = 'http://' + s;
-				$el.find('[data-name="search-input"]').val( s );
+				this.$search.val( s );
+				
 			}
 			
 			
 			// show loading
-			$el.addClass('is-loading');
+			this.$el.addClass('is-loading');
 			
 			
 			// AJAX data
-			var ajax_data = {
+			var ajax_data = acf.prepare_for_ajax({
 				'action'	: 'acf/fields/oembed/search',
-				'nonce'		: acf.get('nonce'),
 				's'			: s,
-				'width'		: acf.get_data($el, 'width'),
-				'height'	: acf.get_data($el, 'height')
-			};
+				'width'		: this.$el.data('width'),
+				'height'	: this.$el.data('height')
+			});
 			
 			
 			// abort XHR if this field is already loading AJAX data
-			if( $el.data('xhr') )
-			{
-				$el.data('xhr').abort();
-			}
+			if( this.$el.data('xhr') ) this.$el.data('xhr').abort();
 			
 			
 			// get HTML
@@ -7424,189 +7592,128 @@ var acf;
 				data: ajax_data,
 				type: 'post',
 				dataType: 'html',
-				success: function( html ){
-					
-					$el.removeClass('is-loading');
-					
-					
-					// update from json
-					acf.fields.oembed.search_success( $el, s, html );
-					
-					
-					// no results?
-					if( !html )
-					{
-						acf.fields.oembed.search_error( $el );
-					}
-					
-				}
+				context: this,
+				success: this.search_success
 			});
 			
 			
 			// update el data
-			$el.data('xhr', xhr);
+			this.$el.data('xhr', xhr);
 			
 		},
 		
-		search_success : function( $el, s, html ){
-		
-			$el.removeClass('has-error').addClass('has-value');
+		search_success: function( html ){
 			
-			$el.find('[data-name="value-input"]').val( s );
-			$el.find('[data-name="value-title"]').html( s );
-			$el.find('[data-name="value-embed"]').html( html );
+			// vars
+			var s = this.$search.val();
+			
+			
+			// remove loading
+			this.$el.removeClass('is-loading');
+			
+			
+			// error
+			if( !html ) {
+				
+				this.$el.removeClass('has-value').addClass('has-error');
+				return;
+				
+			}
+			
+			
+			// add classes
+			this.$el.removeClass('has-error').addClass('has-value');
+			
+			
+			// update vars
+			this.$input.val( s );
+			this.$title.html( s );
+			this.$embed.html( html );
 			
 		},
-		
-		search_error : function( $el ){
+				
+		clear: function(){
 			
 			// update class
-	        $el.removeClass('has-value').addClass('has-error');
-			
-		},
-		
-		clear : function( $el ){
-			
-			// update class
-	        $el.removeClass('has-error has-value');
+	        this.$el.removeClass('has-error has-value');
 			
 			
 			// clear search
-			$el.find('[data-name="search-input"]').val('');
+			this.$el.find('[data-name="search-input"]').val('');
 			
 			
 			// clear inputs
-			$el.find('[data-name="value-input"]').val( '' );
-			$el.find('[data-name="value-title"]').html( '' );
-			$el.find('[data-name="value-embed"]').html( '' );
+			this.$input.val('');
+			this.$title.html('');
+			this.$embed.html('');
 			
 		},
 		
-		edit : function( $el ){ 
+		edit: function(){ 
 			
-			// update class
-	        $el.addClass('is-editing');
+			// add class
+	        this.$el.addClass('is-editing');
 	        
 	        
 	        // set url and focus
-	        var url = $el.find('[data-name="value-title"]').text();
-	        
-	        $el.find('[data-name="search-input"]').val( url ).focus()
+	        this.$search.val( this.$title.text() ).focus();
 			
 		},
 		
-		blur : function( $el ){ 
+		blur: function( $el ){ 
 			
-			$el.removeClass('is-editing');
+			// remove class
+			this.$el.removeClass('is-editing');
 			
 			
-	        // set url and focus
-	        var old_url = $el.find('[data-name="value-title"]').text(),
-	        	new_url = $el.find('[data-name="search-input"]').val(),
-	        	embed = $el.find('[data-name="value-embed"]').html();
-	        
-	        
-	        // bail early if no valu
-	        if( !new_url ) {
-		        
-		        this.clear( $el );
-		        return;
-	        }
-	        
-	        
-	        // bail early if no change
-	        if( new_url == old_url ) {
-		        
-		        return;
-		        
-	        }
-	        
-	        this.search( $el );
-	        
-	        			
-		}
-	};
-	
-	
-	/*
-	*  Events
-	*
-	*  jQuery events for this field
-	*
-	*  @type	function
-	*  @date	1/03/2011
-	*
-	*  @param	N/A
-	*  @return	N/A
-	*/
-	
-	$(document).on('click', '.acf-oembed [data-name="search-button"]', function( e ){
+			// maybe search
+			this.maybe_search();
+				        	
+		},
 		
-		e.preventDefault();
+		_search: function( e ){ // console.log('_search');
+			
+			this.search();
+			
+		},
 		
-		acf.fields.oembed.search( $(this).closest('.acf-oembed') );
+		_clear: function( e ){ // console.log('_clear');
+			
+			this.clear();
+			
+		},
 		
-		$(this).blur();
+		_edit: function( e ){ // console.log('_clear');
+			
+			this.edit();
+			
+		},
+		
+		_keypress: function( e ){ // console.log('_keypress');
+			
+			// don't submit form
+			if( e.which == 13 ) e.preventDefault();
+			
+		},
+		
+		_keyup: function( e ){  console.log('_keypress', e.which);
+			
+			// bail early if no value
+			if( !this.$search.val() ) return;
+			
+			
+			// maybe search
+			this.maybe_search();
+			
+		},
+		
+		_blur: function( e ){ // console.log('_blur');
+			
+			this.blur();
+			
+		},
 		
 	});
-	
-	$(document).on('click', '.acf-oembed [data-name="clear-button"]', function( e ){
-		
-		e.preventDefault();
-		
-		acf.fields.oembed.clear( $(this).closest('.acf-oembed') );
-		
-		$(this).blur();
-		
-	});
-	
-	$(document).on('click', '.acf-oembed [data-name="value-title"]', function( e ){
-		
-		e.preventDefault();
-		
-		acf.fields.oembed.edit( $(this).closest('.acf-oembed') );
-			
-	});
-	
-	$(document).on('keypress', '.acf-oembed [data-name="search-input"]', function( e ){
-		
-		// don't submit form
-		if( e.which == 13 )
-		{
-			e.preventDefault();
-		}
-		
-	});
-	
-	
-	$(document).on('keyup', '.acf-oembed [data-name="search-input"]', function( e ){
-		
-		// bail early if no value
-		if( ! $(this).val() ) {
-			
-			return;
-			
-		}
-		
-		
-		// bail early for directional controls
-		if( ! e.which ) {
-		
-			return;
-			
-		}
-		
-		acf.fields.oembed.search( $(this).closest('.acf-oembed') );
-		
-	});
-	
-	$(document).on('blur', '.acf-oembed [data-name="search-input"]', function(e){
-		
-		acf.fields.oembed.blur( $(this).closest('.acf-oembed') );
-		
-	});
-		
-	
 
 })(jQuery);
 
@@ -8004,6 +8111,8 @@ var acf;
 			
 			
 			// underline search match
+			// consider removing due to bug where matched strings within HTML attributes caused incorrect results
+			// Looks like Select2 v4 has moved away from highlighting results, so perhaps we should too
 			if( this.o.s ) {
 			
 				var s = this.o.s;
@@ -8573,7 +8682,6 @@ var acf;
 			var data = acf.prepare_for_ajax({
 				action: 	args.ajax_action,
 				field_key: 	args.key,
-				post_id: 	acf.get('post_id'),
 				s: 			params.term,
 				paged: 		params.page
 			});
@@ -8764,8 +8872,12 @@ var acf;
 				// add hidden input to each multiple selection
 				select2_args.formatSelection = function( object, $div ){
 					
+					// vars
+					var html = '<input type="hidden" class="select2-search-choice-hidden" name="' + name + '" value="' + object.id + '"' + ($input.prop('disabled') ? 'disabled="disabled"' : '') + ' />';
+					
+					
 					// append input
-					$div.parent().append('<input type="hidden" class="select2-search-choice-hidden" name="' + name + '" value="' + object.id + '" />');
+					$div.parent().append(html);
 					
 					
 					// return
@@ -8776,11 +8888,16 @@ var acf;
 			} else {
 				
 				// change array to single object
-				value = acf.maybe_get(value, 0, '');
+				value = acf.maybe_get(value, 0, false);
 				
+				
+				// if no allow_null, this single select must contain a selection
+				if( !args.allow_null && value ) {
+					
+					$input.val( value.id );
+					
+				}
 			}
-			
-			
 			
 			
 			// remove the blank option as we have a clear all button!
@@ -9820,6 +9937,10 @@ var acf;
 		
 		initialize: function(){
 			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
+			
+			
 			// create options
 			var args = {
 				timeFormat:			this.o.time_format,
@@ -9829,6 +9950,34 @@ var acf;
 				showButtonPanel:	true,
 				controlType: 		'select',
 				oneLine:			true,
+				closeText:			acf._e('date_time_picker', 'selectText')
+			};
+			
+			
+			// add custom 'Close = Select' functionality
+			args.onClose = function( value, instance ){
+				
+				// vars
+				var $div = instance.dpDiv,
+					$close = $div.find('.ui-datepicker-close');
+				
+				
+				// if clicking close button
+				if( !value && $close.is(':hover') ) {
+					
+					// attempt to find new value
+					value = acf.maybe_get(instance, 'settings.timepicker.formattedTime');
+					
+					
+					// bail early if no value
+					if( !value ) return;
+					
+					
+					// update value
+					$.datepicker._setTime(instance);
+					
+				}
+									
 			};
 			
 			
@@ -9861,6 +10010,120 @@ var acf;
 		
 	});
 	
+})(jQuery);
+
+(function($){
+	
+	acf.fields.true_false = acf.field.extend({
+		
+		type: 'true_false',
+		$switch: null,
+		$input: null,
+		
+		actions: {
+			'prepare':	'render',
+			'append':	'render',
+			'show':		'render'
+		},
+		
+		events: {
+			'change .acf-switch-input': 'change'
+		},
+		
+		
+		/*
+		*  focus
+		*
+		*  This function will setup variables when focused on a field
+		*
+		*  @type	function
+		*  @date	12/04/2016
+		*  @since	5.3.8
+		*
+		*  @param	n/a
+		*  @return	n/a
+		*/
+		
+		focus: function(){
+			
+			// vars
+			this.$input = this.$field.find('.acf-switch-input');
+			this.$switch = this.$field.find('.acf-switch');
+			
+		},
+		
+		
+		/*
+		*  render
+		*
+		*  This function is used to setup basic upload form attributes
+		*
+		*  @type	function
+		*  @date	12/04/2016
+		*  @since	5.3.8
+		*
+		*  @param	n/a
+		*  @return	n/a
+		*/
+		
+		render: function(){
+			
+			// bail ealry if no $switch
+			if( !this.$switch.exists() ) return;
+			
+			
+			// vars
+			var $on = this.$switch.children('.acf-switch-on'),
+				$off = this.$switch.children('.acf-switch-off')
+				width = Math.max( $on.width(), $off.width() );
+			
+			
+			// bail ealry if no width
+			if( !width ) return;
+			
+			
+			// set widths
+			$on.css( 'min-width', width );
+			$off.css( 'min-width', width );
+				
+		},
+		
+		
+		/*
+		*  change
+		*
+		*  description
+		*
+		*  @type	function
+		*  @date	12/10/16
+		*  @since	5.4.0
+		*
+		*  @param	$post_id (int)
+		*  @return	$post_id (int)
+		*/
+		
+		change: function( e ){
+			
+			// vars
+			var checked = e.$el.prop('checked');
+			
+			
+			// enable
+			if( checked ) {
+				
+				this.$switch.addClass('-on');
+			
+			// disable	
+			} else {
+				
+				this.$switch.removeClass('-on');
+			
+			}
+					
+		}
+	
+	});
+
 })(jQuery);
 
 (function($){
@@ -10718,6 +10981,10 @@ var acf;
 			data.action = 'acf/validate_save_post';
 			
 			
+			// prepare
+			data = acf.prepare_for_ajax(data);
+			
+			
 			// set busy
 			this.busy = 1;
 			
@@ -11065,7 +11332,7 @@ var acf;
 		remove_error: function( $field ){
 			
 			// var
-			$message = $field.children('.acf-input').children('.' + this.message_class);
+			var $message = $field.children('.acf-input').children('.' + this.message_class);
 			
 			
 			// remove class
@@ -11265,6 +11532,10 @@ var acf;
 		$textarea: null,
 		toolbars: {},
 		
+		events: {
+			'mousedown .acf-editor-wrap.delay': 'mousedown'
+		},
+		
 		actions: {
 			'load':			'initialize',
 			'append':		'initialize',
@@ -11285,7 +11556,27 @@ var acf;
 			
 		},
 		
+		mousedown: function(e) {
+			
+			// prevent default
+			e.preventDefault();
+			
+			
+			// remove delay class
+			this.$el.removeClass('delay');
+			this.$el.find('.acf-editor-toolbar').remove();
+			
+			
+			// initialize
+			this.initialize();
+			
+		},
+		
 		initialize: function(){
+			
+			// bail early if delay
+			if( this.$el.hasClass('delay') ) return;
+			
 			
 			// bail early if no tinyMCEPreInit (needed by both tinymce and quicktags)
 			if( typeof tinyMCEPreInit === 'undefined' ) return;
@@ -11662,7 +11953,7 @@ ed.on('ResizeEditor', function(e) {
 		},
 		
 		ready: function(){
-			
+
 			// vars
 			this.$div = $('#acf-hidden-wp-editor');
 			
@@ -11686,17 +11977,17 @@ ed.on('ResizeEditor', function(e) {
 				var editor = data.editor;
 				
 				
-				// update WP var to match tinymce
+				// bail early if not 'acf'
+				if( editor.id.substr(0, 3) !== 'acf' ) return;
+				
+				
+				// override if 'content' exists
+				editor = tinymce.editors.content || editor;
+				
+				
+				// update vars
+				tinymce.activeEditor = editor;
 				wpActiveEditor = editor.id;
-				
-				
-				// bail early if not acf_content
-				if( editor.id !== 'acf_content' ) return;
-				
-				
-				// update global vars
-				tinymce.activeEditor = tinymce.editors.content || null;
-				wpActiveEditor = tinymce.editors.content ? 'content' : null;
 				
 			});
 			
@@ -11724,6 +12015,7 @@ ed.on('ResizeEditor', function(e) {
 // @codekit-prepend "../js/acf-select.js";
 // @codekit-prepend "../js/acf-tab.js";
 // @codekit-prepend "../js/acf-time-picker.js";
+// @codekit-prepend "../js/acf-true-false.js";
 // @codekit-prepend "../js/acf-taxonomy.js";
 // @codekit-prepend "../js/acf-url.js";
 // @codekit-prepend "../js/acf-validation.js";
