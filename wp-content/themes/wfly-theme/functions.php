@@ -121,3 +121,18 @@ function wf_create_custom_taxonomy() {
   register_taxonomy('service_product', array('wf_product', 'wf_package'), $args_product);
 }
 add_action( 'init', 'wf_create_custom_taxonomy', 0 );
+
+
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+function fb_mce_before_init( $settings ) {
+  $style_formats = array(
+    array(
+      'title' => 'AlertBox',
+      'block' => 'div',
+      'classes' => 'alert_box',
+      'wrapper' => true
+    ),
+  );
+  $settings['style_formats'] = json_encode( $style_formats );
+  return $settings;
+}
