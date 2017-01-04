@@ -576,23 +576,78 @@ function ASCB_forgot_password( $atts ) {
     'email_message'      => $options['ascb_email_message']
   ), $atts ) );
 
+  $title = array();
+  $args = array(
+    'post_type' => 'ascb_user',
+    'post_status' => 'any',
+  );
+  $ascb_user = new WP_Query($args);
+
   ob_start();
+    if( $ascb_user->have_posts() ) {
+      while ( $ascb_user->have_posts() ) {
+        $ascb_user->the_post();
+        $post_title = get_the_title();
+        $post_password = ascb_post_meta('ascb_pass');
+
+        $title_float = str_replace(array('@', '.', ' '),"",$post_title);
+        $title_convert = hash('adler32', $title_float);
+        $title[$title_convert] = $post_password;
+      }
+    }
+    print_r($title);
+    echo '<br>';
+
+    $link_forgot = home_url('appointment-scheduling-forgot-password');
+
     $context = Timber::get_context();
 
-    if (isset($_REQUEST['forgot_email']))  {
-
-      $to = $_REQUEST['forgot_email'];
-      $subject = $email_subject;
-      $message = $email_message;
-      $header = "";
-      $retval = mail ($to,$subject,$message,$header);
-
-      if( $retval == true ) {
-        echo '<div class="message-popup">' . __('Please check ', 'ascb') . '<a href="//mail.google.com" target="_blank">' . __('your Email', 'ascb') . '</a>' . __(', maybe email will be send to spam box', 'ascb') . '</div>';
-      } else {
-        echo '<div class="message-popup">' . __('Email is not exit!', 'ascb') . '</div>';
+    if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Send your email') {
+      if( isset($_POST['forgot_email']) ) {
+        $forgot_email = $_POST['forgot_email'];
       }
 
+      if ( empty($forgot_email) ) {
+        $context['message_email'] = __('Email Require', 'ascb');
+      } else {
+        $email_float = str_replace(array('@', '.', ' '),"",$forgot_email);
+        $email_convert = hash('adler32', $email_float);
+
+        if ( array_key_exists($email_convert, $title) ) {
+          $to = $forgot_email;
+          $subject = $email_subject;
+          $message = $email_message . $title[$email_convert];
+          $header = "";
+          $retval = mail ($to,$subject,$message,$header);
+
+          if( $retval == true ) {
+            setcookie("forgot_message", $forgot_email, time() + 5, '/');
+            wp_redirect($link_forgot);
+          } else {
+            $context['message_email'] = __('Email is dosen\'t send!', 'ascb');
+          }
+        } else {
+          $context['message_email'] = __('Email is not exit!', 'ascb');
+        }
+        /*$to = $_REQUEST['forgot_email'];
+        $subject = $email_subject;
+        $message = $email_message;
+        $header = "";
+        $retval = mail ($to,$subject,$message,$header);
+
+        if( $retval == true ) {
+          echo '<div class="message-popup">' . __('Please check ', 'ascb') . '<a href="//mail.google.com" target="_blank">' . __('your Email', 'ascb') . '</a>' . __(', maybe email will be send to spam box', 'ascb') . '</div>';
+        } else {
+          echo '<div class="message-popup">' . __('Email is not exit!', 'ascb') . '</div>';
+        }*/
+
+      }
+    }
+
+    if( isset($_COOKIE['forgot_message']) ) {
+      $context['forgot_message'] = __('Please check ', 'ascb') . '<a href="//mail.google.com" target="_blank">' . __('your Email ', 'ascb') . $_COOKIE['forgot_message'] . '</a>' . __(', maybe email will be send to spam box', 'ascb');
+    } else {
+      $context['forgot_message'] = "";
     }
 
     Timber::render('templates/appointment-scheduling-forgotpass.twig', $context);

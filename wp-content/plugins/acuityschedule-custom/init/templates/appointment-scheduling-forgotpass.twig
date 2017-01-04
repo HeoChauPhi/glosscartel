@@ -3,6 +3,7 @@
   </div>
 </div>
 
+{% if ( forgot_message is empty ) or ( forgot_message == 'null' ) %}
 <div class="box-form-login">
     <h2 class="box-form-login__title form-title">Forgor Password</h2>
     <div class="link-login">
@@ -12,10 +13,18 @@
     <form id="from_forgotpass" name="from_forgotpass" action="" method="post">
       <div class="form-item">
         <input type="email" name="forgot_email" placeholder="Your Email Address" class="input" size="20">
+        {% if message_email %}
+          <div class="message">{{ message_email }}</div>
+        {% endif %}
       </div>
 
       <div class="form-submit">
-        <input type="submit" name="action" value="Send yout email" class="button botton button-primary button-large">
+        <input type="submit" name="action" value="Send your email" class="button botton button-primary button-large">
       </div>
     </form>
 </div>
+{% else %}
+  <div class="box-form-login">
+    <div class="welcome">{{ forgot_message }} !</div>
+  </div>
+{% endif %}
