@@ -588,7 +588,7 @@ function ASCB_forgot_password( $atts ) {
       $retval = mail ($to,$subject,$message,$header);
 
       if( $retval == true ) {
-        echo '<div class="message-popup"><a href="//mail.google.com" target="_blank">' . __('Please check your Email', 'ascb') . '</a></div>';
+        echo '<div class="message-popup">' . __('Please check ', 'ascb') . '<a href="//mail.google.com" target="_blank">' . __('your Email', 'ascb') . '</a>' . __(', maybe email will be send to spam box', 'ascb') . '</div>';
       } else {
         echo '<div class="message-popup">' . __('Email is not exit!', 'ascb') . '</div>';
       }

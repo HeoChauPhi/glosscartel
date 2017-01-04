@@ -476,9 +476,20 @@
   border: 0;
 }
 
-.acf-field[data-name*="time_form_event"], 
+.acf-field[data-name*="time_form_event"],
 .acf-field[data-name*="time_to_event"] {
   .acf-input-wrap {
     overflow: inherit;
   }
 }
+
+.plugins tr.active {
+  display: table-row !important;
+
+  > td.column-description {
+    > div.active {
+      display: block !important;
+    }
+  }
+}
+

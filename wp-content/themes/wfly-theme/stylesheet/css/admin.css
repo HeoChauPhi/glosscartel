@@ -606,3 +606,13 @@
 .acf-field[data-name*="time_to_event"] .acf-input-wrap {
   overflow: inherit;
 }
+
+/* line 486, ../scss/admin.scss */
+.plugins tr.active {
+  display: table-row !important;
+}
+
+/* line 490, ../scss/admin.scss */
+.plugins tr.active > td.column-description > div.active {
+  display: block !important;
+}
