@@ -6,13 +6,13 @@
 // MySQL settings
 /** The name of the database for WordPress */
 
-define('DB_NAME', 'demowp_glosscartel');
+define('DB_NAME', 'glosscart-2');
 
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '1');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -34,8 +34,8 @@ define('DB_COLLATE', '');
 // used to override the wp_options and
 // dynamically set the site for this environment
 // http://codex.wordpress.org/Editing_wp-config.php
-define("WP_HOME", "http://localhost/demowp/glosscartel/");
-define("WP_SITEURL", "http://localhost/demowp/glosscartel/");
+define("WP_HOME", "http://localhost/wp-tem/glosscartel/");
+define("WP_SITEURL", "http://localhost/wp-tem/glosscartel/");
 
 // used to determine environment from easily accessible constant
 define('VIA_ENVIRONMENT', 'production');
