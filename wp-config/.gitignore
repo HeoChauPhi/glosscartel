@@ -1,2 +1,2 @@
 # Wordpress Specific
-build/wp-config/wp-config.local.php
+wp-config.local.php

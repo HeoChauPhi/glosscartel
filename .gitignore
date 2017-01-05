@@ -1,5 +1,5 @@
 # Wordpress Specific
-build/wp-config/wp-config.local.php
+wp-config/wp-config.local.php
 db-tool
 wp-content/cache/
 
