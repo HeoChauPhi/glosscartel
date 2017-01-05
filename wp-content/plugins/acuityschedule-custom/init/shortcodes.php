@@ -595,8 +595,6 @@ function ASCB_forgot_password( $atts ) {
         $title[$title_convert] = $post_password;
       }
     }
-    print_r($title);
-    echo '<br>';
 
     $link_forgot = home_url('appointment-scheduling-forgot-password');
 
