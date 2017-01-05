@@ -86,7 +86,13 @@
     }
     $('.sign-out').on('click', removeCookie);
     $('.back-link').on('click', backLink);
-    $('input[name*="client_date"]').datepicker();
+
+    $('input[name*="client_date"]').datepicker({
+      showButtonPanel: true,
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+
   });
 
   $(window).load(function() {
