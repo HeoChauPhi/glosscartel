@@ -1,9 +1,9 @@
 {% block content %}
   <h2 class="post-detail-title">{{ post.title }}</h2>
   <p class="blog-author">
-    <span class="post-date">{{ post.post_date|date}}</span> | <a class="post-author" href="{{post.author.path}}"> {{ post.author.name }} </a> 
+    <span class="post-date">{{ post.post_date|date}}</span> | <a class="post-author" href="{{post.author.path}}"> {{ post.author.name }} </a>
   </p>
-  
+
   {% if post.thumbnail.src %}
   <div class="post-picture">
     <img src="{{post.thumbnail.src}}" class="feature" />
@@ -20,9 +20,9 @@
     </ul>
   </div>
   {% endif %}
-  
+
   <div class="post-content">
-    {{ post.content }}  
+    {{ post.content }}
   </div>
 
   {% if post.terms('tags') %}

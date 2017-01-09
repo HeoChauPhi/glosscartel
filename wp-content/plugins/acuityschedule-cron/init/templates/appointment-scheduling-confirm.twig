@@ -1,0 +1,54 @@
+<div class="box-gb">
+  <div class="box-feature__iamge">
+  </div>
+</div>
+
+{% if ( user_email is empty ) or ( user_email == 'null' ) %}
+  {% include "form-signup.twig" %}
+{% else %}
+  <div class="box-form-login">
+    <a href="/" class="back-link">Back</a>
+    <h2 class="box-form-login__title form-title">Confirm your booking</h2>
+    <div class="confirm-client-book">
+      <div class="group-info">
+        <div class="group-image">
+          <div class="cat-img" style="background-image: url({{ cat_img }});">
+            <img src="{{ cat_img }}">
+          </div>
+          <div class="duration">{{ confirm_time }} min</div>
+        </div>
+        <div class="group-confirm-info">
+          <div class="confirm-title">{{ confirm_title }}</div>
+          <div class="confirm-date">{{ confirm_date }}</div>
+          <div class="confirm-time">{{ confirm_time }}</div>
+          <div class="confirm-price">${{ confirm_price }}</div>
+        </div>
+      </div>
+      <div class="form-confirm-end">
+        <form id="form_confirm_end" class="form-confirm-end" name="form_confirm_end" method="post" action="">
+          <div class="form-item">
+            <input type="text" name="confirm_phone" placeholder="Confirm your mobile" class="input">
+            {% if message_phone %}
+              <div class="message">{{ message_phone }}</div>
+            {% endif %}
+          </div>
+          <div class="form-item">
+            <input type="text" name="confirm_area" placeholder="Confirm your booking address" class="input">
+          </div>
+          <div class="form-item">
+            <textarea rows="2" name="confirm_note" placeholder="Describe yourself here..." class="input"></textarea>
+          </div>
+
+          <input type="hidden" name="confirm_id" value="{{ confirm_id }}">
+          <input type="hidden" name="confirm_datetime" value="{{ confirm_datetime }}">
+          <input type="hidden" name="confirm_firstName" value="{{ confirm_firstName }}">
+          <input type="hidden" name="confirm_lastName" value="{{ confirm_lastName }}">
+          <input type="hidden" name="confirm_email" value="{{ confirm_email }}">
+          <div class="box-from-contact__button">
+            <input type="submit" name="action" value="Confirm" class="wpcf7-form-control wpcf7-submit button">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endif %}

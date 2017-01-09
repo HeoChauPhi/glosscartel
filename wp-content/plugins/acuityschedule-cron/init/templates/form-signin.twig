@@ -1,0 +1,43 @@
+<div class="box-gb">
+  <div class="box-feature__iamge">
+  </div>
+</div>
+
+{% if ( user_email is empty ) or ( user_email == 'null' ) %}
+  <div class="box-form-login">
+    <h2 class="box-form-login__title form-title">log in</h2>
+    <div class="link-login">
+      <span>or</span> <a href="{{ function('home_url') }}/appointment-scheduling-registor">Register here</a>
+    </div>
+
+    <form id="from_signin" name="from_signin" action="" method="post">
+      <div class="from-item form-text">
+        <input type="email" required="" value="" placeholder="Email Address" name="signin_email" class="input" size="20">
+        {% if message_email %}
+          <div class="message">{{ message_email }}</div>
+        {% endif %}
+      </div>
+      <div class="from-item">
+        <input type="password" required="" placeholder="Password" name="signin_password" class="input">
+        {% if message_pass %}
+          <div class="message">{{ message_pass }}</div>
+        {% endif %}
+      </div>
+      <div class="box-form-login__forgot">
+        <a href="{{ function('home_url') }}/appointment-scheduling-forgot-password">Forgot your password?</a>
+      </div>
+
+      <div class="form-submit">
+        <input type="submit" name="action" value="Sign In" class="button botton button-primary button-large">
+      </div>
+    </form>
+
+    {% if message_signin %}
+      <div class="message">{{ message_signin }}</div>
+    {% endif %}
+  </div>
+{% else %}
+  <div class="box-form-login">
+    <div class="welcome">Welcome {{ user_email }} !</div>
+  </div>
+{% endif %}

@@ -61,7 +61,7 @@ add_action('admin_init', 'wf_admin_styles');
 
 /* Add custom post type */
 function wf_create_custom_post_types() {
-  register_post_type( 'wf_product',
+  /*register_post_type( 'wf_product',
     array(
       'labels' => array(
         'name' => __( 'Product' ),
@@ -86,7 +86,7 @@ function wf_create_custom_post_types() {
       'public' => true,
       'has_archive' => true,
     )
-  );
+  );*/
   register_post_type( 'slideshow',
     array(
       'labels' => array(
@@ -103,7 +103,7 @@ function wf_create_custom_post_types() {
 }
 add_action( 'init', 'wf_create_custom_post_types' );
 
-function wf_create_custom_taxonomy() {
+/*function wf_create_custom_taxonomy() {
   $labels_product = array(
     'name' => 'Service',
     'singular' => 'Service',
@@ -120,4 +120,4 @@ function wf_create_custom_taxonomy() {
   );
   register_taxonomy('service_product', array('wf_product', 'wf_package'), $args_product);
 }
-add_action( 'init', 'wf_create_custom_taxonomy', 0 );
+add_action( 'init', 'wf_create_custom_taxonomy', 0 );*/
