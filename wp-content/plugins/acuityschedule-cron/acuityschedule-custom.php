@@ -14,7 +14,7 @@ include_once('init/asc.admin.php');
 include_once('init/functions.php');
 include_once('init/options/option.php');
 include_once('init/shortcodes.php');
-//('init/plugin-init.php');
+include_once('init/plugin-init.php');
 
 // Admin settings.
 if(is_admin()) {
@@ -22,9 +22,11 @@ if(is_admin()) {
 }
 
 /* Runs when plugin is activated */
+register_activation_hook(__FILE__, 'asc_plugin_activate');
 //register_activation_hook(__FILE__, 'asc_add_form_page');
 
 /* Runs on plugin deactivation*/
+register_deactivation_hook(__FILE__, 'asc_plugin_deactivate');
 //register_deactivation_hook(__FILE__, 'asc_remove_form_page');
 
 // Post Type Appointment

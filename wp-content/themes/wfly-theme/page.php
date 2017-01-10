@@ -21,6 +21,22 @@
  * @since    Timber 0.1
  */
 
+$app_get_id = [];
+$app_get_cat = [];
+$data = asc_get_apoiment('https://acuityscheduling.com/api/v1/appointment-types');
+$product = asc_get_apoiment('https://acuityscheduling.com/api/v1/products');
+foreach ($product as $product_type) {
+  $data[] = $product_type;
+}
+foreach ($data as $appid) {
+  $app_get_id[] = $appid['id'];
+  if (isset($appid['category'])){
+    $app_get_cat[] = $appid['category'];
+  }
+}
+print_r($app_get_id);
+print_r($app_get_cat);
+
 $context = Timber::get_context();
 $context['title_option'] = framework_page('title');
 $context['page_layout'] = framework_page('layout_page');

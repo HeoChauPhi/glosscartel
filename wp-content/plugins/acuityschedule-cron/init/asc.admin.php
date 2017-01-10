@@ -49,6 +49,10 @@ class ascSettingsPage {
         submit_button();
       ?>
       </form>
+      <h2><?php echo __('Update content from Appointment Scheduling', 'asc') ?></h2>
+      <form id="update_appointment" name="update_appointment" method="post" action="">
+        <input class="button button-primary" type="submit" name="action" value="Update Appointment">
+      </form>
     </div>
     <?php
   }
