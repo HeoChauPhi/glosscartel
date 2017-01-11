@@ -921,3 +921,29 @@ nav#main-navigation {
 img {
   max-width: 100%;
 }
+
+/* line 257, ../scss/customs.scss */
+.page-appointment-scheduling-confirm .group-info {
+  margin: 0 -50px;
+}
+
+/* line 260, ../scss/customs.scss */
+.page-appointment-scheduling-confirm .group-image .cat-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 0;
+  max-height: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 269, ../scss/customs.scss */
+.page-appointment-scheduling-confirm .group-image .cat-img img {
+  visibility: hidden;
+}
+
+/* line 272, ../scss/customs.scss */
+img {
+  max-width: 100%;
+}
