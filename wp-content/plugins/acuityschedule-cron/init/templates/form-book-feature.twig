@@ -1,13 +1,13 @@
 <form id="book_now" class="form-schedule-feature" name="book_now" method="post" action="">
   <div class="form-item">
-    <input type="text" name="client_area" placeholder="Enter Your Area">
+    {% include "area.twig" %}
     {% if area_message %}
       <div class="message">{{ area_message }}</div>
     {% endif %}
   </div>
 
   <div class="form-item">
-    <select name="client_service">
+    <select name="client_service" class="select-two">
       <option selected="" disabled="" value="">Choose a service</option>
       {% for category, group in data %}
         <optgroup label="{{ category }}">
@@ -30,7 +30,7 @@
   </div>
 
   <div class="form-item">
-    <select name="client_time">
+    <select name="client_time" class="select-two">
       <option selected="" disabled="" value="">Choose Times</option>
       {% for hour in 7..20 %}
         {% for time in ['00', '15', '30', '45'] %}

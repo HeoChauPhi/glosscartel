@@ -21,7 +21,7 @@
  * @since    Timber 0.1
  */
 
-$app_get_id = [];
+/*$app_get_id = [];
 $app_get_cat = [];
 $data = asc_get_apoiment('https://acuityscheduling.com/api/v1/appointment-types');
 $product = asc_get_apoiment('https://acuityscheduling.com/api/v1/products');
@@ -34,28 +34,15 @@ foreach ($data as $appid) {
     $app_get_cat[] = $appid['category'];
   }
 }
+$app_get_id = array_keys(array_flip($app_get_id));
+$app_get_cat = array_keys(array_flip($app_get_cat));
 print_r($app_get_id);
-print_r($app_get_cat);
+print_r($app_get_cat);*/
 
 $context = Timber::get_context();
 $context['title_option'] = framework_page('title');
 $context['page_layout'] = framework_page('layout_page');
 $post = new TimberPost();
 $context['post'] = $post;
-
-/*function getRealIPAddress(){
-    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-        //check ip from share internet
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    }else if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-        //to check ip is pass from proxy
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }else{
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-
-echo getRealIPAddress();*/
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );

@@ -88,6 +88,32 @@ class ascSettingsPage {
       'asc_section_id',
       'asc_user_key'
     );
+
+    // Setting ID
+    add_settings_section(
+      'asc_email_id', // ID
+      __('Email Setting', 'asc'), // Title
+      array( $this, 'asc_print_section_info' ), // Callback
+      'asc-setting-admin' // Page
+    );
+
+    add_settings_field(
+      'asc_email_subject',
+      __('Email Subject', 'asc'),
+      array( $this, 'asc_form_textfield' ), // Callback
+      'asc-setting-admin', // Page
+      'asc_email_id',
+      'asc_email_subject'
+    );
+
+    add_settings_field(
+      'asc_email_message',
+      __('Email Message', 'asc'),
+      array( $this, 'asc_form_textarea' ), // Callback
+      'asc-setting-admin', // Page
+      'asc_email_id',
+      'asc_email_message'
+    );
   }
 
   /**

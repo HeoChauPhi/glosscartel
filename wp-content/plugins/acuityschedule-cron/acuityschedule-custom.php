@@ -23,11 +23,11 @@ if(is_admin()) {
 
 /* Runs when plugin is activated */
 register_activation_hook(__FILE__, 'asc_plugin_activate');
-//register_activation_hook(__FILE__, 'asc_add_form_page');
+register_activation_hook(__FILE__, 'asc_add_form_page');
 
 /* Runs on plugin deactivation*/
 register_deactivation_hook(__FILE__, 'asc_plugin_deactivate');
-//register_deactivation_hook(__FILE__, 'asc_remove_form_page');
+register_deactivation_hook(__FILE__, 'asc_remove_form_page');
 
 // Post Type Appointment
 function asc_create_post_types() {
@@ -36,6 +36,20 @@ function asc_create_post_types() {
       'labels' => array(
         'name' => __( 'Acuity Scheduling Appointment', 'asc' ),
         'singular_name' => __( 'Acuity Scheduling Appointment', 'asc' )
+      ),
+      'supports' => array(
+        'title'
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'asc_user',
+    array(
+      'labels' => array(
+        'name' => __( 'Acuity Scheduling User', 'asc' ),
+        'singular_name' => __( 'Acuity Scheduling User', 'asc' )
       ),
       'supports' => array(
         'title'
@@ -75,6 +89,9 @@ function asc_plugin_scripts() {
   wp_register_script('asc-libs-cookie', plugin_dir_url( __FILE__ ) . 'dist/js/libs/js.cookie.js', array('jquery'), FALSE, '2.1.3', TRUE);
   wp_enqueue_script('asc-libs-cookie'); // Enqueue it!
 
+  wp_register_script('asc-select2', plugin_dir_url( __FILE__ ) . 'dist/js/libs/select2.full.js', array('jquery'), FALSE, '4.0.3', TRUE);
+  wp_enqueue_script('asc-select2'); // Enqueue it!
+
   wp_register_script('asc-script', plugin_dir_url( __FILE__ ) . 'dist/js/scripts.js', array('jquery'), FALSE, '1.0.0', TRUE);
   wp_localize_script( 'asc-script', 'ascAjax', array( 'ajaxurl' => admin_url('admin-ajax.php' )));
   wp_enqueue_script('asc-script'); // Enqueue it!
@@ -84,4 +101,10 @@ add_action('wp_enqueue_scripts', 'asc_styles');
 function asc_styles() {
   wp_register_style('jqueryui-css', plugin_dir_url( __FILE__ ). 'dist/css/jquery-ui.css', array(), '1.12.1', 'all');
   wp_enqueue_style('jqueryui-css');
+
+  wp_register_style('select2-css', plugin_dir_url( __FILE__ ). 'dist/css/select2.css', array(), '4.0.3', 'all');
+  wp_enqueue_style('select2-css');
+
+  wp_register_style('styles-css', plugin_dir_url( __FILE__ ). 'dist/css/styles.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('styles-css');
 }

@@ -42,6 +42,8 @@ if (is_admin()) {
           $app_get_cat[] = $appid['category'];
         }
       }
+      $app_get_id = array_keys(array_flip($app_get_id));
+      $app_get_cat = array_keys(array_flip($app_get_cat));
 
       // Remove Posts app
       $args = array(
@@ -234,14 +236,18 @@ function asc_add_apponment() {
           $term_name      = 'Packages And Gift Certificates';
         }
 
-        $calendar = '';
-        foreach ($value['calendarIDs'] as $calendarid) {
-          if ( sizeof($value['calendarIDs']) > 1 ) {
-            $calendar = $calendarid . ' ';
-          } else {
-            $calendar = $calendarid;
+        if ( isset($value['calendarIDs']) ){
+          $calendar = '';
+          foreach ($value['calendarIDs'] as $calendarid) {
+            if ( sizeof($value['calendarIDs']) > 1 ) {
+              $calendar = $calendar . ' ' . $calendarid;
+            } else {
+              $calendar = $calendarid;
+            }
           }
+          $calendar = ltrim($calendar);
         }
+        $prefix = '_cmb2_';
 
         $new_post = array(
           'post_title'  =>   $value['name'],
@@ -251,7 +257,6 @@ function asc_add_apponment() {
 
         // SAVE THE POST
         if ( !in_array($value['id'], $asc_appid) ) {
-          $prefix = '_cmb2_';
           $post   = wp_insert_post ($new_post);
           update_post_meta($post, $prefix . 'asc_app_id', $value['id']);
           update_post_meta($post, $prefix . 'asc_app_price', $value['price']);

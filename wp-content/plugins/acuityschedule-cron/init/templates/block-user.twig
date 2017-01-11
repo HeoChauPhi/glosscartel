@@ -1,4 +1,4 @@
-{% if block_user %}
+{% if user_login %}
   <div class="block-user box-menu-myaccount">
     <ul class="menu-myaccount">
       <li><a href="#">{{ user_login }}</a>
@@ -9,7 +9,6 @@
     </ul>
 
     <div class="picture-user">
-      <img src="images/myaccount.png">
     </div>
   </div>
 {% else %}
