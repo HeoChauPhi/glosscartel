@@ -947,3 +947,9 @@ img {
 img {
   max-width: 100%;
 }
+
+/* line 275, ../scss/customs.scss */
+.box-feature__iamge img {
+  z-index: -1;
+  position: relative;
+}
