@@ -14,6 +14,45 @@ function asc_acuityscheduling( $atts ) {
 }
 **/
 
+add_action( 'wp_ajax_datetime', 'datetime_callback' );
+add_action( 'wp_ajax_nopriv_datetime', 'datetime_callback' );
+function datetime_callback() {
+  $values = $_REQUEST;
+
+  $userID = '12648352';
+  $key = '7a929774222d17671054d7cc5199f029';
+
+  // $userID = $options_asc['asc_user_id'];
+  // $key = $options_asc['asc_user_key'];
+  $url = 'https://acuityscheduling.com/api/v1/availability/times?appointmentTypeID='.$values['app_id'].'&date='.$values['datetime'];
+
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_USERPWD, "$userID:$key");
+  $result = curl_exec($ch);
+  curl_close($ch);
+
+  $data_app = json_decode($result, true);
+
+  $content = '<select name="client_time" class="select-two"> <option selected="" disabled="" value="">Find A Time</option>';
+  foreach ($data_app as $value) {
+    $dt_str   = $value['time'];
+    $dt_arr   = explode('T', $dt_str);
+    $dt_d     = $dt_arr[0];
+    $dt_t_str = $dt_arr[1];
+    $dt_t_arr = explode(':', $dt_t_str);
+    $dt_t     = $dt_t_arr[0].':'.$dt_t_arr[1];
+
+    $content .= '<option value='.$value['time'].'>'.$dt_t.'</option>';
+  }
+  $content .= '</select>';
+
+  $data = json_encode(array('markup' => $content));
+  echo $data;
+  wp_die();
+}
+
 // Feature choose
 add_shortcode( 'asc_scheduling', 'ASC_acuityscheduling' );
 function ASC_acuityscheduling( $atts ) {
@@ -29,7 +68,34 @@ function ASC_acuityscheduling( $atts ) {
     $link_signup = home_url('appointment-scheduling-registor');
     $link_paynow = home_url('appointment-scheduling-client-choose');
 
+    $args_app = array(
+      'post_type'       => 'asc_appointment',
+      'orderby'         => 'date',
+      'order'           => 'ASC',
+      'posts_per_page'  => -1
+    );
+
     $context = Timber::get_context();
+    $post_app = Timber::get_posts($args_app);
+    $context['post_app'] = $post_app;
+    $context['cat_app'] = Timber::get_terms('service_product');
+
+    /*$userID = '12648352';
+    $key = '7a929774222d17671054d7cc5199f029';
+
+    // $userID = $options_asc['asc_user_id'];
+    // $key = $options_asc['asc_user_key'];
+    $url = 'https://acuityscheduling.com/api/v1/availability/times?appointmentTypeID=1743364&date=2017-01-22';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_USERPWD, "$userID:$key");
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $data = json_decode($result, true);
+    print_r($data);*/
 
     /*if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Book Now' ) {
       if( isset($_POST['client_area'], $_POST['client_service'], $_POST['client_date'], $_POST['client_time']) ) {
@@ -80,6 +146,7 @@ function ASC_signup( $atts ) {
   $args = array(
     'post_type' => 'asc_user',
     'post_status' => 'any',
+    'posts_per_page'  => -1
   );
   $asc_user = new WP_Query($args);
 
@@ -174,6 +241,7 @@ function ASC_signin( $atts ) {
   $args = array(
     'post_type'   => 'asc_user',
     'post_status' => 'any',
+    'posts_per_page'  => -1
   );
   $asc_user = new WP_Query($args);
 
@@ -278,6 +346,7 @@ function ASC_forgot_password( $atts ) {
   $args = array(
     'post_type' => 'asc_user',
     'post_status' => 'any',
+    'posts_per_page'  => -1
   );
   $asc_user = new WP_Query($args);
 

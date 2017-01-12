@@ -2,6 +2,40 @@
 /*global $, jQuery, Modernizr, enquire, audiojs*/
 
 (function($) {
+  var chosenSelect = function() {
+    $('.client-date').val('');
+    $('.datetime-chose').html('<select name="client_time" class="select-two client-time"><option selected="" disabled="" value="">Find A Time</option></select>');
+    $('.select-two').select2();
+  }
+
+  var chosenDatepicker = function () {
+    var date_value = $(this).val();
+    var selected = $('.client-service').find('option:selected');
+    var select_id = selected.data('id');
+
+    console.log(select_id);
+
+    $.ajax({
+      type : "post",
+      dataType : "json",
+      url : ascAjax.ajaxurl,
+      data : {action: "datetime", datetime: date_value, app_id: select_id },
+      beforeSend: function() {
+        $('.datetime-chose').html('');
+        $('.datetime-chose').before('<div class="ajax-load-icon">load items</div>');
+      },
+      success: function(response) {
+        $('.ajax-load-icon').remove();
+        $('.datetime-chose').html(response.markup);
+        $('.select-two').select2();
+      },
+      error: function(response) {
+
+      }
+    });
+
+  };
+
   function setCookie(key, value) {
     var expires = new Date();
     expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -90,10 +124,14 @@
     $('input[name*="client_date"]').datepicker({
       showButtonPanel: true,
       showOtherMonths: true,
-      selectOtherMonths: true
+      selectOtherMonths: true,
+      dateFormat: 'yy-mm-dd'
     });
 
     $('.select-two').select2();
+
+    $('.client-date').on('change', chosenDatepicker);
+    $('.client-service').on('change', chosenSelect);
   });
 
   $(window).load(function() {
