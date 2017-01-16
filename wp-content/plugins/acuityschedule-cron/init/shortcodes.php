@@ -65,6 +65,7 @@ function ASC_acuityscheduling( $atts ) {
     'product_url'   => $options['asc_product_url']*/
   ), $atts ) );
   ob_start();
+
     $link_signup = home_url('appointment-scheduling-registor');
     $link_paynow = home_url('appointment-scheduling-client-choose');
 
@@ -79,23 +80,6 @@ function ASC_acuityscheduling( $atts ) {
     $post_app = Timber::get_posts($args_app);
     $context['post_app'] = $post_app;
     $context['cat_app'] = Timber::get_terms('service_product');
-
-    /*$userID = '12648352';
-    $key = '7a929774222d17671054d7cc5199f029';
-
-    // $userID = $options_asc['asc_user_id'];
-    // $key = $options_asc['asc_user_key'];
-    $url = 'https://acuityscheduling.com/api/v1/availability/times?appointmentTypeID=1743364&date=2017-01-22';
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_USERPWD, "$userID:$key");
-    $result = curl_exec($ch);
-    curl_close($ch);
-
-    $data = json_decode($result, true);
-    print_r($data);*/
 
     /*if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Book Now' ) {
       if( isset($_POST['client_area'], $_POST['client_service'], $_POST['client_date'], $_POST['client_time']) ) {

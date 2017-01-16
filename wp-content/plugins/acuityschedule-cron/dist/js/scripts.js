@@ -4,8 +4,8 @@
 (function($) {
   var chosenSelect = function() {
     $('.client-date').val('');
-    $('.datetime-chose').html('<select name="client_time" class="select-two client-time"><option selected="" disabled="" value="">Find A Time</option></select>');
-    $('.select-two').select2();
+    $('.datetime-chose').html('<span>Find A Time</span>');
+    //$('.select-two').select2();
   }
 
   var chosenDatepicker = function () {
