@@ -3,21 +3,6 @@
     "title": "Group Components",
     "fields": [
         {
-            "key": "field_57d503080f04a",
-            "label": "Add components block",
-            "name": "add_components_block",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "button_label": "Add Row",
-            "min": "",
-            "max": "",
             "layouts": [
                 {
                     "key": "57d50324492b2",
@@ -26,6 +11,14 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "post_type": [
+                                "slideshow"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1,
                             "key": "field_57d509376569e",
                             "label": "Feature Banner",
                             "name": "feature_banner",
@@ -37,15 +30,72 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "post_type": [
-                                "slideshow"
+                            }
+                        },
+                        {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_587ca891d02f1",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587ca8ead02f2",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_587ca891d02f1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
                             ],
-                            "taxonomy": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "return_format": "object",
-                            "ui": 1
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587cab14d02fd",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
                         }
                     ],
                     "min": "",
@@ -58,6 +108,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_57d5349e6a978",
                             "label": "Service Title",
                             "name": "service_title",
@@ -69,29 +124,9 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            }
                         },
                         {
-                            "key": "field_57d6597d9dd49",
-                            "label": "Service List",
-                            "name": "service_list",
-                            "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "button_label": "Add Row",
-                            "min": "",
-                            "max": "",
                             "layouts": [
                                 {
                                     "key": "57d65a57443fe",
@@ -100,6 +135,16 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
+                                            "return_format": "url",
+                                            "preview_size": "full",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
                                             "key": "field_57d65a949dd4a",
                                             "label": "Service Item Image",
                                             "name": "service_item_image",
@@ -111,19 +156,14 @@
                                                 "width": "",
                                                 "class": "",
                                                 "id": ""
-                                            },
-                                            "return_format": "url",
-                                            "preview_size": "full",
-                                            "library": "all",
-                                            "min_width": "",
-                                            "min_height": "",
-                                            "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
-                                            "max_size": "",
-                                            "mime_types": ""
+                                            }
                                         },
                                         {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
                                             "key": "field_57d65ab29dd4b",
                                             "label": "Service Item Title",
                                             "name": "service_item_title",
@@ -135,18 +175,112 @@
                                                 "width": "",
                                                 "class": "",
                                                 "id": ""
-                                            },
+                                            }
+                                        },
+                                        {
                                             "default_value": "",
+                                            "new_lines": "",
+                                            "maxlength": "",
                                             "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
+                                            "rows": 2,
+                                            "key": "field_587cab3bd02fe",
+                                            "label": "Service Item Description",
+                                            "name": "service_item_description",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
                                         }
                                     ],
                                     "min": "",
                                     "max": ""
                                 }
-                            ]
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Service",
+                            "key": "field_57d6597d9dd49",
+                            "label": "Service List",
+                            "name": "service_list",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_587ca90bd02f3",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587ca92fd02f5",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_587ca90bd02f3",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587cab0ed02fc",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
                         }
                     ],
                     "min": "",
@@ -159,6 +293,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": "",
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_57d65edcc5a07",
                             "label": "CTA Book Content",
                             "name": "cta_book_content",
@@ -170,13 +309,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": ""
+                            }
                         },
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_57d65ef2c5a08",
                             "label": "CTA Link Text",
                             "name": "cta_link_text",
@@ -188,14 +328,11 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            }
                         },
                         {
+                            "default_value": "",
+                            "placeholder": "",
                             "key": "field_57d65f1ac5a09",
                             "label": "CTA Link Url",
                             "name": "cta_link_url",
@@ -207,24 +344,63 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
-                    "key": "58009d830a42c",
-                    "name": "box_link_scroll",
-                    "label": "Box Link Scroll",
-                    "display": "row",
-                    "sub_fields": [
+                            }
+                        },
                         {
-                            "key": "field_58009d9a0a42d",
-                            "label": "Link Text",
-                            "name": "link_text",
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_587ca94cd02f6",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587ca95bd02f7",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_587ca94cd02f6",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587cab04d02fb",
+                            "label": "Component Class",
+                            "name": "component_class",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -233,12 +409,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            }
                         }
                     ],
                     "min": "",
@@ -251,6 +422,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "rows": 5,
                             "key": "field_57f5bd8cf0e23",
                             "label": "Custom Text Area",
                             "name": "custom_text_area",
@@ -262,14 +438,60 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": 5,
-                            "new_lines": ""
+                            }
                         },
                         {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_587cabd0df6df",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587cac14df6e1",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_587cabd0df6df",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_57f5bda6f0e24",
                             "label": "Component Class",
                             "name": "component_class",
@@ -281,12 +503,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            }
                         }
                     ],
                     "min": "",
@@ -299,6 +516,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_57d6818c69c02",
                             "label": "Your Shortcode",
                             "name": "your_shortcode",
@@ -310,18 +532,112 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
+                            }
+                        },
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
                             "default_value": "",
+                            "delay": 0,
+                            "key": "field_587caa07d02f9",
+                            "label": "Your Shortcode Text",
+                            "name": "your_shortcode_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_587cac39b9c88",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "key": "field_587cac4db9c89",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_587cac39b9c88",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587caaf4d02fa",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
                         }
                     ],
                     "min": "",
                     "max": ""
                 }
-            ]
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Add Components",
+            "key": "field_57d503080f04a",
+            "label": "Components Block",
+            "name": "components_block",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -341,5 +657,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1476442603
+    "modified": 1484565793
 }

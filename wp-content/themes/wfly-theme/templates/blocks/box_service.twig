@@ -1,3 +1,4 @@
+{% if component_class %}<div class="{{ component_class }}">{% endif %}
 <div class="box-service">
   <div class="container">
     <h2 class="box-service__title">{{service_title}}</h2>
@@ -13,3 +14,4 @@
     </ul>
   </div>
 </div>
+{% if component_class %}</div>{% endif %}

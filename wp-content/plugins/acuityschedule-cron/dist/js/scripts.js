@@ -5,15 +5,12 @@
   var chosenSelect = function() {
     $('.client-date').val('');
     $('.datetime-chose').html('<span>Find A Time</span>');
-    //$('.select-two').select2();
   }
 
   var chosenDatepicker = function () {
     var date_value = $(this).val();
     var selected = $('.client-service').find('option:selected');
     var select_id = selected.data('id');
-
-    console.log(select_id);
 
     $.ajax({
       type : "post",

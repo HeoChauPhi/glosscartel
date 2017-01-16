@@ -60,6 +60,32 @@ function set_posts_per_page( $query ) {
   return $query;
 }
 
+// Wysywyg Editer
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+function fb_mce_before_init( $settings ) {
+  $style_formats = array(
+    array(
+      'title' => 'Text Big',
+      'block' => 'div',
+      'classes' => 'text_big',
+      'wrapper' => true
+    ),
+    array(
+      'title' => 'Text Medium',
+      'block' => 'div',
+      'classes' => 'text_medium',
+      'wrapper' => true
+    ),
+    array(
+      'title' => 'Text Small',
+      'block' => 'div',
+      'classes' => 'text_mall',
+      'wrapper' => true
+    ),
+  );
+  $settings['style_formats'] = json_encode( $style_formats );
+  return $settings;
+}
 
 /*
 **
