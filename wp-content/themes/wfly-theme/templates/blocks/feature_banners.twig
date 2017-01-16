@@ -1,4 +1,4 @@
-{% if component_class %}<div class="{{ component_class }}">{% endif %}
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
 {% for post in feature_banner %}
 <div class="box-feature">
   {% for item in post.get_field('slidehsow_items') %}
@@ -11,4 +11,5 @@
   {% endfor %}
 </div>
 {% endfor %}
-{% if component_class %}</div>{% endif %}
+{% include 'box-scroll-down.twig' %}
+</div>

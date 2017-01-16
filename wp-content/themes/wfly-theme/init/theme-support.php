@@ -68,19 +68,19 @@ function fb_mce_before_init( $settings ) {
       'title' => 'Text Big',
       'block' => 'div',
       'classes' => 'text_big',
-      'wrapper' => true
+      'wrapper' => false
     ),
     array(
       'title' => 'Text Medium',
       'block' => 'div',
       'classes' => 'text_medium',
-      'wrapper' => true
+      'wrapper' => false
     ),
     array(
       'title' => 'Text Small',
       'block' => 'div',
       'classes' => 'text_mall',
-      'wrapper' => true
+      'wrapper' => false
     ),
   );
   $settings['style_formats'] = json_encode( $style_formats );

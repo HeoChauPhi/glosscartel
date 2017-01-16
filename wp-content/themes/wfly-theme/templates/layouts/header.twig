@@ -1,4 +1,12 @@
 {% block header %}
+  {% if footer_widget %}
+  <div class="header-top">
+    {% for key, header in header_widget %}
+      {{acfwidget('group_header_block', 'header_widget-' ~ key )}}
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <header id="header" class="header header-wrapper">
     <div class="container">
       <div class="header-content">

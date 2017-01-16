@@ -1,3 +1,4 @@
-<div{% if component_class %} class="{{ component_class }}"{% endif %}>
-  {{ custom_text_area }}
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
+  <div class="custom-text">{{ custom_text_area }}</div>
+  {% include 'box-scroll-down.twig' %}
 </div>

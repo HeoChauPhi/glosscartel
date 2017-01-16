@@ -84,26 +84,38 @@
     }
   }
 
-  function scrolldown() {
-   $('.scrol-bottom a').click(function() {
-    var target = $(this.hash);
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top - 200
-      }, 1000);
-      return false;
-     }
+  function siteMessage() {
+    var site_message = $('#site-message');
+    site_message.find('.icon-close').click(function() {
+      $(this).parent().fadeOut( "slow" );
     });
-   }
+  }
+
+  function scrolldown() {
+    var adminbar_height = $('#wpadminbar').outerHeight(true);
+
+    $('.scroll-down').click(function() {
+      var this_parent = $(this).parent();
+      var next_box = this_parent.next();
+
+      if (next_box.length) {
+        $('html, body').animate({
+          scrollTop: next_box.offset().top - adminbar_height
+        }, 1000);
+        return false;
+       }
+    });
+  }
 
   $(document).ready(function() {
     // Call to function
+    siteMessage();
     headerFixed();
     navigation();
     featureSlider();
     verticalSlick();
-    popuplogin();
-    colorbox();
+    // popuplogin();
+    // colorbox();
     footerjs();
     loginForm();
     matchHeight();

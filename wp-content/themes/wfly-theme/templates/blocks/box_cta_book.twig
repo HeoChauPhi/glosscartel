@@ -1,4 +1,4 @@
-{% if component_class %}<div class="{{ component_class }}">{% endif %}
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
 <div class="box-cta">
   <div class="container">
     <div class="box-cta-book">
@@ -7,4 +7,5 @@
     </div>
   </div>
 </div>
-{% if component_class %}</div>{% endif %}
+{% include 'box-scroll-down.twig' %}
+</div>

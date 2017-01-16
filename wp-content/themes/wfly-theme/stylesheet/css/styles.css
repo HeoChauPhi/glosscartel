@@ -488,7 +488,7 @@ ul.tab li:first-child a {
 
 .buttom-footer {
   float: left; }
-  .buttom-footer a.btn.btn_yello {
+  .buttom-footer .btn.btn_yellow a {
     padding: 3px 10px;
     background: #beaa7c;
     border-radius: 10px;
@@ -496,7 +496,7 @@ ul.tab li:first-child a {
     display: block;
     font-size: 14px;
     color: #ffffff; }
-    .buttom-footer a.btn.btn_yello:hover {
+    .buttom-footer .btn.btn_yellow a:hover {
       background: #ff4040; }
 
 .box-social__list {

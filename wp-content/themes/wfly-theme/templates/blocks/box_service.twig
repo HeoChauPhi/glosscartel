@@ -1,17 +1,19 @@
-{% if component_class %}<div class="{{ component_class }}">{% endif %}
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
 <div class="box-service">
-  <div class="container">
-    <h2 class="box-service__title">{{service_title}}</h2>
+    {% if service_title %}
+      <h2 class="box-service__title">{{ service_title }}</h2>
+    {% endif %}
     <ul class="box-service_list">
       {% for item in service_list %}
-        <li class="box-service__item">
+      <li class="box-service__item">
         <div class="box-service__item__image">
-          <img src="{{item.service_item_image}}">
+          <img src="{{ item.service_item_image }}">
         </div>
-        <h3 class="box-service__item__title">{{item.service_item_title}}</h3>
-        </li>
+        <h3 class="box-service__item__title">{{ item.service_item_title }}</h3>
+        <div class="box-service__item__desc">{{ item.service_item_description }}</div>
+      </li>
       {% endfor %}
     </ul>
-  </div>
 </div>
-{% if component_class %}</div>{% endif %}
+{% include 'box-scroll-down.twig' %}
+</div>

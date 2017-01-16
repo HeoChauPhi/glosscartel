@@ -52,14 +52,23 @@ function shortcode($name) {
 function acfwidget($name, $widgetid) {
   if (get_field($name, 'widget_'.$widgetid)) {
     $afcfield = get_field($name, 'widget_'.$widgetid);
-    if (is_array($afcfield)) {
-      return $afcfield;
-    } else {
-      echo do_shortcode($afcfield);
+    //print_r($afcfield);
+
+    if ( !empty( $afcfield ) ) {
+      foreach ($afcfield as $field) {
+        $layout = $field['acf_fc_layout'];
+
+        try {
+          Timber::render($layout . '.twig', $field);
+        } catch (Exception $e) {
+          echo 'Could not find a twig file for layout type: ' . $layout;
+        }
+      }
     }
   }
   return;
 }
+
 // --> Get object in ACF. Ex: label, slug...
 function acfobject($name, $object) {
   $field = get_field_object($name);
@@ -187,26 +196,6 @@ function flexible_content($name) {
     }
   }
 
-  /*if (!empty($fc_ob)) {
-    $layout_ob = $fc_ob['layouts'];
-    foreach ($layout_ob as $field_ob) {
-      //print_r($field_ob);
-
-      $fc_name = $field_ob['name'];
-      $fc_type[$field_ob['name']] = $field_ob['sub_fields'];
-
-    }
-  }
-
-  foreach ($fc_type as $fc_fields) {
-    //print_r($fc_fields);
-
-    foreach ($fc_fields as $fc_field) {
-      //echo $fc_field['name'] . '<br>';
-      $ob_type = $fc_field['name'];
-    }
-  }*/
-
   return;
 }
 
@@ -231,6 +220,14 @@ function wf_twig_data($data){
   $data['customtax'] = TimberHelper::function_wrapper( 'customtax' );
   $data['get_term_name'] = TimberHelper::function_wrapper( 'get_term_name' );
   $data['avatar_author'] = TimberHelper::function_wrapper( 'avatar_author' );
+
+  // Widget
+  $widget_data_sidebar = get_option('widget_sidebar_Widget');
+  $widget_data_header = get_option('widget_header_Widget');
+  $widget_data_footer = get_option('widget_footer_Widget');
+  $data['sidebar_widget'] = $widget_data_sidebar;
+  $data['header_widget'] = $widget_data_header;
+  $data['footer_widget'] = $widget_data_footer;
 
   return $data;
 }

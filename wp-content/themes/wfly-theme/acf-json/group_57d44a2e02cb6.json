@@ -3,67 +3,7 @@
     "title": "Group Footer Block",
     "fields": [
         {
-            "key": "field_57d4685ee314a",
-            "label": "Group Footer Block",
-            "name": "group_footer_block",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "button_label": "Add Row",
-            "min": "",
-            "max": "",
             "layouts": [
-                {
-                    "key": "57d4686360159",
-                    "name": "footer_button_link",
-                    "label": "Footer Button Link",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_57d469f605c9f",
-                            "label": "Footer Button Link Text",
-                            "name": "footer_button_link_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_57d46897e314b",
-                            "label": "Footer Button Link URL",
-                            "name": "footer_button_link_url",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 {
                     "key": "57d4691ee314c",
                     "name": "footer_text",
@@ -71,6 +11,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "new_lines": "wpautop",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "rows": "",
                             "key": "field_57d4691ee314d",
                             "label": "Block Footer Text",
                             "name": "block_footer_text",
@@ -82,12 +27,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "wpautop"
+                            }
                         }
                     ],
                     "min": "",
@@ -100,21 +40,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_57d46977e314f",
-                            "label": "Block Footer Social",
-                            "name": "block_footer_social",
-                            "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "button_label": "Add Row",
-                            "min": "",
-                            "max": "",
                             "layouts": [
                                 {
                                     "key": "57d4698d01868",
@@ -123,6 +48,11 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
                                             "key": "field_57d4699ee3150",
                                             "label": "Social Name",
                                             "name": "social_name",
@@ -134,14 +64,11 @@
                                                 "width": "",
                                                 "class": "",
                                                 "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
+                                            }
                                         },
                                         {
+                                            "default_value": "",
+                                            "placeholder": "",
                                             "key": "field_57d469b4e3151",
                                             "label": "Social URL",
                                             "name": "social_url",
@@ -153,21 +80,49 @@
                                                 "width": "",
                                                 "class": "",
                                                 "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": ""
+                                            }
                                         }
                                     ],
                                     "min": "",
                                     "max": ""
                                 }
-                            ]
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Social",
+                            "key": "field_57d46977e314f",
+                            "label": "Block Footer Social",
+                            "name": "block_footer_social",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
                         }
                     ],
                     "min": "",
                     "max": ""
                 }
-            ]
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Add Footer Block",
+            "key": "field_57d4685ee314a",
+            "label": "Group Footer Block",
+            "name": "group_footer_block",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -186,5 +141,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": ""
+    "description": "",
+    "modified": 1484595533
 }

@@ -1,3 +1,7 @@
-{% if component_class %}<div class="{{ component_class }}">{% endif %}
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
+{% if your_shortcode_text %}
+  <div class="shortcode-text">{{ your_shortcode_text }}</div>
+{% endif %}
 {{shortcode(your_shortcode)}}
-{% if component_class %}</div>{% endif %}
+{% include 'box-scroll-down.twig' %}
+</div>

@@ -1,0 +1,9 @@
+<div class="box-social">
+  <div class="box-social__list">
+    {% for item in block_footer_social %}
+      <div class="box-social__item">
+        <a href="{{item.social_url}}"><span class="icon-{{item.social_name|lower}}"></span>{{item.social_name}}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
