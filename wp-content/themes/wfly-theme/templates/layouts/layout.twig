@@ -22,6 +22,9 @@
       {% endblock %}
 
       <main role="main" class="page-content-wrappre clearfix">
+        {% block page_title %}
+        {% endblock %}
+
         <div class="{{ page_layout }}">
           <div class="main-content {% if block('sidebar') %}has-sidebar{% endif %}">
             {% block content %}

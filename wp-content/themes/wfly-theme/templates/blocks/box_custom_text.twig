@@ -1,4 +1,10 @@
 <div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
-  <div class="custom-text">{{ custom_text_area }}</div>
+  <div class="custom-text">
+  {% if swich_text_fields %}
+  {{ custom_text_editer }}
+  {% else %}
+  {{ custom_text_area }}
+  {% endif %}
+  </div>
   {% include 'box-scroll-down.twig' %}
 </div>
