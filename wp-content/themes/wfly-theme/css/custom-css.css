@@ -611,111 +611,178 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 /* line 88, ../scss/_myaccount.scss */
-.box-menu-myaccount {
-  display: flex;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  display: -webkit-flex;
-  display: -webkit-flex;
-  /* Safari */
-  -webkit-flex-wrap: wrap;
-  /* Safari 6.1+ */
-  display: flex;
-  flex-wrap: wrap;
-}
-/* line 103, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li {
-  list-style: none;
-  font-size: 15px;
-  margin-right: 15px;
-  text-transform: uppercase;
-  position: relative;
-}
-/* line 110, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li a {
-  color: #beaa7c;
-  border-bottom: 1px solid #ff4040;
-  display: block;
-}
-/* line 115, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li a:before {
-  content: "";
-  width: 100%;
-  position: absolute;
-  height: 20px;
-  bottom: -20px;
-}
-/* line 124, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li ul {
-  padding: 10px 0;
-  margin: 0;
-  position: absolute;
-  width: 120px;
-  background: #ff4040;
-  top: 30px;
-  text-align: center;
-  right: -20px;
-  display: none;
-}
-/* line 134, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li ul li {
-  margin: 0;
-  padding: 0;
-}
-/* line 138, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li ul li a {
-  color: #ffffff;
-  border: none;
-  padding: 5px 0;
-  display: block;
-}
-/* line 144, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li ul li a:hover {
-  color: #404352;
-}
-/* line 152, ../scss/_myaccount.scss */
-.box-menu-myaccount .menu-myaccount li:hover ul {
-  display: block;
-}
-
-/* line 161, ../scss/_myaccount.scss */
 .date-times {
   position: absolute;
   width: 65px;
   background: #beaa7c;
 }
-/* line 165, ../scss/_myaccount.scss */
+/* line 92, ../scss/_myaccount.scss */
 .date-times .time {
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
 }
 
-/* line 170, ../scss/_myaccount.scss */
+/* line 97, ../scss/_myaccount.scss */
 .picture-user {
   background-image: url("../images/myaccount.png");
   width: 53px;
   height: 54px;
 }
 
-/* line 177, ../scss/_myaccount.scss */
-.block-user.logain1 a {
-  background: #beaa7c none repeat scroll 0 0;
-  border-radius: 14px;
-  color: #ffffff;
-  display: block;
-  font-size: 14px;
-  line-height: 1;
-  padding: 6px 14px 5px;
+/* line 104, ../scss/_myaccount.scss */
+.group-header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 111, ../scss/_myaccount.scss */
+.group-header-menu .main-nav ul li a {
+  color: #404352;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 0;
+  margin: 0 15px;
   text-transform: uppercase;
-  vertical-align: middle;
-  margin-left: 20px;
-  text-shadow: none;
+  font-weight: normal;
+  border-bottom: 1px solid transparent;
+}
+/* line 123, ../scss/_myaccount.scss */
+.group-header-menu .main-nav ul li a:hover {
+  color: #beaa7c;
+  border-bottom: 1px solid  #ff4040;
+}
+/* line 130, ../scss/_myaccount.scss */
+.group-header-menu .main-nav ul li.current-menu-item a {
+  border-bottom: 1px solid  #ff4040;
+  color: #beaa7c;
+}
+/* line 139, ../scss/_myaccount.scss */
+.group-header-menu .box-menu-myaccount a {
+  color: #404352;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 1px 0;
+  margin: 0 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid  transparent;
+}
+/* line 150, ../scss/_myaccount.scss */
+.group-header-menu .box-menu-myaccount a:hover {
+  color: #beaa7c;
+  border-bottom: 1px solid  #ff4040;
+}
+
+/* line 159, ../scss/_myaccount.scss */
+.box-component.box-book-now {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+/* line 166, ../scss/_myaccount.scss */
+.box-component.box-book-now .shortcode-text {
+  margin-bottom: 20px;
+}
+/* line 170, ../scss/_myaccount.scss */
+.box-component.box-book-now .text_big {
+  font-size: 61px;
+}
+/* line 173, ../scss/_myaccount.scss */
+.box-component.box-book-now .text_big span {
+  color: #ff4040 !important;
+}
+/* line 178, ../scss/_myaccount.scss */
+.box-component.box-book-now .text_mall {
+  font-size: 15px;
+}
+/* line 182, ../scss/_myaccount.scss */
+.box-component.box-book-now .scroll-box-book-now {
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+/* line 185, ../scss/_myaccount.scss */
+.box-component.box-book-now .scroll-box-book-now .scroll-text.text {
+  color: #beaa7c;
 }
 
 /* line 191, ../scss/_myaccount.scss */
-nav#main-navigation {
-  margin-right: 70px;
+.box-from-contact__button {
+  position: absolute;
+  bottom: 160px;
+}
+
+/* line 198, ../scss/_myaccount.scss */
+.box-service {
+  text-align: center;
+  padding-top: 0;
+  margin-top: 143px;
+}
+/* line 203, ../scss/_myaccount.scss */
+.box-service .box-service_list {
+  padding: 0;
+  margin: 0;
+  margin-top: -143px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+/* line 210, ../scss/_myaccount.scss */
+.box-service .box-service_list .box-service__item {
+  width: 33.333%;
+  padding-top: 0;
+}
+/* line 214, ../scss/_myaccount.scss */
+.box-service .box-service_list .box-service__item .box-service__item__image {
+  margin-bottom: 0;
+  line-height: 0;
+}
+/* line 219, ../scss/_myaccount.scss */
+.box-service .box-service_list .box-service__item img {
+  width: 100%;
+}
+/* line 223, ../scss/_myaccount.scss */
+.box-service .box-service_list .box-service__item:before {
+  display: none;
+}
+/* line 229, ../scss/_myaccount.scss */
+.box-service .group-box-service {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+/* line 238, ../scss/_myaccount.scss */
+.box-service .group-box-service .box-service__item__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* line 245, ../scss/_myaccount.scss */
+.box-component.box-service-wrapper {
+  background: #404352;
+  padding-bottom: 50px;
+}
+
+/* line 249, ../scss/_myaccount.scss */
+.scroll-text.text {
+  color: #beaa7c;
+}
+
+/* line 255, ../scss/_myaccount.scss */
+.box-product-sale__list {
+  border-bottom: 10px solid #ff6666;
+}
+
+/* line 258, ../scss/_myaccount.scss */
+.feature-text-height {
+  line-height: 60px;
 }
 
 /* line 69, ../scss/customs.scss */
@@ -735,13 +802,11 @@ nav#main-navigation {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
   margin: 0 auto;
   width: 100%;
-  top: 730px;
   background: transparent;
 }
-/* line 91, ../scss/customs.scss */
+/* line 89, ../scss/customs.scss */
 .form-schedule-feature .form-item {
   padding: 19px 20px;
   font-size: 14px;
@@ -749,6 +814,8 @@ nav#main-navigation {
   position: relative;
   width: 220px;
   overflow: hidden;
+  text-align: left;
+  color: #fff;
 }
 /* line 99, ../scss/customs.scss */
 .form-schedule-feature .form-item:after {
@@ -872,16 +939,12 @@ nav#main-navigation {
   background: #404352;
   padding: 12px 20px;
   width: auto;
-  position: absolute;
-  left: 50%;
-  bottom: -100px;
-  transform: translateX(-50%);
 }
-/* line 214, ../scss/customs.scss */
+/* line 210, ../scss/customs.scss */
 .form-schedule-feature .box-from-contact__button input.button:hover {
   background-color: #d2215d;
 }
-/* line 219, ../scss/customs.scss */
+/* line 215, ../scss/customs.scss */
 .form-schedule-feature .message {
   position: absolute;
   background: white;
@@ -896,12 +959,12 @@ nav#main-navigation {
   margin-right: 1px;
 }
 
-/* line 235, ../scss/customs.scss */
+/* line 231, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 239, ../scss/customs.scss */
+/* line 235, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -910,24 +973,24 @@ nav#main-navigation {
   max-height: 200px;
   overflow: hidden;
   text-align: center;
+}
+
+/* line 245, ../scss/customs.scss */
+.page-appointment-scheduling-confirm .group-image .cat-img img {
+  visibility: hidden;
 }
 
 /* line 249, ../scss/customs.scss */
-.page-appointment-scheduling-confirm .group-image .cat-img img {
-  visibility: hidden;
-}
-
-/* line 253, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 257, ../scss/customs.scss */
+/* line 253, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 260, ../scss/customs.scss */
+/* line 256, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -938,18 +1001,67 @@ img {
   text-align: center;
 }
 
-/* line 269, ../scss/customs.scss */
+/* line 265, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img img {
   visibility: hidden;
 }
 
-/* line 272, ../scss/customs.scss */
+/* line 268, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 275, ../scss/customs.scss */
+/* line 271, ../scss/customs.scss */
 .box-feature__iamge img {
   z-index: -1;
   position: relative;
+}
+
+/* line 278, ../scss/customs.scss */
+.header-top {
+  background: #df3860;
+  color: white;
+}
+
+/* line 284, ../scss/customs.scss */
+#site-message a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* line 290, ../scss/customs.scss */
+#site-message {
+  position: relative;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+
+/* line 296, ../scss/customs.scss */
+.icon-close {
+  background-image: url("../images/close-icon.png");
+  background-repeat: no-repeat;
+  color: transparent;
+  float: right;
+  font-size: 0;
+  height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 20px;
+}
+
+/* line 310, ../scss/customs.scss */
+#site-message p {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 317, ../scss/customs.scss */
+.home .page-content-wrappre {
+  background-color: transparent;
+  color: #333;
 }

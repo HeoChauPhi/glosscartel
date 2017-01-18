@@ -1,13 +1,15 @@
 {% block header %}
-  {% if footer_widget %}
-  <div class="header-top">
-    {% for key, header in header_widget %}
-      {{acfwidget('group_header_block', 'header_widget-' ~ key )}}
-    {% endfor %}
-  </div>
-  {% endif %}
-
   <header id="header" class="header header-wrapper">
+
+    {% if footer_widget %}
+    <div class="header-top">
+      <div class="container">
+      {% for key, header in header_widget %}
+        {{acfwidget('group_header_block', 'header_widget-' ~ key )}}
+      {% endfor %}
+      </div>
+    </div>
+    {% endif %}
     <div class="container">
       <div class="header-content">
         <div class="branding">
@@ -24,12 +26,12 @@
             <a href="{{ site.url }}" rel="home">{{ site.name }}</a>
           </p>
         </div>
-
-        {% block navigation %}
-        {% include 'navigation.twig' %}
-        {% endblock %}
-
-        {{shortcode('[asc_block_user]')}}
+        <div class="group-header-menu">
+          {% block navigation %}
+          {% include 'navigation.twig' %}
+          {% endblock %}
+          {{shortcode('[asc_block_user]')}}
+        </div>
       </div>
     </div>
   </header>
