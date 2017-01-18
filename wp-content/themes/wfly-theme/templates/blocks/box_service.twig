@@ -1,4 +1,4 @@
-<div class="box-component {% if component_class %}{{ component_class }}{% endif %}">
+<div class="box-component {% if component_class %}{{ component_class }}{% endif %} box-service-wrapper">
 <div class="box-service">
     {% if service_title %}
       <h2 class="box-service__title">{{ service_title }}</h2>
@@ -9,8 +9,10 @@
         <div class="box-service__item__image">
           <img src="{{ item.service_item_image }}">
         </div>
-        <h3 class="box-service__item__title">{{ item.service_item_title }}</h3>
-        <div class="box-service__item__desc">{{ item.service_item_description }}</div>
+        <div class="group-box-service">
+          <h3 class="box-service__item__title">{{ item.service_item_title }}</h3>
+          <div class="box-service__item__desc">{{ item.service_item_description }}</div>
+        </div>
       </li>
       {% endfor %}
     </ul>
