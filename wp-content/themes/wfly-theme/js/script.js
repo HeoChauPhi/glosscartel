@@ -31,6 +31,11 @@
     });
   }
 
+  function shadowFeature() {
+    var height_text = $('.box-book-now .text_big').outerHeight(true);
+    $('.box-feature').parent().next('.box-book-now').css({'margin-top': - height_text + 'px'});
+  }
+
   function verticalSlick() {
     $('.slickvertical > .block-content').slick({
       vertical: true,
@@ -113,6 +118,7 @@
     headerFixed();
     navigation();
     featureSlider();
+    shadowFeature();
     verticalSlick();
     // popuplogin();
     // colorbox();
