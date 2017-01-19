@@ -522,11 +522,13 @@ button.slick-prev.slick-arrow {
   position: relative; }
   .box-feature__iamge {
     line-height: 0;
-    background-position: center;
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    height: 100vh;
+    width: 100%;
     z-index: 0; }
     .box-feature__iamge:before {
       background-image: url("../images/bg-shadow.png");
