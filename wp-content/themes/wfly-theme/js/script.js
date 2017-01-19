@@ -108,7 +108,7 @@
           scrollTop: next_box.offset().top - adminbar_height
         }, 1000);
         return false;
-       }
+      }
     });
   }
 
@@ -136,9 +136,45 @@
     }
   }
 
-  function accordionElement($classname) {
-    $($classname).accordion({
-      heightStyle: "content"
+  function accordionElement() {
+    $('.box-faq-list').each(function(){
+      var parent_element = $(this);
+      var accordion_header = $(this).find('.box-faq-question');
+      var accordion_content = $(this).find('.box-faq-answer');
+      accordion_content.each(function() {
+        var accordion_content_height = $(this).height();
+        //console.log(accordion_content_height);
+        $(this).css({'margin-top': - (accordion_content_height + 32)})
+      });
+
+      accordion_header.click(function(){
+        var header_data = $(this).attr('data-question');
+        var content_get = $(this).parent().find('.box-faq-answer[data-answer-for*="'+header_data+'"]');
+
+        $(this).parent().find('.box-faq-answer').removeClass('content-show');
+        content_get.toggleClass('content-show');
+      });
+    });
+
+    $('.sidebar-faq-list').each(function(){
+      var adminbar_height = $('#wpadminbar').outerHeight(true);
+      var data_accordion = $(this).attr('data-accordion');
+      var accordion_header = $(this).find('.sidebar-faq-question');
+
+      accordion_header.click(function(){
+        var header_data = $(this).attr('data-question');
+        var content_get = $('.' + data_accordion).find('.box-faq-answer[data-answer-for*="'+header_data+'"]');
+
+        $('.' + data_accordion).find('.box-faq-answer').removeClass('content-show');
+        content_get.toggleClass('content-show');
+
+        var header_get = $('.' + data_accordion).find('.box-faq-question[data-question*="'+header_data+'"]');
+        if (header_get.length) {
+          $('html, body').animate({
+            scrollTop: header_get.offset().top - adminbar_height
+          }, 1000);
+        }
+      });
     });
   }
 
@@ -157,7 +193,7 @@
     matchHeight();
     scrolldown();
     backToTop();
-    //accordionElement('.box-faq-list');
+    accordionElement();
 
 
     var hunghtfeature = $('.box-feature').height();

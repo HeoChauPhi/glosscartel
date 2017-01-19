@@ -2,9 +2,9 @@
   <div class="box-sidebar-faq">
     <h3 class="sidebar-faq-title">{{ box_faq_title }}</h3>
     {% if box_faq_list %}
-      <div class="sidebar-faq-list">
+      <div class="sidebar-faq-list" data-accordion="box-faq-list">
       {% for item in box_faq_list %}
-        <div class="sidebar-faq-question">{{ item.faq_question }}</div>
+        <div class="sidebar-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
       {% endfor %}
       </div>
     {% endif %}
@@ -20,8 +20,10 @@
   {% if box_faq_list %}
     <div class="box-faq-list">
     {% for item in box_faq_list %}
-      <div class="box-faq-question">{{ item.faq_question }}</div>
-      <div class="box-faq-answer">{{ item.faq_answer }}</div>
+      <div class="box-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
+      <div class="box-faq-inner">
+        <div class="box-faq-answer {% if loop.index == 1 %}content-show{% endif %}" data-answer-for="question-{{ loop.index }}">{{ item.faq_answer }}</div>
+      </div>
     {% endfor %}
     </div>
   {% endif %}
