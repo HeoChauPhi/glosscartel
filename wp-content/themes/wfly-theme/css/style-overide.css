@@ -51,3 +51,9 @@
 #back-to-top.show {
   opacity: 0.8;
 }
+
+// FAQ Page
+.box-faq-answer {
+  display: none;
+  background-color: blue !important;
+}

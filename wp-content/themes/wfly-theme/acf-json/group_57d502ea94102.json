@@ -565,8 +565,8 @@
                 },
                 {
                     "key": "57d6817969c01",
-                    "name": "shortcode",
-                    "label": "Shortcode",
+                    "name": "box_faq",
+                    "label": "Box FAQ",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -575,9 +575,9 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "key": "field_57d6818c69c02",
-                            "label": "Your Shortcode",
-                            "name": "your_shortcode",
+                            "key": "field_58807bc7decab",
+                            "label": "Box FAQ title",
+                            "name": "box_faq_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -589,15 +589,82 @@
                             }
                         },
                         {
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "default_value": "",
-                            "delay": 0,
-                            "key": "field_587caa07d02f9",
-                            "label": "Your Shortcode Text",
-                            "name": "your_shortcode_text",
-                            "type": "wysiwyg",
+                            "layouts": [
+                                {
+                                    "key": "5880799cb22f6",
+                                    "name": "faq_list",
+                                    "label": "FAQ List",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "default_value": "",
+                                            "delay": 0,
+                                            "key": "field_588079c68e015",
+                                            "label": "FAQ Question",
+                                            "name": "faq_question",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "default_value": "",
+                                            "delay": 0,
+                                            "key": "field_588079e88e016",
+                                            "label": "FAQ Answer",
+                                            "name": "faq_answer",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add FAQs",
+                            "key": "field_588079728e014",
+                            "label": "Box FAQ List",
+                            "name": "box_faq_list",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": 1,
+                            "message": "Disable\/Enable Sidebar FAQs",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_58807a198e017",
+                            "label": "FAQ Sidebar",
+                            "name": "faq_sidebar",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -675,6 +742,119 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "588079548e00e",
+                    "name": "shortcode",
+                    "label": "Shortcode",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_588079548e00f",
+                            "label": "Your Shortcode",
+                            "name": "your_shortcode",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
+                            "key": "field_588079548e010",
+                            "label": "Your Shortcode Text",
+                            "name": "your_shortcode_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_588079548e011",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_588079548e012",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_588079548e011",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_588079548e013",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ],
             "min": "",
@@ -711,5 +891,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484734801
+    "modified": 1484815321
 }

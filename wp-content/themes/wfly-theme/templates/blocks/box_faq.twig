@@ -1,0 +1,28 @@
+{% if faq_sidebar %}
+  <div class="box-sidebar-faq">
+    <h3 class="sidebar-faq-title">{{ box_faq_title }}</h3>
+    {% if box_faq_list %}
+      <div class="sidebar-faq-list">
+      {% for item in box_faq_list %}
+        <div class="sidebar-faq-question">{{ item.faq_question }}</div>
+      {% endfor %}
+      </div>
+    {% endif %}
+    <div class="sidebar-faq-extend">
+      <div class="faq-extend-message">STILL CAN’T FIND ANANSWER TO YOUR QUESTION?</div>
+      <div class="faq-message-link"><a href="//glosscartel.com/contact/">Contact Us</a></div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="box-faq">
+  <h3 class="box-faq-title">{{ box_faq_title }}</h3>
+  {% if box_faq_list %}
+    <div class="box-faq-list">
+    {% for item in box_faq_list %}
+      <div class="box-faq-question">{{ item.faq_question }}</div>
+      <div class="box-faq-answer">{{ item.faq_answer }}</div>
+    {% endfor %}
+    </div>
+  {% endif %}
+</div>

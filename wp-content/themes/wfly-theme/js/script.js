@@ -136,6 +136,12 @@
     }
   }
 
+  function accordionElement($classname) {
+    $($classname).accordion({
+      heightStyle: "content"
+    });
+  }
+
   $(document).ready(function() {
     // Call to function
     siteMessage();
@@ -151,6 +157,7 @@
     matchHeight();
     scrolldown();
     backToTop();
+    //accordionElement('.box-faq-list');
 
 
     var hunghtfeature = $('.box-feature').height();
