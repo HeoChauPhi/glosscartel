@@ -813,7 +813,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .form-schedule-feature .box-from-contact__button input.button, .button {
   background-image: url(../images/iconbookingnow.png);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 8px center;
 }
 
 /* line 69, ../scss/customs.scss */
