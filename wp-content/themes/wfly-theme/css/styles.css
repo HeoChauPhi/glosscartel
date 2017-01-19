@@ -91,14 +91,6 @@ body {
   font-family: 'BrandonGrotesqueRegular';
   padding: 0;
   margin: 0; }
-  body.home:after {
-    content: "";
-    background-image: url("../images/image-demo/Fade-White.png");
-    position: absolute;
-    z-index: 1;
-    height: 124px;
-    width: 100%;
-    top: 0; }
 
 * {
   box-sizing: border-box; }
@@ -412,7 +404,6 @@ button.slick-prev.slick-arrow {
   left: 20px; }
 
 .header-content {
-  padding-top: 30px;
   padding-bottom: 30px; }
 
 .home .header-content {
@@ -437,12 +428,6 @@ button.slick-prev.slick-arrow {
 
 .bien {
   background-color: red; }
-
-.home .header-wrapper {
-  position: absolute;
-  top: 27px;
-  width: 100%;
-  z-index: 2; }
 
 .header-content {
   display: -ms-flexbox;
@@ -540,7 +525,22 @@ button.slick-prev.slick-arrow {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    position: relative;
     z-index: 0; }
+    .box-feature__iamge:before {
+      background-image: url("../images/bg-shadow.png");
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      bottom: 0;
+      content: "";
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: auto;
+      width: 100%; }
     .box-feature__iamge img {
       width: 100%;
       opacity: 0; }
@@ -829,8 +829,7 @@ button#cboxClose {
 .box-service {
   text-align: center;
   padding-top: 15px;
-  padding-bottom: 50px;
-  background: #404352; }
+  padding-bottom: 50px; }
   .box-service_list {
     display: inline-block;
     width: 100%;
@@ -1623,15 +1622,6 @@ button#cboxClose {
     cursor: pointer;
     left: 30px;
     top: 20px; }
-  .home .header-wrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: inline-block;
-    z-index: 2;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    background: rgba(255, 255, 255, 0.85); }
   .box-feature__iamge img {
     height: 651px; }
   .box-feature__heightline {

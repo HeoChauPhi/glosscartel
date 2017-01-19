@@ -19,7 +19,7 @@
  */
 
 switch ($_SERVER['HTTP_HOST']) {
-  case 'http://glosscartel.com/':
+  case 'glosscartel.com':
     $config_file = 'wp-config/wp-config.glosscartel.php';
     //define('WP_CACHE', true); //Added by WP-Cache Manager
     break;

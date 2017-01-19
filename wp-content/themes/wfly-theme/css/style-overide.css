@@ -1,0 +1,12 @@
+.branding,
+.group-header-menu {
+  margin-top: 30px;
+}
+
+.home .header-main {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
