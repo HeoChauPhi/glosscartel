@@ -534,6 +534,7 @@ button.slick-prev.slick-arrow {
       background-image: url("../images/bg-shadow.png");
       background-position: bottom left;
       background-repeat: no-repeat;
+      background-size: 100%;
       bottom: 0;
       content: "";
       content: "";
@@ -634,7 +635,7 @@ button.slick-prev.slick-arrow {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 54px;
+  min-height: 54px;
   display: flex;
   flex-wrap: wrap;
   display: -webkit-flex;
