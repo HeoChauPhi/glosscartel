@@ -330,29 +330,31 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .page-appointment-scheduling-client-choose .group-content .box-from-contact__button,
 .page-appointment-scheduling-success .group-content .box-from-contact__button {
   text-align: center;
+  width: 100%;
+  margin-top: 20px;
 }
-/* line 272, ../scss/_login-form.scss */
+/* line 275, ../scss/_login-form.scss */
 .page-appointment-scheduling-client-choose .group-content .box-from-contact__button .button,
 .page-appointment-scheduling-success .group-content .box-from-contact__button .button {
   background: #30323e;
   width: auto;
   padding: 10px 15px;
 }
-/* line 277, ../scss/_login-form.scss */
+/* line 280, ../scss/_login-form.scss */
 .page-appointment-scheduling-client-choose .group-content .box-from-contact__button .button:hover,
 .page-appointment-scheduling-success .group-content .box-from-contact__button .button:hover {
   background-color: #ff0d0d;
 }
 
-/* line 286, ../scss/_login-form.scss */
+/* line 289, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .box-form-login {
   padding-top: 0;
 }
-/* line 290, ../scss/_login-form.scss */
+/* line 293, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .confirm-client-book {
   margin-top: 25px;
 }
-/* line 294, ../scss/_login-form.scss */
+/* line 297, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .box-form-login__title.form-title {
   margin-bottom: 0;
   text-align: center;
@@ -360,7 +362,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: 15px;
   font-size: 24px;
 }
-/* line 302, ../scss/_login-form.scss */
+/* line 305, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm a.back-link {
   position: absolute;
   top: 13px;
@@ -370,11 +372,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   height: 38px;
   left: 20px;
 }
-/* line 311, ../scss/_login-form.scss */
+/* line 314, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm a.back-link:hover {
   opacity: .7;
 }
-/* line 316, ../scss/_login-form.scss */
+/* line 319, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-image {
   width: 40%;
   float: left;
@@ -382,7 +384,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background: wheat;
   position: relative;
 }
-/* line 324, ../scss/_login-form.scss */
+/* line 327, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .duration {
   color: #fff;
   font-size: 20px;
@@ -397,38 +399,38 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   bottom: 5px;
   left: 10px;
 }
-/* line 339, ../scss/_login-form.scss */
+/* line 342, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-confirm-info {
   min-height: 140px;
   overflow: hidden;
 }
-/* line 343, ../scss/_login-form.scss */
+/* line 346, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-confirm-info .confirm-title {
   background: #ff6666;
   padding: 10px;
 }
-/* line 347, ../scss/_login-form.scss */
+/* line 350, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-confirm-info .confirm-date {
   background: #ed4f63;
   padding: 10px;
 }
-/* line 351, ../scss/_login-form.scss */
+/* line 354, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-confirm-info .confirm-time {
   background: #de3860;
   padding: 10px;
 }
-/* line 355, ../scss/_login-form.scss */
+/* line 358, ../scss/_login-form.scss */
 .page-appointment-scheduling-confirm .group-confirm-info .confirm-price {
   background: #ffffff;
   padding: 10px;
 }
 
-/* line 365, ../scss/_login-form.scss */
+/* line 368, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-wraper {
   padding: 0 30px 20px;
   font-size: 20px;
 }
-/* line 370, ../scss/_login-form.scss */
+/* line 373, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-top {
   border-top: 1px solid #5f626e;
   margin-top: 10px;
@@ -436,52 +438,52 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: 10px 0;
   text-align: center;
 }
-/* line 378, ../scss/_login-form.scss */
+/* line 381, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #5f626e;
 }
-/* line 383, ../scss/_login-form.scss */
+/* line 386, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul h3 {
   color: #ff4040;
 }
-/* line 387, ../scss/_login-form.scss */
+/* line 390, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul .content-top__item1 {
   padding: 10px 0 10px 35px;
   background-image: url(../images/item-1.png);
   background-repeat: no-repeat;
   background-position: 0 15px;
 }
-/* line 394, ../scss/_login-form.scss */
+/* line 397, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul .content-top__item2 {
   padding: 10px 0 10px 35px;
   background-image: url(../images/item-2.png);
   background-repeat: no-repeat;
   background-position: 0 15px;
 }
-/* line 401, ../scss/_login-form.scss */
+/* line 404, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul .content-top__item3 {
   text-align: center;
   padding: 15px 0;
 }
-/* line 405, ../scss/_login-form.scss */
+/* line 408, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-mediul .content-top__item3 a {
   color: #ff4040;
   font-weight: bold;
 }
-/* line 413, ../scss/_login-form.scss */
+/* line 416, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-bottom .content-bottom__text {
   margin-bottom: 15px;
 }
-/* line 417, ../scss/_login-form.scss */
+/* line 420, ../scss/_login-form.scss */
 .page-appointment-scheduling-success .content-bottom .content-bottom__icon .box-social__list {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-/* line 426, ../scss/_login-form.scss */
+/* line 429, ../scss/_login-form.scss */
 .page-appointment-scheduling-forgot-password .message {
   color: #FF5722;
   font-size: 30px;
@@ -672,7 +674,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 /* line 183, ../scss/_myaccount.scss */
 .box-component.box-book-now .scroll-box-book-now {
-  margin-top: 130px;
+  margin-top: 20px;
   margin-bottom: 80px;
 }
 /* line 186, ../scss/_myaccount.scss */
@@ -682,8 +684,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 192, ../scss/_myaccount.scss */
 .box-from-contact__button {
-  position: absolute;
-  bottom: 160px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 /* line 199, ../scss/_myaccount.scss */
@@ -736,8 +738,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .box-component.box-service-wrapper {
   position: relative;
   padding-bottom: 50px;
+  overflow: hidden;
 }
-/* line 248, ../scss/_myaccount.scss */
+/* line 249, ../scss/_myaccount.scss */
 .box-component.box-service-wrapper:before {
   content: "";
   position: absolute;
@@ -750,19 +753,67 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: -1;
 }
 
-/* line 260, ../scss/_myaccount.scss */
+/* line 261, ../scss/_myaccount.scss */
 .scroll-text.text {
   color: #beaa7c;
 }
 
-/* line 266, ../scss/_myaccount.scss */
-.box-product-sale__list {
+/* line 269, ../scss/_myaccount.scss */
+.box-product-sale__list .box-product-sale_item:nth-child(1) {
   border-bottom: 10px solid #ff6666;
 }
+/* line 273, ../scss/_myaccount.scss */
+.box-product-sale__list .box-product-sale_item:nth-child(2) {
+  border-bottom: 10px solid #ee4f63;
+}
+/* line 276, ../scss/_myaccount.scss */
+.box-product-sale__list .box-product-sale_item:nth-child(3) {
+  border-bottom: 10px solid #df3860;
+}
+/* line 280, ../scss/_myaccount.scss */
+.box-product-sale__list .box-product-sale_item:nth-child(4) {
+  border-bottom: 10px solid #d2215d;
+}
+/* line 284, ../scss/_myaccount.scss */
+.box-product-sale__list .box-product-sale__title {
+  font-weight: 700;
+}
+/* line 289, ../scss/_myaccount.scss */
+.box-product-sale__list .number sup {
+  font-size: 35px;
+}
+/* line 293, ../scss/_myaccount.scss */
+.box-product-sale__list .no-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
 
-/* line 269, ../scss/_myaccount.scss */
+/* line 300, ../scss/_myaccount.scss */
 .feature-text-height {
   line-height: 60px;
+}
+
+/* line 307, ../scss/_myaccount.scss */
+.box-cta-book__content p {
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 2;
+  word-spacing: 5px;
+}
+
+/* line 316, ../scss/_myaccount.scss */
+.scroll-icon {
+  margin-top: 30px;
+}
+
+/* line 322, ../scss/_myaccount.scss */
+.form-schedule-feature .box-from-contact__button input.button, .button {
+  background-image: url(../images/iconbookingnow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 /* line 69, ../scss/customs.scss */
@@ -785,8 +836,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0 auto;
   width: 100%;
   background: transparent;
+  flex-wrap: wrap;
 }
-/* line 89, ../scss/customs.scss */
+/* line 90, ../scss/customs.scss */
 .form-schedule-feature .form-item {
   padding: 19px 20px;
   font-size: 14px;
@@ -797,7 +849,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-align: left;
   color: #fff;
 }
-/* line 99, ../scss/customs.scss */
+/* line 100, ../scss/customs.scss */
 .form-schedule-feature .form-item:after {
   background-image: url("../images/dost1.png");
   content: "";
@@ -809,57 +861,57 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   transform: translatey(-50%);
   background-repeat: no-repeat;
 }
-/* line 112, ../scss/customs.scss */
+/* line 113, ../scss/customs.scss */
 .form-schedule-feature .form-item:first-child {
   border-radius: 30px 0 0 30px;
   padding-left: 30px;
   background-color: #ff6666;
 }
-/* line 117, ../scss/customs.scss */
+/* line 118, ../scss/customs.scss */
 .form-schedule-feature .form-item:first-child input {
   background-color: #ff6666;
   color: #fff;
 }
-/* line 123, ../scss/customs.scss */
+/* line 124, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2) {
   background-color: #ee4f63;
 }
-/* line 126, ../scss/customs.scss */
+/* line 127, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2):after {
   background-image: url("../images/arrow1.png");
   width: 20px;
 }
-/* line 131, ../scss/customs.scss */
+/* line 132, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2) input {
   background-color: #ee4f63;
   color: #fff;
 }
-/* line 137, ../scss/customs.scss */
+/* line 138, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(3) {
   background-color: #df3860;
 }
-/* line 140, ../scss/customs.scss */
+/* line 141, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(3) input {
   background-color: #df3860;
   color: #fff;
 }
-/* line 146, ../scss/customs.scss */
+/* line 147, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4) {
   border-radius: 0px 30px 30px 0;
   padding-right: 30px;
   background-color: #d2215d;
 }
-/* line 150, ../scss/customs.scss */
+/* line 151, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4):after {
   background-image: url("../images/arrow1.png");
   width: 20px;
 }
-/* line 154, ../scss/customs.scss */
+/* line 155, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4) input {
   background-color: #d2215d;
   color: #fff;
 }
-/* line 160, ../scss/customs.scss */
+/* line 161, ../scss/customs.scss */
 .form-schedule-feature .form-item input {
   margin: 0;
   padding: 0;
@@ -870,35 +922,35 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   outline: 0;
 }
-/* line 169, ../scss/customs.scss */
+/* line 170, ../scss/customs.scss */
 .form-schedule-feature .form-item input:focus, .form-schedule-feature .form-item input:visited {
   border: 0;
 }
-/* line 174, ../scss/customs.scss */
+/* line 175, ../scss/customs.scss */
 .form-schedule-feature .form-item input:active, .form-schedule-feature .form-item input:hover {
   border: 0;
 }
-/* line 178, ../scss/customs.scss */
+/* line 179, ../scss/customs.scss */
 .form-schedule-feature .form-item input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #fff;
 }
-/* line 181, ../scss/customs.scss */
+/* line 182, ../scss/customs.scss */
 .form-schedule-feature .form-item input::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
 }
-/* line 184, ../scss/customs.scss */
+/* line 185, ../scss/customs.scss */
 .form-schedule-feature .form-item input:-ms-input-placeholder {
   /* IE 10+ */
   color: #fff;
 }
-/* line 187, ../scss/customs.scss */
+/* line 188, ../scss/customs.scss */
 .form-schedule-feature .form-item input:-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
 }
-/* line 192, ../scss/customs.scss */
+/* line 193, ../scss/customs.scss */
 .form-schedule-feature .form-item select {
   font-size: 14px;
   text-transform: uppercase;
@@ -908,23 +960,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 280px;
   outline: 0;
 }
-/* line 201, ../scss/customs.scss */
+/* line 202, ../scss/customs.scss */
 .form-schedule-feature .form-item select optgroup,
 .form-schedule-feature .form-item select option {
   background: #333;
   font-size: 15px;
 }
-/* line 209, ../scss/customs.scss */
+/* line 210, ../scss/customs.scss */
 .form-schedule-feature .box-from-contact__button input.button {
-  background: #404352;
+  background-color: #404352;
   padding: 12px 20px;
   width: auto;
 }
-/* line 214, ../scss/customs.scss */
+/* line 215, ../scss/customs.scss */
 .form-schedule-feature .box-from-contact__button input.button:hover {
   background-color: #d2215d;
 }
-/* line 219, ../scss/customs.scss */
+/* line 220, ../scss/customs.scss */
 .form-schedule-feature .message {
   position: absolute;
   background: white;
@@ -939,12 +991,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-right: 1px;
 }
 
-/* line 235, ../scss/customs.scss */
+/* line 236, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 239, ../scss/customs.scss */
+/* line 240, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -955,22 +1007,22 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-align: center;
 }
 
-/* line 249, ../scss/customs.scss */
+/* line 250, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img img {
   visibility: hidden;
 }
 
-/* line 253, ../scss/customs.scss */
+/* line 254, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 257, ../scss/customs.scss */
+/* line 258, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 260, ../scss/customs.scss */
+/* line 261, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -981,30 +1033,30 @@ img {
   text-align: center;
 }
 
-/* line 269, ../scss/customs.scss */
+/* line 270, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img img {
   visibility: hidden;
 }
 
-/* line 272, ../scss/customs.scss */
+/* line 273, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 276, ../scss/customs.scss */
+/* line 277, ../scss/customs.scss */
 .header-top {
   background: #df3860;
   color: white;
 }
 
-/* line 282, ../scss/customs.scss */
+/* line 283, ../scss/customs.scss */
 #site-message a {
   color: white;
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* line 288, ../scss/customs.scss */
+/* line 289, ../scss/customs.scss */
 .icon-close {
   background-image: url("../images/close-icon.png");
   background-repeat: no-repeat;
@@ -1020,7 +1072,7 @@ img {
   cursor: pointer;
 }
 
-/* line 303, ../scss/customs.scss */
+/* line 304, ../scss/customs.scss */
 #site-message p {
   font-size: 12px;
   margin: 0;
@@ -1028,8 +1080,14 @@ img {
   text-transform: uppercase;
 }
 
-/* line 310, ../scss/customs.scss */
+/* line 311, ../scss/customs.scss */
 .home .page-content-wrappre {
   background-color: transparent;
   color: #333;
+}
+
+/* line 316, ../scss/customs.scss */
+#site-message {
+  position: relative;
+  padding: 15px 0;
 }

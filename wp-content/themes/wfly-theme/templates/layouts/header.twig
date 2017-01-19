@@ -1,7 +1,6 @@
 {% block header %}
   <header id="header" class="header header-wrapper">
 
-    {% if footer_widget %}
     {% if header_widget %}
     <div class="header-top">
       <div class="container">
@@ -11,17 +10,6 @@
       </div>
     </div>
     {% endif %}
-    <div class="container">
-      <div class="header-content">
-        <div class="branding">
-          <div class="site-logo">
-            {% if function('has_custom_logo') %}
-              {{function('the_custom_logo')}}
-            {% else %}
-              <a href="{{ site.url }}">
-                <img alt="{{ site.name }}" class="site-logo__image" src="{{ site_logo }}">
-              </a>
-            {% endif %}
     <div class="header-main">
       <div class="container">
         <div class="header-content">
@@ -45,12 +33,6 @@
             {% endblock %}
             {{shortcode('[asc_block_user]')}}
           </div>
-        </div>
-        <div class="group-header-menu">
-          {% block navigation %}
-          {% include 'navigation.twig' %}
-          {% endblock %}
-          {{shortcode('[asc_block_user]')}}
         </div>
       </div>
     </div>

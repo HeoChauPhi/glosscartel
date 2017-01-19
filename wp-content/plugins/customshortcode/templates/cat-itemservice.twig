@@ -7,7 +7,7 @@
     <div class="box-product-sale__from">
       {% if item.service_product_about_sale %}
       <div class="text">from</div>
-      <div class="number">{{item.service_product_about_sale}}</div>
+      <div class="number"><sup>$</sup>{{item.service_product_about_sale}}</div>
       {% else %}
       <div class="no-price">Coming soon</div>
       {% endif %}
@@ -25,7 +25,7 @@
         <div class="box-product-sale__from">
           {% if child.service_product_about_sale %}
           <div class="text">from</div>
-          <div class="number">{{child.service_product_about_sale}}</div>
+          <div class="number"><sup>$</sup>{{child.service_product_about_sale}}</div>
           {% else %}
           <div class="no-price">Coming soon</div>
           {% endif %}
