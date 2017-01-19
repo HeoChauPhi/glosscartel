@@ -835,51 +835,51 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding-left: 30px;
   background-color: #ff6666;
 }
-/* line 116, ../scss/customs.scss */
+/* line 117, ../scss/customs.scss */
 .form-schedule-feature .form-item:first-child input {
   background-color: #ff6666;
   color: #fff;
 }
-/* line 122, ../scss/customs.scss */
+/* line 123, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2) {
   background-color: #ee4f63;
 }
-/* line 124, ../scss/customs.scss */
+/* line 126, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2):after {
   background-image: url("../images/arrow1.png");
   width: 20px;
 }
-/* line 128, ../scss/customs.scss */
+/* line 131, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(2) input {
   background-color: #ee4f63;
   color: #fff;
 }
-/* line 134, ../scss/customs.scss */
+/* line 137, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(3) {
   background-color: #df3860;
 }
-/* line 136, ../scss/customs.scss */
+/* line 140, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(3) input {
   background-color: #df3860;
   color: #fff;
 }
-/* line 142, ../scss/customs.scss */
+/* line 146, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4) {
   border-radius: 0px 30px 30px 0;
   padding-right: 30px;
   background-color: #d2215d;
 }
-/* line 146, ../scss/customs.scss */
+/* line 150, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4):after {
   background-image: url("../images/arrow1.png");
   width: 20px;
 }
-/* line 150, ../scss/customs.scss */
+/* line 154, ../scss/customs.scss */
 .form-schedule-feature .form-item:nth-child(4) input {
   background-color: #d2215d;
   color: #fff;
 }
-/* line 156, ../scss/customs.scss */
+/* line 160, ../scss/customs.scss */
 .form-schedule-feature .form-item input {
   margin: 0;
   padding: 0;
@@ -890,35 +890,35 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   outline: 0;
 }
-/* line 165, ../scss/customs.scss */
+/* line 169, ../scss/customs.scss */
 .form-schedule-feature .form-item input:focus, .form-schedule-feature .form-item input:visited {
   border: 0;
 }
-/* line 170, ../scss/customs.scss */
+/* line 174, ../scss/customs.scss */
 .form-schedule-feature .form-item input:active, .form-schedule-feature .form-item input:hover {
   border: 0;
 }
-/* line 174, ../scss/customs.scss */
+/* line 178, ../scss/customs.scss */
 .form-schedule-feature .form-item input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #fff;
 }
-/* line 177, ../scss/customs.scss */
+/* line 181, ../scss/customs.scss */
 .form-schedule-feature .form-item input::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
 }
-/* line 180, ../scss/customs.scss */
+/* line 184, ../scss/customs.scss */
 .form-schedule-feature .form-item input:-ms-input-placeholder {
   /* IE 10+ */
   color: #fff;
 }
-/* line 183, ../scss/customs.scss */
+/* line 187, ../scss/customs.scss */
 .form-schedule-feature .form-item input:-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
 }
-/* line 188, ../scss/customs.scss */
+/* line 192, ../scss/customs.scss */
 .form-schedule-feature .form-item select {
   font-size: 14px;
   text-transform: uppercase;
@@ -928,23 +928,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 280px;
   outline: 0;
 }
-/* line 197, ../scss/customs.scss */
+/* line 201, ../scss/customs.scss */
 .form-schedule-feature .form-item select optgroup,
 .form-schedule-feature .form-item select option {
   background: #333;
   font-size: 15px;
 }
-/* line 205, ../scss/customs.scss */
+/* line 209, ../scss/customs.scss */
 .form-schedule-feature .box-from-contact__button input.button {
   background: #404352;
   padding: 12px 20px;
   width: auto;
 }
-/* line 210, ../scss/customs.scss */
+/* line 214, ../scss/customs.scss */
 .form-schedule-feature .box-from-contact__button input.button:hover {
   background-color: #d2215d;
 }
-/* line 215, ../scss/customs.scss */
+/* line 219, ../scss/customs.scss */
 .form-schedule-feature .message {
   position: absolute;
   background: white;
@@ -959,12 +959,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-right: 1px;
 }
 
-/* line 231, ../scss/customs.scss */
+/* line 235, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 235, ../scss/customs.scss */
+/* line 239, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -973,24 +973,24 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   max-height: 200px;
   overflow: hidden;
   text-align: center;
-}
-
-/* line 245, ../scss/customs.scss */
-.page-appointment-scheduling-confirm .group-image .cat-img img {
-  visibility: hidden;
 }
 
 /* line 249, ../scss/customs.scss */
+.page-appointment-scheduling-confirm .group-image .cat-img img {
+  visibility: hidden;
+}
+
+/* line 253, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 253, ../scss/customs.scss */
+/* line 257, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-info {
   margin: 0 -50px;
 }
 
-/* line 256, ../scss/customs.scss */
+/* line 260, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img {
   background-position: center center;
   background-repeat: no-repeat;
@@ -1001,43 +1001,36 @@ img {
   text-align: center;
 }
 
-/* line 265, ../scss/customs.scss */
+/* line 269, ../scss/customs.scss */
 .page-appointment-scheduling-confirm .group-image .cat-img img {
   visibility: hidden;
 }
 
-/* line 268, ../scss/customs.scss */
+/* line 272, ../scss/customs.scss */
 img {
   max-width: 100%;
 }
 
-/* line 271, ../scss/customs.scss */
+/* line 275, ../scss/customs.scss */
 .box-feature__iamge img {
   z-index: -1;
   position: relative;
 }
 
-/* line 278, ../scss/customs.scss */
+/* line 282, ../scss/customs.scss */
 .header-top {
   background: #df3860;
   color: white;
 }
 
-/* line 284, ../scss/customs.scss */
+/* line 288, ../scss/customs.scss */
 #site-message a {
   color: white;
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* line 290, ../scss/customs.scss */
-#site-message {
-  position: relative;
-  padding: 15px 0;
-  margin-bottom: 25px;
-}
-
-/* line 296, ../scss/customs.scss */
+/* line 294, ../scss/customs.scss */
 .icon-close {
   background-image: url("../images/close-icon.png");
   background-repeat: no-repeat;
@@ -1052,7 +1045,7 @@ img {
   width: 20px;
 }
 
-/* line 310, ../scss/customs.scss */
+/* line 308, ../scss/customs.scss */
 #site-message p {
   font-size: 12px;
   margin: 0;
@@ -1060,7 +1053,7 @@ img {
   text-transform: uppercase;
 }
 
-/* line 317, ../scss/customs.scss */
+/* line 315, ../scss/customs.scss */
 .home .page-content-wrappre {
   background-color: transparent;
   color: #333;
