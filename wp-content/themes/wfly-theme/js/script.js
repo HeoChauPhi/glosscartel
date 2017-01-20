@@ -70,6 +70,9 @@
     $('.box-product-sale__list').each(function() {
       $(this).find('.box-product-sale_item').matchHeight();
     });
+    $('.box-dry__list').each(function() {
+      $(this).find('.box-dry__item').matchHeight();
+    });
   }
 
   function verticalSlick() {
@@ -79,6 +82,20 @@
       dots: false,
       infinite: true,
       speed: 500,
+      cssEase: 'linear',
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+
+    $('.box-dry__list').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      infinite: true,
+      speed: 500,
+      cssEase: 'linear',
+      adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 3000,
     });
