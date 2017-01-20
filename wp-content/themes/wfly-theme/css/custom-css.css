@@ -746,7 +746,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -128px;
+  bottom: -161px;
   background-color: #404352;
   width: 100%;
   height: 100%;
@@ -934,6 +934,67 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .box-faq .box-faq-answer.content-show {
   color: #fff;
   font-size: 20px;
+}
+
+/* line 449, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale_item {
+  border-bottom: 0 solid transparent;
+}
+/* line 452, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale_item:hover:before {
+  border-bottom: 10px solid #ff4040;
+}
+/* line 456, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale_item:before {
+  background-image: url(../images/box-shadowglossmenu.png);
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  bottom: 0;
+  background-size: contain;
+  background-position: bottom;
+}
+/* line 472, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale__title {
+  position: relative;
+  font-size: 20px;
+  top: initial;
+  line-height: 1;
+  left: inherit;
+  transform: inherit;
+  margin-bottom: 5px;
+}
+/* line 482, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale__desc {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+/* line 489, ../scss/_myaccount.scss */
+.box-product-sale .service_product-glossmenu .box-product-sale__content {
+  bottom: 25px;
+  z-index: 9;
+  padding: 0 10px;
+}
+
+/* line 498, ../scss/_myaccount.scss */
+.page-gloss-menu .main-content {
+  padding-bottom: 0;
+}
+
+/* line 502, ../scss/_myaccount.scss */
+button.slick-prev.slick-arrow {
+  left: 20px;
+}
+
+/* line 506, ../scss/_myaccount.scss */
+button.slick-next.slick-arrow {
+  right: 50px;
 }
 
 /* line 69, ../scss/customs.scss */

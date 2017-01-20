@@ -5,9 +5,10 @@
         <div class="box-product-sale__image" style="background-image: url({{item.service_product_image}});">
           <img src="{{item.service_product_image}}">
         </div>
-        <h2 class="box-product-sale__title"><a href="{{ item.link }}">{{item.name}}</a></h2>
-        {% if item.description %}
+
+        {% if item.description or item.name %}
         <div class="box-product-sale__content">
+          <h2 class="box-product-sale__title"><a href="{{ item.link }}">{{item.name}}</a></h2>
           <div class="box-product-sale__desc">{{item.description}}</div>
         </div>
         {% endif %}
@@ -18,9 +19,9 @@
             <div class="box-product-sale__image" style="background-image: url({{item.service_product_image}});">
               <img src="{{child.service_product_image}}">
             </div>
-            <h2 class="box-product-sale__title"><a href="{{child.link}}">{{child.name}}</a></h2>
             {% if child.description %}
             <div class="box-product-sale__content">
+              <h2 class="box-product-sale__title"><a href="{{child.link}}">{{child.name}}</a></h2>
               <div class="box-product-sale__desc">{{item.description}}</div>
             </div>
             {% endif %}
