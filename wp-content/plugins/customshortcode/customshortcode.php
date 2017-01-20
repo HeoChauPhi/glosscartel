@@ -42,7 +42,8 @@ function array_fill_keystest($target, $value = '') {
 add_shortcode( 'cs_tax', 'cs_create_get_tax' );
 function cs_create_get_tax($attrs) {
   extract(shortcode_atts (array(
-    'tax_name' => ''
+    'tax_name'  => '',
+    'template'  => ''
   ), $attrs));
 
   ob_start();
@@ -53,7 +54,9 @@ function cs_create_get_tax($attrs) {
 
     $context = Timber::get_context();
     $context['categories'] = Timber::get_terms($tax_name, $args);
-    Timber::render( array( 'cat-' . $tax_name . '.twig', 'cs-categories.twig'), $context );
+    $context['template_class'] = $tax_name . '-' . $template;
+
+    Timber::render( array( 'cat-' . $tax_name . '-' . $template . '.twig', 'cat-' . $tax_name . '.twig', 'cs-categories.twig'), $context );
 
     $content = ob_get_contents();
   ob_end_clean();

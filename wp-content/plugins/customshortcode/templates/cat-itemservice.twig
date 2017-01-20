@@ -2,7 +2,7 @@
   <div class="box-product-sale__image" style="background-image: url({{item.service_product_image}});">
     <img src="{{item.service_product_image}}">
   </div>
-  <h2 class="box-product-sale__title">{{item.name}}</h2>
+  <h2 class="box-product-sale__title"><a href="{{item.link}}">{{item.name}}</a></h2>
   <div class="box-product-sale__content">
     <div class="box-product-sale__from">
       {% if item.service_product_about_sale %}
@@ -20,7 +20,7 @@
       <div class="box-product-sale__image" style="background-image: url({{item.service_product_image}});">
         <img src="{{child.service_product_image}}">
       </div>
-      <h2 class="box-product-sale__title">{{child.name}}</h2>
+      <h2 class="box-product-sale__title"><a href="{{child.link}}">{{child.name}}</a></h2>
       <div class="box-product-sale__content">
         <div class="box-product-sale__from">
           {% if child.service_product_about_sale %}
