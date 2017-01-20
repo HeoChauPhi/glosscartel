@@ -53,7 +53,7 @@
 }
 
 /* FAQ Page */
-.box-sidebar-faq {
+/*.box-sidebar-faq {
   float: left;
   width: 30%;
 }
@@ -61,7 +61,7 @@
 .box-faq {
   float: right;
   width: 68%;
-}
+}*/
 
 .box-faq-inner {
   overflow: hidden;
