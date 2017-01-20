@@ -404,6 +404,10 @@ button.slick-prev.slick-arrow {
 .blow-dry-page button.slick-prev.slick-arrow {
   left: 20px; }
 
+#header {
+  position: relative;
+  z-index: 1000; }
+
 .header-content {
   padding-bottom: 30px; }
 
@@ -894,6 +898,7 @@ button#cboxClose {
   flex-wrap: wrap; }
 
 .box-product-sale_item {
+  display: none;
   width: 100%;
   position: relative; }
   @media screen and (min-width: 480px) {
@@ -906,9 +911,13 @@ button#cboxClose {
     background: transparent; }
 
 .box-product-sale__image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height: 0;
   height: 100%; }
   .box-product-sale__image img {
+    visibility: hidden;
     width: 100%;
     height: auto; }
   .box-product-sale__image a {

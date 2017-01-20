@@ -86,3 +86,29 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}

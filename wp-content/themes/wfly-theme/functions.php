@@ -20,7 +20,7 @@ if(!is_admin()) {
     wp_register_script('lib-colorbox', get_template_directory_uri() . '/js/libs/jquery.colorbox.js', array('jquery'), '1.6.4');
     wp_enqueue_script('lib-colorbox');
 
-    wp_register_script('lib-slickslider', get_template_directory_uri() . '/js/libs/slick.min.js', array('jquery'), '1.6.0');
+    wp_register_script('lib-slickslider', get_template_directory_uri() . '/js/libs/slick.js', array('jquery'), '1.6.0');
     wp_enqueue_script('lib-slickslider');
 
     wp_register_script('lib-acf', get_template_directory_uri() . '/js/libs/acf.js', array('jquery'), '1.0.0');

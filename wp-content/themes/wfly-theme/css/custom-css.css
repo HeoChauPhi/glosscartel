@@ -759,19 +759,19 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 /* line 269, ../scss/_myaccount.scss */
-.box-product-sale__list .box-product-sale_item:nth-child(1) {
+.box-product-sale__list .box-product-sale_item:nth-child(4n+1) {
   border-bottom: 10px solid #ff6666;
 }
 /* line 273, ../scss/_myaccount.scss */
-.box-product-sale__list .box-product-sale_item:nth-child(2) {
+.box-product-sale__list .box-product-sale_item:nth-child(4n+2) {
   border-bottom: 10px solid #ee4f63;
 }
 /* line 276, ../scss/_myaccount.scss */
-.box-product-sale__list .box-product-sale_item:nth-child(3) {
+.box-product-sale__list .box-product-sale_item:nth-child(4n+3) {
   border-bottom: 10px solid #df3860;
 }
 /* line 280, ../scss/_myaccount.scss */
-.box-product-sale__list .box-product-sale_item:nth-child(4) {
+.box-product-sale__list .box-product-sale_item:nth-child(4n+4) {
   border-bottom: 10px solid #d2215d;
 }
 /* line 284, ../scss/_myaccount.scss */
