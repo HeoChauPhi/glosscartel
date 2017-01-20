@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 20, 2017 at 09:31 AM
+-- Generation Time: Jan 20, 2017 at 05:48 PM
 -- Server version: 5.6.31-0ubuntu0.15.10.1
 -- PHP Version: 5.6.11-1ubuntu3.4
 
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=3181 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3197 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_options`
@@ -432,13 +432,13 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (3150, '_transient_plugin_slugs', 'a:15:{i:0;s:57:"acuity-online-appointment-scheduling/acuityscheduling.php";i:1;s:34:"advanced-custom-fields-pro/acf.php";i:2;s:19:"akismet/akismet.php";i:3;s:21:"Akismet3/Akismet3.php";i:4;s:45:"acuityschedule-cron/acuityschedule-custom.php";i:5;s:47:"acuityschedule-custom/acuityschedule-custom.php";i:6;s:36:"contact-form-7/wp-contact-form-7.php";i:7;s:58:"contact-form-7-to-database-extension/contact-form-7-db.php";i:8;s:27:"custom-form/custom-form.php";i:9;s:35:"customshortcode/customshortcode.php";i:10;s:44:"stops-core-theme-and-plugin-updates/main.php";i:11;s:9:"hello.php";i:12;s:25:"timber-library/timber.php";i:13;s:37:"tinymce-advanced/tinymce-advanced.php";i:14;s:32:"wp-db-ajax-made/wp-db-backup.php";}', 'no'),
 (3151, '_transient_timeout_dash_88ae138922fe95674369b1cb3d215a2b', '1484772151', 'no'),
 (3152, '_transient_dash_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/''>WordPress 4.7.1 Security and Maintenance Release</a> <span class="rss-date">11/01/2017</span><div class="rssSummary">WordPress 4.7 has been downloaded over 10 million times since its release on December 6, 2016 and we are pleased to announce the immediate availability of WordPress 4.7.1. This is a security release for all previous versions and we strongly encourage you to update your sites immediately. WordPress versions 4.7 and earlier are affected by eight security issues: [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wptavern.com/how-to-add-users-to-buddypress-groups-in-bulk''>WPTavern: How to Add Users to BuddyPress Groups in Bulk</a></li><li><a class=''rsswidget'' href=''https://wptavern.com/siteground-auto-issues-lets-encrypt-certificates-for-new-domains''>WPTavern: SiteGround Auto-Issues Let’s Encrypt Certificates for New Domains</a></li><li><a class=''rsswidget'' href=''https://wptavern.com/postmatic-basic-rebrands-as-replyable-moves-two-way-email-commenting-to-saas-product''>WPTavern: Postmatic Basic Rebrands as Replyable, Moves Two-Way Email Commenting to SaaS Product</a></li></ul></div><div class="rss-widget"><ul><li class="dashboard-news-plugin"><span>Popular Plugin:</span> SiteOrigin Widgets Bundle&nbsp;<a href="plugin-install.php?tab=plugin-information&amp;plugin=so-widgets-bundle&amp;_wpnonce=ec66623322&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox open-plugin-details-modal" aria-label="Install SiteOrigin Widgets Bundle">(Install)</a></li></ul></div>', 'no'),
-(3166, 'service_product_children', 'a:0:{}', 'yes'),
 (3176, '_transient_timeout_acf_get_remote_plugin_info', '1484963226', 'no'),
 (3177, '_transient_acf_get_remote_plugin_info', 'a:12:{s:4:"name";s:26:"Advanced Custom Fields PRO";s:4:"slug";s:26:"advanced-custom-fields-pro";s:8:"homepage";s:37:"https://www.advancedcustomfields.com/";s:7:"version";s:5:"5.5.5";s:6:"author";s:13:"Elliot Condon";s:10:"author_url";s:28:"http://www.elliotcondon.com/";s:12:"contributors";s:12:"elliotcondon";s:8:"requires";s:5:"3.6.0";s:6:"tested";s:5:"4.7.0";s:6:"tagged";s:123:"acf, advanced, custom, field, fields, custom field, custom fields, simple fields, magic fields, more fields, repeater, edit";s:9:"changelog";s:147:"<h4>5.5.5</h4><ul><li>File field: Fixed bug creating draft post when saving an empty value</li><li>Image field: Fixed bug mentioned above</li></ul>";s:14:"upgrade_notice";s:0:"";}', 'no'),
 (3178, '_site_transient_timeout_theme_roots', '1484878629', 'no'),
 (3179, '_site_transient_theme_roots', 'a:3:{s:13:"twentysixteen";s:7:"/themes";s:10:"wfly-theme";s:7:"/themes";s:14:"wfly-theme_old";s:7:"/themes";}', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(3180, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1484876834;s:8:"response";a:1:{s:34:"advanced-custom-fields-pro/acf.php";O:8:"stdClass":5:{s:4:"slug";s:26:"advanced-custom-fields-pro";s:6:"plugin";s:34:"advanced-custom-fields-pro/acf.php";s:11:"new_version";s:5:"5.5.5";s:3:"url";s:37:"https://www.advancedcustomfields.com/";s:7:"package";s:0:"";}}s:12:"translations";a:0:{}s:9:"no_update";a:7:{s:57:"acuity-online-appointment-scheduling/acuityscheduling.php";O:8:"stdClass":6:{s:2:"id";s:5:"38400";s:4:"slug";s:36:"acuity-online-appointment-scheduling";s:6:"plugin";s:57:"acuity-online-appointment-scheduling/acuityscheduling.php";s:11:"new_version";s:5:"1.1.0";s:3:"url";s:67:"https://wordpress.org/plugins/acuity-online-appointment-scheduling/";s:7:"package";s:79:"https://downloads.wordpress.org/plugin/acuity-online-appointment-scheduling.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.2";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.2.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:3:"4.6";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/contact-form-7.4.6.zip";}s:44:"stops-core-theme-and-plugin-updates/main.php";O:8:"stdClass":7:{s:2:"id";s:5:"43668";s:4:"slug";s:35:"stops-core-theme-and-plugin-updates";s:6:"plugin";s:44:"stops-core-theme-and-plugin-updates/main.php";s:11:"new_version";s:5:"6.2.9";s:3:"url";s:66:"https://wordpress.org/plugins/stops-core-theme-and-plugin-updates/";s:7:"package";s:84:"https://downloads.wordpress.org/plugin/stops-core-theme-and-plugin-updates.6.2.9.zip";s:14:"upgrade_notice";s:48:"Bug fix: manual log updates not working with 4.7";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:25:"timber-library/timber.php";O:8:"stdClass":6:{s:2:"id";s:5:"42153";s:4:"slug";s:14:"timber-library";s:6:"plugin";s:25:"timber-library/timber.php";s:11:"new_version";s:5:"1.2.1";s:3:"url";s:45:"https://wordpress.org/plugins/timber-library/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/timber-library.1.2.1.zip";}s:37:"tinymce-advanced/tinymce-advanced.php";O:8:"stdClass":6:{s:2:"id";s:3:"731";s:4:"slug";s:16:"tinymce-advanced";s:6:"plugin";s:37:"tinymce-advanced/tinymce-advanced.php";s:11:"new_version";s:5:"4.4.3";s:3:"url";s:47:"https://wordpress.org/plugins/tinymce-advanced/";s:7:"package";s:65:"https://downloads.wordpress.org/plugin/tinymce-advanced.4.4.3.zip";}}}', 'no');
+(3180, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1484876834;s:8:"response";a:1:{s:34:"advanced-custom-fields-pro/acf.php";O:8:"stdClass":5:{s:4:"slug";s:26:"advanced-custom-fields-pro";s:6:"plugin";s:34:"advanced-custom-fields-pro/acf.php";s:11:"new_version";s:5:"5.5.5";s:3:"url";s:37:"https://www.advancedcustomfields.com/";s:7:"package";s:0:"";}}s:12:"translations";a:0:{}s:9:"no_update";a:7:{s:57:"acuity-online-appointment-scheduling/acuityscheduling.php";O:8:"stdClass":6:{s:2:"id";s:5:"38400";s:4:"slug";s:36:"acuity-online-appointment-scheduling";s:6:"plugin";s:57:"acuity-online-appointment-scheduling/acuityscheduling.php";s:11:"new_version";s:5:"1.1.0";s:3:"url";s:67:"https://wordpress.org/plugins/acuity-online-appointment-scheduling/";s:7:"package";s:79:"https://downloads.wordpress.org/plugin/acuity-online-appointment-scheduling.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.2";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.2.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:3:"4.6";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/contact-form-7.4.6.zip";}s:44:"stops-core-theme-and-plugin-updates/main.php";O:8:"stdClass":7:{s:2:"id";s:5:"43668";s:4:"slug";s:35:"stops-core-theme-and-plugin-updates";s:6:"plugin";s:44:"stops-core-theme-and-plugin-updates/main.php";s:11:"new_version";s:5:"6.2.9";s:3:"url";s:66:"https://wordpress.org/plugins/stops-core-theme-and-plugin-updates/";s:7:"package";s:84:"https://downloads.wordpress.org/plugin/stops-core-theme-and-plugin-updates.6.2.9.zip";s:14:"upgrade_notice";s:48:"Bug fix: manual log updates not working with 4.7";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:25:"timber-library/timber.php";O:8:"stdClass":6:{s:2:"id";s:5:"42153";s:4:"slug";s:14:"timber-library";s:6:"plugin";s:25:"timber-library/timber.php";s:11:"new_version";s:5:"1.2.1";s:3:"url";s:45:"https://wordpress.org/plugins/timber-library/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/timber-library.1.2.1.zip";}s:37:"tinymce-advanced/tinymce-advanced.php";O:8:"stdClass":6:{s:2:"id";s:3:"731";s:4:"slug";s:16:"tinymce-advanced";s:6:"plugin";s:37:"tinymce-advanced/tinymce-advanced.php";s:11:"new_version";s:5:"4.4.3";s:3:"url";s:47:"https://wordpress.org/plugins/tinymce-advanced/";s:7:"package";s:65:"https://downloads.wordpress.org/plugin/tinymce-advanced.4.4.3.zip";}}}', 'no'),
+(3196, 'service_product_children', 'a:0:{}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -451,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=13044 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13164 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -466,10 +466,10 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (186, 54, '_edit_lock', '1473795527:1'),
 (187, 1, '_edit_lock', '1473010221:1'),
 (200, 64, '_edit_last', '1'),
-(201, 64, '_edit_lock', '1484763762:1'),
+(201, 64, '_edit_lock', '1484898098:1'),
 (202, 64, '_cmb_layout_page', 'full'),
 (290, 93, '_edit_last', '1'),
-(291, 93, '_edit_lock', '1484796356:1'),
+(291, 93, '_edit_lock', '1484883248:1'),
 (292, 94, '_wp_attached_file', '2016/09/banner-feature.png'),
 (293, 94, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1511;s:6:"height";i:795;s:4:"file";s:26:"2016/09/banner-feature.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"banner-feature-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:26:"banner-feature-300x158.png";s:5:"width";i:300;s:6:"height";i:158;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:26:"banner-feature-768x404.png";s:5:"width";i:768;s:6:"height";i:404;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:27:"banner-feature-1024x539.png";s:5:"width";i:1024;s:6:"height";i:539;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (294, 93, 'slidehsow_items_0_slideshow_image', '2632'),
@@ -1176,7 +1176,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1079, 173, 'package_save', '50%'),
 (1080, 173, '_package_save', 'field_57d84423f6455'),
 (1081, 174, '_edit_last', '1'),
-(1082, 174, '_edit_lock', '1484732890:1'),
+(1082, 174, '_edit_lock', '1484908968:1'),
 (1083, 174, 'sub_title', ''),
 (1084, 174, '_sub_title', 'field_57d7bcea2c47f'),
 (1085, 174, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
@@ -4416,7 +4416,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10833, 2556, '_cmb2_asc_app_duration', '60'),
 (10834, 2556, '_cmb2_asc_app_blockoffb', '0'),
 (10835, 2556, '_cmb2_asc_app_blockoffa', '15'),
-(10836, 2556, '_cmb2_asc_app_description', ''),
+(10836, 2556, '_cmb2_asc_app_description', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'),
 (10837, 2556, '_cmb2_asc_app_calendar', '717835'),
 (10838, 2557, '_cmb2_asc_app_id', '2352882'),
 (10839, 2557, '_cmb2_asc_app_price', '165.00'),
@@ -4573,9 +4573,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10990, 2559, '_add_components_block_0_acf_test_custom_field', 'field_57d5349e6a978'),
 (10991, 2559, 'test_post_object', '93'),
 (10992, 2559, '_test_post_object', 'field_57d638b14faca'),
-(10993, 2559, 'add_components_block_1_service_title', 'GET GLOSSED IN FOUR EASY STEPS'),
-(10994, 2559, '_add_components_block_1_service_title', 'field_57d5349e6a978');
+(10993, 2559, 'add_components_block_1_service_title', 'GET GLOSSED IN FOUR EASY STEPS');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(10994, 2559, '_add_components_block_1_service_title', 'field_57d5349e6a978'),
 (10995, 2559, 'add_components_block_1_service_list_0_service_item_image', '113'),
 (10996, 2559, '_add_components_block_1_service_list_0_service_item_image', 'field_57d65a949dd4a'),
 (10997, 2559, 'add_components_block_1_service_list_0_service_item_title', 'USE OUR GLOSS MENU TO INSPIRE YOU'),
@@ -5096,9 +5096,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (11540, 2604, '_components_block_4_component_class', 'field_587cab04d02fb'),
 (11541, 2605, 'add_components_block_0_feature_banner', '93'),
 (11542, 2605, '_add_components_block_0_feature_banner', 'field_57d509376569e'),
-(11543, 2605, 'add_components_block', 'a:8:{i:0;s:15:"feature_banners";i:1;s:15:"box_custom_text";i:2;s:9:"shortcode";i:3;s:11:"box_service";i:4;s:15:"box_custom_text";i:5;s:9:"shortcode";i:6;s:15:"box_custom_text";i:7;s:15:"box_custom_text";}'),
-(11544, 2605, '_add_components_block', 'field_57d503080f04a');
+(11543, 2605, 'add_components_block', 'a:8:{i:0;s:15:"feature_banners";i:1;s:15:"box_custom_text";i:2;s:9:"shortcode";i:3;s:11:"box_service";i:4;s:15:"box_custom_text";i:5;s:9:"shortcode";i:6;s:15:"box_custom_text";i:7;s:15:"box_custom_text";}');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(11544, 2605, '_add_components_block', 'field_57d503080f04a'),
 (11545, 2605, 'add_components_block_0_acf_test_custom_field', 'heochaua'),
 (11546, 2605, '_add_components_block_0_acf_test_custom_field', 'field_57d5349e6a978'),
 (11547, 2605, 'test_post_object', '93'),
@@ -5613,9 +5613,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (12057, 2615, '_add_components_block_4_cta_book_content', 'field_57d65edcc5a07'),
 (12058, 2615, 'add_components_block_4_cta_link_text', ''),
 (12059, 2615, '_add_components_block_4_cta_link_text', 'field_57d65ef2c5a08'),
-(12060, 2615, 'add_components_block_4_cta_link_url', ''),
-(12061, 2615, '_add_components_block_4_cta_link_url', 'field_57d65f1ac5a09');
+(12060, 2615, 'add_components_block_4_cta_link_url', '');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(12061, 2615, '_add_components_block_4_cta_link_url', 'field_57d65f1ac5a09'),
 (12062, 2615, 'add_components_block_4_custom_text_area', '<div id="animate-1" class="box-service">\r\n      <div class="container">\r\n        <div class="scrol-bottom cl-white">\r\n          <div class="text">GLOSS CARTEL SERVICES</div>\r\n          <a href="#animate-2">img</a>\r\n        </div>\r\n      </div>\r\n    </div>'),
 (12063, 2615, '_add_components_block_4_custom_text_area', 'field_57f5bd8cf0e23'),
 (12064, 2615, 'add_components_block_4_component_class', ''),
@@ -6154,10 +6154,10 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (12603, 2630, '_add_components_block_0_feature_banner', 'field_57d509376569e'),
 (12604, 2630, 'add_components_block', 'a:8:{i:0;s:15:"feature_banners";i:1;s:15:"box_custom_text";i:2;s:9:"shortcode";i:3;s:11:"box_service";i:4;s:15:"box_custom_text";i:5;s:9:"shortcode";i:6;s:15:"box_custom_text";i:7;s:15:"box_custom_text";}'),
 (12605, 2630, '_add_components_block', 'field_57d503080f04a'),
-(12606, 2630, 'add_components_block_0_acf_test_custom_field', 'heochaua'),
-(12607, 2630, '_add_components_block_0_acf_test_custom_field', 'field_57d5349e6a978'),
-(12608, 2630, 'test_post_object', '93');
+(12606, 2630, 'add_components_block_0_acf_test_custom_field', 'heochaua');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(12607, 2630, '_add_components_block_0_acf_test_custom_field', 'field_57d5349e6a978'),
+(12608, 2630, 'test_post_object', '93'),
 (12609, 2630, '_test_post_object', 'field_57d638b14faca'),
 (12610, 2630, 'add_components_block_1_service_title', 'GET GLOSSED IN FOUR EASY STEPS'),
 (12611, 2630, '_add_components_block_1_service_title', 'field_57d5349e6a978'),
@@ -6460,7 +6460,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (12908, 2638, 'components_block_1_component_class', 'content-right'),
 (12909, 2638, '_components_block_1_component_class', 'field_587caaf4d02fa'),
 (12910, 2639, '_edit_last', '1'),
-(12911, 2639, '_edit_lock', '1484879192:1'),
+(12911, 2639, '_edit_lock', '1484880796:1'),
 (12912, 2639, 'sub_title', 'WE’RE HERE TO HELP'),
 (12913, 2639, '_sub_title', 'field_57d7bcea2c47f'),
 (12914, 2639, 'image_banner', '2636'),
@@ -6591,7 +6591,116 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (13040, 2655, 'components_block_0_component_class', ''),
 (13041, 2655, '_components_block_0_component_class', 'field_587caaf4d02fa'),
 (13042, 2655, 'components_block_0_box_faq_title', 'GENERAL BOOKING ENQUIRIES'),
-(13043, 2655, '_components_block_0_box_faq_title', 'field_58807bc7decab');
+(13043, 2655, '_components_block_0_box_faq_title', 'field_58807bc7decab'),
+(13044, 174, 'image_banner', ''),
+(13045, 174, '_image_banner', 'field_587ca7de926a0'),
+(13054, 174, 'components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13055, 174, '_components_block', 'field_57d503080f04a'),
+(13056, 2656, 'sub_title', ''),
+(13057, 2656, '_sub_title', 'field_57d7bcea2c47f'),
+(13058, 2656, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13059, 2656, '_add_components_block_0_your_shortcode', 'field_57d6818c69c02'),
+(13060, 2656, 'add_components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13061, 2656, '_add_components_block', 'field_57d503080f04a'),
+(13062, 2656, 'image_banner', ''),
+(13063, 2656, '_image_banner', 'field_587ca7de926a0'),
+(13064, 2656, 'components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13065, 2656, '_components_block_0_your_shortcode', 'field_588079548e00f'),
+(13066, 2656, 'components_block_0_your_shortcode_text', ''),
+(13067, 2656, '_components_block_0_your_shortcode_text', 'field_588079548e010'),
+(13068, 2656, 'components_block_0_scroll_down', '0'),
+(13069, 2656, '_components_block_0_scroll_down', 'field_588079548e011'),
+(13070, 2656, 'components_block_0_component_class', ''),
+(13071, 2656, '_components_block_0_component_class', 'field_588079548e013'),
+(13072, 2656, 'components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13073, 2656, '_components_block', 'field_57d503080f04a'),
+(13078, 2657, 'sub_title', ''),
+(13079, 2657, '_sub_title', 'field_57d7bcea2c47f'),
+(13080, 2657, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13081, 2657, '_add_components_block_0_your_shortcode', 'field_57d6818c69c02'),
+(13082, 2657, 'add_components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13083, 2657, '_add_components_block', 'field_57d503080f04a'),
+(13084, 2657, 'image_banner', ''),
+(13085, 2657, '_image_banner', 'field_587ca7de926a0'),
+(13086, 2657, 'components_block', ''),
+(13087, 2657, '_components_block', 'field_57d503080f04a');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(13088, 174, 'components_block_0_your_shortcode', '[cs_tax tax_name="service_product" template="glossmenu"]'),
+(13089, 174, '_components_block_0_your_shortcode', 'field_588079548e00f'),
+(13090, 174, 'components_block_0_your_shortcode_text', ''),
+(13091, 174, '_components_block_0_your_shortcode_text', 'field_588079548e010'),
+(13092, 174, 'components_block_0_scroll_down', '0'),
+(13093, 174, '_components_block_0_scroll_down', 'field_588079548e011'),
+(13094, 174, 'components_block_0_component_class', ''),
+(13095, 174, '_components_block_0_component_class', 'field_588079548e013'),
+(13096, 2658, 'sub_title', ''),
+(13097, 2658, '_sub_title', 'field_57d7bcea2c47f'),
+(13098, 2658, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13099, 2658, '_add_components_block_0_your_shortcode', 'field_57d6818c69c02'),
+(13100, 2658, 'add_components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13101, 2658, '_add_components_block', 'field_57d503080f04a'),
+(13102, 2658, 'image_banner', ''),
+(13103, 2658, '_image_banner', 'field_587ca7de926a0'),
+(13104, 2658, 'components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13105, 2658, '_components_block', 'field_57d503080f04a'),
+(13106, 2658, 'components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13107, 2658, '_components_block_0_your_shortcode', 'field_588079548e00f'),
+(13108, 2658, 'components_block_0_your_shortcode_text', ''),
+(13109, 2658, '_components_block_0_your_shortcode_text', 'field_588079548e010'),
+(13110, 2658, 'components_block_0_scroll_down', '0'),
+(13111, 2658, '_components_block_0_scroll_down', 'field_588079548e011'),
+(13112, 2658, 'components_block_0_component_class', ''),
+(13113, 2658, '_components_block_0_component_class', 'field_588079548e013'),
+(13114, 2659, 'sub_title', ''),
+(13115, 2659, '_sub_title', 'field_57d7bcea2c47f'),
+(13116, 2659, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13117, 2659, '_add_components_block_0_your_shortcode', 'field_57d6818c69c02'),
+(13118, 2659, 'add_components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13119, 2659, '_add_components_block', 'field_57d503080f04a'),
+(13120, 2659, 'image_banner', ''),
+(13121, 2659, '_image_banner', 'field_587ca7de926a0'),
+(13122, 2659, 'components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13123, 2659, '_components_block', 'field_57d503080f04a'),
+(13124, 2659, 'components_block_0_your_shortcode', '[cs_tax tax_name="service_product" template="test"]'),
+(13125, 2659, '_components_block_0_your_shortcode', 'field_588079548e00f'),
+(13126, 2659, 'components_block_0_your_shortcode_text', ''),
+(13127, 2659, '_components_block_0_your_shortcode_text', 'field_588079548e010'),
+(13128, 2659, 'components_block_0_scroll_down', '0'),
+(13129, 2659, '_components_block_0_scroll_down', 'field_588079548e011'),
+(13130, 2659, 'components_block_0_component_class', ''),
+(13131, 2659, '_components_block_0_component_class', 'field_588079548e013'),
+(13132, 2660, 'sub_title', ''),
+(13133, 2660, '_sub_title', 'field_57d7bcea2c47f'),
+(13134, 2660, 'add_components_block_0_your_shortcode', '[cs_tax tax_name="service_product"]'),
+(13135, 2660, '_add_components_block_0_your_shortcode', 'field_57d6818c69c02'),
+(13136, 2660, 'add_components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13137, 2660, '_add_components_block', 'field_57d503080f04a'),
+(13138, 2660, 'image_banner', ''),
+(13139, 2660, '_image_banner', 'field_587ca7de926a0'),
+(13140, 2660, 'components_block', 'a:1:{i:0;s:9:"shortcode";}'),
+(13141, 2660, '_components_block', 'field_57d503080f04a'),
+(13142, 2660, 'components_block_0_your_shortcode', '[cs_tax tax_name="service_product" template="glossmenu"]'),
+(13143, 2660, '_components_block_0_your_shortcode', 'field_588079548e00f'),
+(13144, 2660, 'components_block_0_your_shortcode_text', ''),
+(13145, 2660, '_components_block_0_your_shortcode_text', 'field_588079548e010'),
+(13146, 2660, 'components_block_0_scroll_down', '0'),
+(13147, 2660, '_components_block_0_scroll_down', 'field_588079548e011'),
+(13148, 2660, 'components_block_0_component_class', ''),
+(13149, 2660, '_components_block_0_component_class', 'field_588079548e013'),
+(13150, 2556, '_edit_lock', '1484909281:1'),
+(13151, 2556, '_edit_last', '1'),
+(13152, 2556, '_cmb2_asc_app_image_id', '486'),
+(13153, 2556, '_cmb2_asc_app_image', 'http://localhost/demowp/glosscartel/wp-content/uploads/2016/10/Clip-Group7.jpg'),
+(13154, 2574, '_edit_lock', '1484906611:1'),
+(13155, 2574, '_edit_last', '1'),
+(13156, 2661, '_cmb2_asc_app_id', '2381712'),
+(13157, 2661, '_cmb2_asc_app_price', '60.00'),
+(13158, 2661, '_cmb2_asc_app_duration', '30'),
+(13159, 2661, '_cmb2_asc_app_blockoffb', '0'),
+(13160, 2661, '_cmb2_asc_app_blockoffa', '0'),
+(13161, 2661, '_cmb2_asc_app_description', ''),
+(13162, 2661, '_cmb2_asc_app_calendar', '717838'),
+(13163, 2557, '_edit_lock', '1484908975:1');
 
 -- --------------------------------------------------------
 
@@ -6623,7 +6732,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2656 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2662 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_posts`
@@ -6636,7 +6745,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (55, 1, '2016-08-05 04:54:01', '2016-08-05 04:54:01', '', '513e0748', '', 'publish', 'closed', 'closed', '', '513e0748', '', '', '2016-09-04 18:19:05', '2016-09-04 18:19:05', '', 0, 'http://localhost/demowp/gloss-cortel/?post_type=postcode&#038;p=55', 0, 'postcode', '', 0),
 (64, 1, '2016-09-10 17:46:03', '2016-09-10 17:46:03', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2017-01-18 17:58:13', '2017-01-18 17:58:13', '', 0, 'http://localhost/demowp/gloss-cartel/?page_id=64', 0, 'page', '', 0),
 (65, 1, '2016-09-10 17:46:03', '2016-09-10 17:46:03', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2016-09-10 17:46:03', '2016-09-10 17:46:03', '', 64, 'http://localhost/demowp/gloss-cartel/64-revision-v1/', 0, 'revision', '', 0),
-(93, 1, '2016-09-11 07:28:51', '2016-09-11 07:28:51', '', 'Home Slideshow', '', 'publish', 'closed', 'closed', '', 'home-slideshow', '', '', '2017-01-19 03:19:51', '2017-01-19 03:19:51', '', 0, 'http://localhost/demowp/gloss-cartel/?post_type=slideshow&#038;p=93', 0, 'slideshow', '', 0),
+(93, 1, '2016-09-11 07:28:51', '2016-09-11 07:28:51', '', 'Home Slideshow', '', 'publish', 'closed', 'closed', '', 'home-slideshow', '', '', '2017-01-20 03:16:30', '2017-01-20 03:16:30', '', 0, 'http://localhost/demowp/gloss-cartel/?post_type=slideshow&#038;p=93', 0, 'slideshow', '', 0),
 (94, 1, '2016-09-11 07:28:39', '2016-09-11 07:28:39', '', 'banner-feature', '', 'inherit', 'open', 'closed', '', 'banner-feature', '', '', '2016-09-11 07:28:39', '2016-09-11 07:28:39', '', 93, 'http://localhost/demowp/gloss-cartel/wp-content/uploads/2016/09/banner-feature.png', 0, 'attachment', 'image/png', 0),
 (97, 1, '2016-09-11 07:36:59', '2016-09-11 07:36:59', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2016-09-11 07:36:59', '2016-09-11 07:36:59', '', 64, 'http://localhost/demowp/gloss-cartel/64-revision-v1/', 0, 'revision', '', 0),
 (99, 1, '2016-09-11 10:41:32', '2016-09-11 10:41:32', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2016-09-11 10:41:32', '2016-09-11 10:41:32', '', 64, 'http://localhost/demowp/gloss-cartel/64-revision-v1/', 0, 'revision', '', 0),
@@ -6681,7 +6790,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (171, 1, '2016-09-13 18:27:24', '2016-09-13 18:27:24', '', 'Blow Dry 4 for 5', '', 'publish', 'closed', 'closed', '', 'blow-dry-4-for-5', '', '', '2016-09-13 18:27:24', '2016-09-13 18:27:24', '', 0, 'http://localhost/demowp/gloss-cartel/?post_type=wf_package&#038;p=171', 0, 'wf_package', '', 0),
 (172, 1, '2016-09-13 18:30:46', '2016-09-13 18:30:46', '', 'Blow Dry 3 for 5', '', 'publish', 'closed', 'closed', '', 'blow-dry-3-for-5', '', '', '2016-09-13 18:30:46', '2016-09-13 18:30:46', '', 0, 'http://localhost/demowp/gloss-cartel/?post_type=wf_package&#038;p=172', 0, 'wf_package', '', 0),
 (173, 1, '2016-09-13 18:31:44', '2016-09-13 18:31:44', '', 'Makeu up offer 1', '', 'publish', 'closed', 'closed', '', 'makeu-up-offer-1', '', '', '2016-09-13 18:31:44', '2016-09-13 18:31:44', '', 0, 'http://localhost/demowp/gloss-cartel/?post_type=wf_package&#038;p=173', 0, 'wf_package', '', 0),
-(174, 1, '2016-09-13 18:33:51', '2016-09-13 18:33:51', '', 'Gloss Menu', '', 'publish', 'closed', 'closed', '', 'gloss-menu', '', '', '2016-09-13 18:33:51', '2016-09-13 18:33:51', '', 0, 'http://localhost/demowp/gloss-cartel/?page_id=174', 0, 'page', '', 0),
+(174, 1, '2016-09-13 18:33:51', '2016-09-13 18:33:51', '', 'Gloss Menu', '', 'publish', 'closed', 'closed', '', 'gloss-menu', '', '', '2017-01-20 07:48:45', '2017-01-20 07:48:45', '', 0, 'http://localhost/demowp/gloss-cartel/?page_id=174', 0, 'page', '', 0),
 (175, 1, '2016-09-13 18:33:51', '2016-09-13 18:33:51', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2016-09-13 18:33:51', '2016-09-13 18:33:51', '', 174, 'http://localhost/demowp/gloss-cartel/174-revision-v1/', 0, 'revision', '', 0),
 (183, 1, '2016-09-14 09:09:30', '2016-09-14 09:09:30', '', 'clash-resources-com-how-you-can-get-speedy-your_2.jpg', '', 'inherit', 'open', 'closed', '', 'clash-resources-com-how-you-can-get-speedy-your_2-jpg', '', '', '2016-09-14 09:09:30', '2016-09-14 09:09:30', '', 185, 'http://glosscartel.com/wp-content/uploads/2016/09/clash-resources-com-how-you-can-get-speedy-your_2.jpg', 0, 'attachment', 'image/jpeg', 0),
 (184, 1, '2016-09-14 09:09:32', '2016-09-14 09:09:32', '', 'clash-resources-com-how-you-can-get-speedy-your_1.jpg', '', 'inherit', 'open', 'closed', '', 'clash-resources-com-how-you-can-get-speedy-your_1-jpg', '', '', '2016-09-14 09:09:32', '2016-09-14 09:09:32', '', 185, 'http://glosscartel.com/wp-content/uploads/2016/09/clash-resources-com-how-you-can-get-speedy-your_1.jpg', 0, 'attachment', 'image/jpeg', 0),
@@ -7077,9 +7186,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (717, 1, '2017-01-03 08:25:01', '2017-01-03 08:25:01', '<div class="alert_box"></div>', '', '', 'trash', 'open', 'open', '', '__trashed', '', '', '2017-01-03 09:31:26', '2017-01-03 09:31:26', '', 0, 'http://localhost/demowp/glosscartel/?p=717', 0, 'post', '', 0),
 (718, 1, '2017-01-03 09:31:26', '2017-01-03 09:31:26', '<div class="alert_box"></div>', '', '', 'inherit', 'closed', 'closed', '', '717-revision-v1', '', '', '2017-01-03 09:31:26', '2017-01-03 09:31:26', '', 717, 'http://localhost/demowp/glosscartel/717-revision-v1/', 0, 'revision', '', 0),
 (733, 0, '2017-01-09 07:57:20', '0000-00-00 00:00:00', '', '1. The Super Base', '', 'draft', 'open', 'open', '', '', '', '', '2017-01-09 07:57:20', '0000-00-00 00:00:00', '', 0, 'http://localhost/demowp/glosscartel/?p=733', 0, 'post', '', 0),
-(2521, 1, '2017-01-10 10:04:28', '2017-01-10 10:04:28', '', 'Make Up', '', 'publish', 'closed', 'closed', '', 'make-up-1-out-and-pout', '', '', '2017-01-16 04:30:46', '2017-01-16 04:30:46', '', 0, 'http://localhost/demowp/glosscartel/make-up-1-out-and-pout/', 0, 'asc_appointment', '', 0),
-(2533, 1, '2017-01-10 10:04:35', '2017-01-10 10:04:35', '', 'Blow Dry Gift', '', 'publish', 'closed', 'closed', '', 'blow-dry-gift', '', '', '2017-01-16 04:30:49', '2017-01-16 04:30:49', '', 0, 'http://localhost/demowp/glosscartel/blow-dry-gift/', 0, 'asc_appointment', '', 0),
-(2534, 1, '2017-01-10 10:04:36', '2017-01-10 10:04:36', '', 'Purchase 3 Blow Drys get 1 FREE', '', 'publish', 'closed', 'closed', '', 'purchase-3-blow-drys-get-1-free', '', '', '2017-01-16 04:30:50', '2017-01-16 04:30:50', '', 0, 'http://localhost/demowp/glosscartel/purchase-3-blow-drys-get-1-free/', 0, 'asc_appointment', '', 0),
+(2521, 1, '2017-01-10 10:04:28', '2017-01-10 10:04:28', '', 'Make Up', '', 'publish', 'closed', 'closed', '', 'make-up-1-out-and-pout', '', '', '2017-01-20 10:37:18', '2017-01-20 10:37:18', '', 0, 'http://localhost/demowp/glosscartel/make-up-1-out-and-pout/', 0, 'asc_appointment', '', 0),
+(2533, 1, '2017-01-10 10:04:35', '2017-01-10 10:04:35', '', 'Blow Dry Gift', '', 'publish', 'closed', 'closed', '', 'blow-dry-gift', '', '', '2017-01-20 10:37:19', '2017-01-20 10:37:19', '', 0, 'http://localhost/demowp/glosscartel/blow-dry-gift/', 0, 'asc_appointment', '', 0),
+(2534, 1, '2017-01-10 10:04:36', '2017-01-10 10:04:36', '', 'Purchase 3 Blow Drys get 1 FREE', '', 'publish', 'closed', 'closed', '', 'purchase-3-blow-drys-get-1-free', '', '', '2017-01-20 10:37:20', '2017-01-20 10:37:20', '', 0, 'http://localhost/demowp/glosscartel/purchase-3-blow-drys-get-1-free/', 0, 'asc_appointment', '', 0),
 (2547, 1, '2017-01-11 03:18:38', '2017-01-11 03:18:38', '[asc_signup]', 'Appointment Scheduling Registor', '', 'publish', 'closed', 'closed', '', 'appointment-scheduling-registor', '', '', '2017-01-11 03:18:38', '2017-01-11 03:18:38', '', 0, 'http://localhost/demowp/glosscartel/appointment-scheduling-registor/', 0, 'page', '', 0),
 (2548, 1, '2017-01-11 03:18:38', '2017-01-11 03:18:38', '[asc_signin]', 'Appointment Scheduling Signin', '', 'publish', 'closed', 'closed', '', 'appointment-scheduling-signin', '', '', '2017-01-11 03:18:38', '2017-01-11 03:18:38', '', 0, 'http://localhost/demowp/glosscartel/appointment-scheduling-signin/', 0, 'page', '', 0),
 (2549, 1, '2017-01-11 03:18:38', '2017-01-11 03:18:38', '[asc_client_choose]', 'Appointment Scheduling Client Choose', '', 'publish', 'closed', 'closed', '', 'appointment-scheduling-client-choose', '', '', '2017-01-11 03:18:38', '2017-01-11 03:18:38', '', 0, 'http://localhost/demowp/glosscartel/appointment-scheduling-client-choose/', 0, 'page', '', 0),
@@ -7089,9 +7198,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (2552, 1, '2017-01-11 03:18:38', '2017-01-11 03:18:38', '[asc_forgot_password]', 'Appointment Scheduling Forgot Password', '', 'publish', 'closed', 'closed', '', 'appointment-scheduling-forgot-password', '', '', '2017-01-11 03:18:38', '2017-01-11 03:18:38', '', 0, 'http://localhost/demowp/glosscartel/appointment-scheduling-forgot-password/', 0, 'page', '', 0),
 (2553, 1, '2017-01-11 03:51:54', '2017-01-11 03:51:54', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2017-01-11 03:51:54', '2017-01-11 03:51:54', '', 64, 'http://localhost/demowp/glosscartel/64-revision-v1/', 0, 'revision', '', 0),
 (2554, 1, '2017-01-11 03:59:39', '0000-00-00 00:00:00', '', 'caohai11031991@gmail.com', '', 'pending', 'closed', 'closed', '', '', '', '', '2017-01-11 03:59:39', '0000-00-00 00:00:00', '', 0, 'http://localhost/demowp/glosscartel/?post_type=asc_user&p=2554', 0, 'asc_user', '', 0),
-(2555, 1, '2017-01-16 04:30:42', '2017-01-16 04:30:42', '', 'Blow Dry', '', 'publish', 'closed', 'closed', '', 'blow-dry', '', '', '2017-01-16 04:30:42', '2017-01-16 04:30:42', '', 0, 'http://localhost/demowp/glosscartel/blow-dry/', 0, 'asc_appointment', '', 0),
-(2556, 1, '2017-01-16 04:30:45', '2017-01-16 04:30:45', '', 'Updo', '', 'publish', 'closed', 'closed', '', 'updo', '', '', '2017-01-16 04:30:45', '2017-01-16 04:30:45', '', 0, 'http://localhost/demowp/glosscartel/updo/', 0, 'asc_appointment', '', 0),
-(2557, 1, '2017-01-16 04:30:47', '2017-01-16 04:30:47', '', 'Make Up &amp; Blow Dry', '', 'publish', 'closed', 'closed', '', 'make-up-blow-dry', '', '', '2017-01-16 04:30:47', '2017-01-16 04:30:47', '', 0, 'http://localhost/demowp/glosscartel/make-up-blow-dry/', 0, 'asc_appointment', '', 0),
+(2555, 1, '2017-01-16 04:30:42', '2017-01-16 04:30:42', '', 'Blow Dry', '', 'publish', 'closed', 'closed', '', 'blow-dry', '', '', '2017-01-20 10:37:18', '2017-01-20 10:37:18', '', 0, 'http://localhost/demowp/glosscartel/blow-dry/', 0, 'asc_appointment', '', 0),
+(2556, 1, '2017-01-16 04:30:45', '2017-01-16 04:30:45', '', 'Updo', '', 'publish', 'closed', 'closed', '', 'updo', '', '', '2017-01-20 10:48:01', '2017-01-20 10:48:01', '', 0, 'http://localhost/demowp/glosscartel/updo/', 0, 'asc_appointment', '', 0),
+(2557, 1, '2017-01-16 04:30:47', '2017-01-16 04:30:47', '', 'Make Up &amp; Blow Dry', '', 'publish', 'closed', 'closed', '', 'make-up-blow-dry', '', '', '2017-01-20 10:37:19', '2017-01-20 10:37:19', '', 0, 'http://localhost/demowp/glosscartel/make-up-blow-dry/', 0, 'asc_appointment', '', 0),
 (2558, 1, '2017-01-16 07:39:48', '2017-01-16 07:39:48', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2017-01-16 07:39:48', '2017-01-16 07:39:48', '', 64, 'http://localhost/demowp/glosscartel/64-revision-v1/', 0, 'revision', '', 0),
 (2559, 1, '2017-01-16 10:52:10', '2017-01-16 10:52:10', '', 'Home', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2017-01-16 10:52:10', '2017-01-16 10:52:10', '', 64, 'http://localhost/demowp/glosscartel/64-revision-v1/', 0, 'revision', '', 0),
 (2560, 1, '2017-01-16 10:57:01', '2017-01-16 10:57:01', 'a:7:{s:8:"location";a:2:{i:0;a:1:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}i:1;a:1:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";}}}s:8:"position";s:15:"acf_after_title";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Group Component After Title', 'group-component-after-title', 'publish', 'closed', 'closed', '', 'group_57d7bcb77b0bf', '', '', '2017-01-16 11:01:29', '2017-01-16 11:01:29', '', 0, 'http://localhost/demowp/glosscartel/?post_type=acf-field-group&#038;p=2560', 0, 'acf-field-group', '', 0),
@@ -7102,9 +7211,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (2567, 1, '2017-01-16 10:57:03', '2017-01-16 10:57:03', 'a:10:{s:3:"min";s:0:"";s:3:"max";s:0:"";s:12:"button_label";s:10:"Add Social";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57d46977e314e";s:7:"layouts";a:1:{i:0;a:6:{s:3:"key";s:13:"57d4698d01868";s:5:"label";s:11:"Social Item";s:4:"name";s:11:"social_item";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";}}}', 'Block Footer Social', 'block_footer_social', 'publish', 'closed', 'closed', '', 'field_57d46977e314f', '', '', '2017-01-16 17:50:41', '2017-01-16 17:50:41', '', 2563, 'http://localhost/demowp/glosscartel/?post_type=acf-field&#038;p=2567', 0, 'acf-field', '', 0),
 (2568, 1, '2017-01-16 10:57:04', '2017-01-16 10:57:04', 'a:11:{s:13:"default_value";s:0:"";s:9:"maxlength";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57d4698d01868";}', 'Social Name', 'social_name', 'publish', 'closed', 'closed', '', 'field_57d4699ee3150', '', '', '2017-01-16 10:57:04', '2017-01-16 10:57:04', '', 2567, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2568', 0, 'acf-field', '', 0),
 (2569, 1, '2017-01-16 10:57:04', '2017-01-16 10:57:04', 'a:8:{s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:4:"type";s:3:"url";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57d4698d01868";}', 'Social URL', 'social_url', 'publish', 'closed', 'closed', '', 'field_57d469b4e3151', '', '', '2017-01-16 10:57:04', '2017-01-16 10:57:04', '', 2567, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2569', 1, 'acf-field', '', 0),
-(2574, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:8:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:8:"taxonomy";s:8:"operator";s:2:"==";s:5:"value";s:15:"service_product";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";s:5:"local";s:4:"json";}', 'Group field Service Taxonomy', 'group-field-service-taxonomy', 'publish', 'closed', 'closed', '', 'group_57d67cda98a98', '', '', '2017-01-16 10:57:05', '2017-01-16 10:57:05', '', 0, 'http://localhost/demowp/glosscartel/?post_type=acf-field-group&p=2574', 0, 'acf-field-group', '', 0),
-(2575, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:10:{s:13:"default_value";i:0;s:7:"message";s:34:"Check this disable this page title";s:2:"ui";i:0;s:10:"ui_on_text";s:0:"";s:11:"ui_off_text";s:0:"";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Disable title', 'disable_title', 'publish', 'closed', 'closed', '', 'field_57d856f8e537a', '', '', '2017-01-16 10:57:05', '2017-01-16 10:57:05', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2575', 0, 'acf-field', '', 0),
-(2576, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:12:{s:6:"layout";s:8:"vertical";s:7:"choices";a:2:{s:4:"full";s:16:"Page full layout";s:9:"container";s:21:"Page container layout";}s:13:"default_value";s:9:"container";s:12:"other_choice";i:0;s:17:"save_other_choice";i:0;s:10:"allow_null";i:0;s:13:"return_format";s:5:"value";s:4:"type";s:5:"radio";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Taxonomy Layout', 'taxonomy_layout', 'publish', 'closed', 'closed', '', 'field_57d85671e5379', '', '', '2017-01-16 10:57:05', '2017-01-16 10:57:05', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2576', 1, 'acf-field', '', 0),
+(2574, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:8:"taxonomy";s:8:"operator";s:2:"==";s:5:"value";s:15:"service_product";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Group field Service Taxonomy', 'group-field-service-taxonomy', 'publish', 'closed', 'closed', '', 'group_57d67cda98a98', '', '', '2017-01-20 09:51:28', '2017-01-20 09:51:28', '', 0, 'http://localhost/demowp/glosscartel/?post_type=acf-field-group&#038;p=2574', 0, 'acf-field-group', '', 0),
+(2575, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:10:{s:13:"default_value";i:1;s:7:"message";s:34:"Check this disable this page title";s:2:"ui";i:0;s:10:"ui_on_text";s:0:"";s:11:"ui_off_text";s:0:"";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Disable title', 'disable_title', 'publish', 'closed', 'closed', '', 'field_57d856f8e537a', '', '', '2017-01-20 09:50:37', '2017-01-20 09:50:37', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&#038;p=2575', 0, 'acf-field', '', 0),
+(2576, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:12:{s:6:"layout";s:8:"vertical";s:7:"choices";a:2:{s:4:"full";s:16:"Page full layout";s:9:"container";s:21:"Page container layout";}s:13:"default_value";s:4:"full";s:12:"other_choice";i:0;s:17:"save_other_choice";i:0;s:10:"allow_null";i:0;s:13:"return_format";s:5:"value";s:4:"type";s:5:"radio";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Taxonomy Layout', 'taxonomy_layout', 'publish', 'closed', 'closed', '', 'field_57d85671e5379', '', '', '2017-01-20 09:51:28', '2017-01-20 09:51:28', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&#038;p=2576', 1, 'acf-field', '', 0),
 (2577, 1, '2017-01-16 10:57:05', '2017-01-16 10:57:05', 'a:15:{s:13:"return_format";s:3:"url";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:9:"min_width";s:0:"";s:10:"min_height";s:0:"";s:8:"min_size";s:0:"";s:9:"max_width";s:0:"";s:10:"max_height";s:0:"";s:8:"max_size";s:0:"";s:10:"mime_types";s:0:"";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Service Product Image', 'service_product_image', 'publish', 'closed', 'closed', '', 'field_57d67d7e19825', '', '', '2017-01-16 10:57:05', '2017-01-16 10:57:05', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2577', 2, 'acf-field', '', 0),
 (2578, 1, '2017-01-16 10:57:06', '2017-01-16 10:57:06', 'a:10:{s:13:"default_value";s:0:"";s:9:"maxlength";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}}', 'Service Product About Sale', 'service_product_about_sale', 'publish', 'closed', 'closed', '', 'field_57d67ddf19826', '', '', '2017-01-16 10:57:06', '2017-01-16 10:57:06', '', 2574, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2578', 3, 'acf-field', '', 0),
 (2579, 1, '2017-01-16 10:57:06', '2017-01-16 10:57:06', 'a:8:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:9:"slideshow";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";a:1:{i:0;s:11:"the_content";}s:11:"description";s:0:"";s:5:"local";s:4:"json";}', 'Group field Slideshow', 'group-field-slideshow', 'publish', 'closed', 'closed', '', 'group_57d50625f2223', '', '', '2017-01-16 10:57:06', '2017-01-16 10:57:06', '', 0, 'http://localhost/demowp/glosscartel/?post_type=acf-field-group&p=2579', 0, 'acf-field-group', '', 0),
@@ -7180,7 +7289,13 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (2652, 1, '2017-01-19 08:42:00', '2017-01-19 08:42:00', 'a:11:{s:13:"default_value";s:0:"";s:9:"maxlength";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57d6817969c01";}', 'Box FAQ title', 'box_faq_title', 'publish', 'closed', 'closed', '', 'field_58807bc7decab', '', '', '2017-01-19 08:42:00', '2017-01-19 08:42:00', '', 613, 'http://localhost/demowp/glosscartel/?post_type=acf-field&p=2652', 0, 'acf-field', '', 0),
 (2653, 1, '2017-01-19 08:42:56', '2017-01-19 08:42:56', '', 'Frequently Asked Questions', '', 'inherit', 'closed', 'closed', '', '2639-revision-v1', '', '', '2017-01-19 08:42:56', '2017-01-19 08:42:56', '', 2639, 'http://localhost/demowp/glosscartel/2639-revision-v1/', 0, 'revision', '', 0),
 (2654, 1, '2017-01-19 09:14:41', '2017-01-19 09:14:41', '', 'FAQ', '', 'publish', 'closed', 'closed', '', 'faq', '', '', '2017-01-19 09:14:41', '2017-01-19 09:14:41', '', 0, 'http://localhost/demowp/glosscartel/?p=2654', 3, 'nav_menu_item', '', 0),
-(2655, 1, '2017-01-19 10:38:47', '2017-01-19 10:38:47', '', 'Frequently Asked Questions', '', 'inherit', 'closed', 'closed', '', '2639-revision-v1', '', '', '2017-01-19 10:38:47', '2017-01-19 10:38:47', '', 2639, 'http://localhost/demowp/glosscartel/2639-revision-v1/', 0, 'revision', '', 0);
+(2655, 1, '2017-01-19 10:38:47', '2017-01-19 10:38:47', '', 'Frequently Asked Questions', '', 'inherit', 'closed', 'closed', '', '2639-revision-v1', '', '', '2017-01-19 10:38:47', '2017-01-19 10:38:47', '', 2639, 'http://localhost/demowp/glosscartel/2639-revision-v1/', 0, 'revision', '', 0),
+(2656, 1, '2017-01-20 02:39:56', '2017-01-20 02:39:56', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2017-01-20 02:39:56', '2017-01-20 02:39:56', '', 174, 'http://localhost/demowp/glosscartel/174-revision-v1/', 0, 'revision', '', 0),
+(2657, 1, '2017-01-20 03:36:44', '2017-01-20 03:36:44', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2017-01-20 03:36:44', '2017-01-20 03:36:44', '', 174, 'http://localhost/demowp/glosscartel/174-revision-v1/', 0, 'revision', '', 0),
+(2658, 1, '2017-01-20 04:16:43', '2017-01-20 04:16:43', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2017-01-20 04:16:43', '2017-01-20 04:16:43', '', 174, 'http://localhost/demowp/glosscartel/174-revision-v1/', 0, 'revision', '', 0),
+(2659, 1, '2017-01-20 07:43:57', '2017-01-20 07:43:57', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2017-01-20 07:43:57', '2017-01-20 07:43:57', '', 174, 'http://localhost/demowp/glosscartel/174-revision-v1/', 0, 'revision', '', 0),
+(2660, 1, '2017-01-20 07:48:45', '2017-01-20 07:48:45', '', 'Gloss Menu', '', 'inherit', 'closed', 'closed', '', '174-revision-v1', '', '', '2017-01-20 07:48:45', '2017-01-20 07:48:45', '', 174, 'http://localhost/demowp/glosscartel/174-revision-v1/', 0, 'revision', '', 0),
+(2661, 1, '2017-01-20 09:51:46', '2017-01-20 09:51:46', '', 'Nails', '', 'publish', 'closed', 'closed', '', 'nails', '', '', '2017-01-20 10:37:19', '2017-01-20 10:37:19', '', 0, 'http://localhost/demowp/glosscartel/nails/', 0, 'asc_appointment', '', 0);
 
 -- --------------------------------------------------------
 
@@ -7193,16 +7308,16 @@ CREATE TABLE IF NOT EXISTS `wp_termmeta` (
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_termmeta`
 --
 
 INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
-(1, 271, 'disable_title', '0'),
+(1, 271, 'disable_title', '1'),
 (2, 271, '_disable_title', 'field_57d856f8e537a'),
-(3, 271, 'taxonomy_layout', 'container'),
+(3, 271, 'taxonomy_layout', 'full'),
 (4, 271, '_taxonomy_layout', 'field_57d85671e5379'),
 (5, 271, 'service_product_image', '126'),
 (6, 271, '_service_product_image', 'field_57d67d7e19825'),
@@ -7220,7 +7335,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_terms`
@@ -7319,9 +7434,10 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (94, 'essay corrector', 'essay-corrector', 0),
 (95, 'Online proofreader', 'online-proofreader', 0),
 (271, 'Hair Styles', 'hair-styles', 0),
-(272, 'Make Up', 'make-up', 0),
 (273, 'Packages', 'packages', 0),
-(274, 'Packages And Gift Certificates', 'packages-and-gift-certificates', 0);
+(276, 'Nails', 'nails', 0),
+(278, 'Make Up', 'make-up', 0),
+(279, 'Packages And Gift Certificates', 'packages-and-gift-certificates', 0);
 
 -- --------------------------------------------------------
 
@@ -7562,9 +7678,9 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (609, 77, 0),
 (717, 1, 0),
 (733, 1, 0),
-(2521, 272, 0),
-(2533, 274, 0),
-(2534, 274, 0),
+(2521, 278, 0),
+(2533, 279, 0),
+(2534, 279, 0),
 (2555, 271, 0),
 (2556, 271, 0),
 (2557, 273, 0),
@@ -7572,7 +7688,8 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (2619, 3, 0),
 (2620, 3, 0),
 (2621, 2, 0),
-(2654, 3, 0);
+(2654, 3, 0),
+(2661, 276, 0);
 
 -- --------------------------------------------------------
 
@@ -7587,7 +7704,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_term_taxonomy`
@@ -7685,10 +7802,11 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (93, 93, 'post_tag', '', 0, 1),
 (94, 94, 'category', '', 0, 2),
 (95, 95, 'category', '', 0, 1),
-(271, 271, 'service_product', '', 0, 2),
-(272, 272, 'service_product', '', 0, 1),
+(271, 271, 'service_product', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', 0, 2),
 (273, 273, 'service_product', '', 0, 1),
-(274, 274, 'service_product', '', 0, 2);
+(276, 276, 'service_product', '', 0, 1),
+(278, 278, 'service_product', '', 0, 1),
+(279, 279, 'service_product', '', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -7905,32 +8023,32 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3181;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3197;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13044;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13164;
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2656;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2662;
 --
 -- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
-  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=275;
+  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=280;
 --
 -- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=275;
+  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=280;
 --
 -- AUTO_INCREMENT for table `wp_usermeta`
 --
