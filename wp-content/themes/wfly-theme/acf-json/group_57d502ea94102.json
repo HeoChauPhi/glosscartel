@@ -288,23 +288,26 @@
                 },
                 {
                     "key": "57d65ea1c5a06",
-                    "name": "box_cta_book",
-                    "label": "Box CTA Book",
+                    "name": "box_product",
+                    "label": "Box Product",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": "",
-                            "default_value": "",
-                            "delay": 0,
-                            "key": "field_57d65edcc5a07",
-                            "label": "CTA Book Content",
-                            "name": "cta_book_content",
-                            "type": "wysiwyg",
+                            "taxonomy": "service_product",
+                            "field_type": "multi_select",
+                            "multiple": 0,
+                            "allow_null": 1,
+                            "return_format": "object",
+                            "add_term": 0,
+                            "load_terms": 0,
+                            "save_terms": 0,
+                            "key": "field_5882c46416288",
+                            "label": "Box Product Select",
+                            "name": "box_product_select",
+                            "type": "taxonomy",
                             "instructions": "",
-                            "required": "",
-                            "conditional_logic": "",
+                            "required": 0,
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -312,31 +315,23 @@
                             }
                         },
                         {
-                            "default_value": "",
-                            "maxlength": "",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "choices": {
+                                "default": "Template for Home page",
+                                "glossmenu": "Template for Gloss Menu page"
+                            },
+                            "default_value": [
+                                "default"
+                            ],
+                            "ui": 0,
+                            "ajax": 0,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_57d65ef2c5a08",
-                            "label": "CTA Link Text",
-                            "name": "cta_link_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": "",
-                            "conditional_logic": "",
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            }
-                        },
-                        {
-                            "default_value": "",
-                            "placeholder": "",
-                            "key": "field_57d65f1ac5a09",
-                            "label": "CTA Link Url",
-                            "name": "cta_link_url",
-                            "type": "url",
+                            "return_format": "value",
+                            "key": "field_5882ce0fda110",
+                            "label": "Box Product Template",
+                            "name": "box_product_template",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -399,6 +394,135 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_587cab04d02fb",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5882c40016281",
+                    "name": "box_cta_book",
+                    "label": "Box CTA Book",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "default_value": "",
+                            "delay": 0,
+                            "key": "field_5882c40016282",
+                            "label": "CTA Book Content",
+                            "name": "cta_book_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_5882c40016283",
+                            "label": "CTA Link Text",
+                            "name": "cta_link_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "placeholder": "",
+                            "key": "field_5882c40016284",
+                            "label": "CTA Link Url",
+                            "name": "cta_link_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": 0,
+                            "message": "Enable Scroll Next Block Button",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "key": "field_5882c40016285",
+                            "label": "Scroll Down",
+                            "name": "scroll_down",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_5882c40016286",
+                            "label": "Text Scroll Down",
+                            "name": "text_scroll_down",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5882c40016285",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_5882c40016287",
                             "label": "Component Class",
                             "name": "component_class",
                             "type": "text",
@@ -891,5 +1015,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484815321
+    "modified": 1484967556
 }
