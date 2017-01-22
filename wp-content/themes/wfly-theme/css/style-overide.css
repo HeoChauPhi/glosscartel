@@ -20,7 +20,8 @@
   height: 51px;
   text-align: center;
   line-height: 0;
-  background: #666975;
+  background-color: #666975;
+  background-image: url(../images/icon-backtotop.png);
   color: #444;
   cursor: pointer;
   border: 0;
@@ -32,7 +33,7 @@
 }
 
 #back-to-top:before {
-  content: "\2335";
+/*  content: "\2335";
   text-indent: 0;
   float: left;
   width: 100%;
@@ -41,17 +42,20 @@
   font-size: 66px;
   line-height: 33px;
   font-weight: 400;
-  transform: rotate(180deg);
+  transform: rotate(180deg);*/
 }
 
 #back-to-top:hover {
-  background: #e9ebec;
-}
-
-#back-to-top.show {
   opacity: 0.8;
 }
 
+#back-to-top.show {
+  opacity: 1;
+}
+
+#back-to-top.show:hover {
+  opacity: 0.8;
+}
 /* FAQ Page */
 /*.box-sidebar-faq {
   float: left;

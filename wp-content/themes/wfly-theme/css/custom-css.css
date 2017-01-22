@@ -614,7 +614,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   cursor: pointer;
   font-size: 15px;
   padding: 5px 0;
-  margin: 0 15px;
+  margin: 0 27px;
   text-transform: uppercase;
   font-weight: normal;
   border-bottom: 1px solid transparent;
@@ -637,7 +637,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   cursor: pointer;
   font-size: 15px;
   padding: 1px 0;
-  margin: 0 15px;
+  margin: 0 26px;
   text-transform: uppercase;
   border-bottom: 1px solid  transparent;
 }
@@ -663,62 +663,69 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .box-component.box-book-now .text_big {
   font-size: 61px;
   letter-spacing: 10px;
+  margin-bottom: 15px;
 }
-/* line 174, ../scss/_myaccount.scss */
+/* line 175, ../scss/_myaccount.scss */
 .box-component.box-book-now .text_big span {
   color: #ff4040 !important;
 }
-/* line 179, ../scss/_myaccount.scss */
+/* line 180, ../scss/_myaccount.scss */
 .box-component.box-book-now .text_mall {
   font-size: 15px;
+  color: #404352;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  word-spacing: 1px;
 }
-/* line 183, ../scss/_myaccount.scss */
+/* line 188, ../scss/_myaccount.scss */
 .box-component.box-book-now .scroll-box-book-now {
   margin-top: 20px;
   margin-bottom: 80px;
 }
-/* line 186, ../scss/_myaccount.scss */
+/* line 191, ../scss/_myaccount.scss */
 .box-component.box-book-now .scroll-box-book-now .scroll-text.text {
   color: #beaa7c;
 }
 
-/* line 192, ../scss/_myaccount.scss */
+/* line 197, ../scss/_myaccount.scss */
 .box-from-contact__button {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 48px;
 }
 
-/* line 199, ../scss/_myaccount.scss */
+/* line 204, ../scss/_myaccount.scss */
 .box-service {
   text-align: center;
   padding-top: 0;
 }
-/* line 203, ../scss/_myaccount.scss */
+/* line 208, ../scss/_myaccount.scss */
 .box-service .box-service_list {
   padding: 0;
   margin: 0;
   padding-left: 70px;
   padding-right: 70px;
+  display: flex;
+  justify-content: center;
 }
-/* line 209, ../scss/_myaccount.scss */
+/* line 216, ../scss/_myaccount.scss */
 .box-service .box-service_list .box-service__item {
-  width: 33.333%;
+  width: 355px;
   padding-top: 0;
 }
-/* line 213, ../scss/_myaccount.scss */
+/* line 220, ../scss/_myaccount.scss */
 .box-service .box-service_list .box-service__item .box-service__item__image {
   margin-bottom: 0;
   line-height: 0;
 }
-/* line 218, ../scss/_myaccount.scss */
+/* line 225, ../scss/_myaccount.scss */
 .box-service .box-service_list .box-service__item img {
   width: 100%;
 }
-/* line 222, ../scss/_myaccount.scss */
+/* line 229, ../scss/_myaccount.scss */
 .box-service .box-service_list .box-service__item:before {
   display: none;
 }
-/* line 228, ../scss/_myaccount.scss */
+/* line 235, ../scss/_myaccount.scss */
 .box-service .group-box-service {
   position: absolute;
   bottom: 0;
@@ -728,61 +735,61 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: 10px;
   padding-bottom: 20px;
 }
-/* line 237, ../scss/_myaccount.scss */
+/* line 244, ../scss/_myaccount.scss */
 .box-service .group-box-service .box-service__item__title {
   font-size: 25px;
   font-weight: bold;
 }
 
-/* line 244, ../scss/_myaccount.scss */
+/* line 251, ../scss/_myaccount.scss */
 .box-component.box-service-wrapper {
   position: relative;
   padding-bottom: 50px;
   overflow: hidden;
 }
-/* line 249, ../scss/_myaccount.scss */
+/* line 256, ../scss/_myaccount.scss */
 .box-component.box-service-wrapper:before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -161px;
+  bottom: -129px;
   background-color: #404352;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-/* line 261, ../scss/_myaccount.scss */
+/* line 268, ../scss/_myaccount.scss */
 .scroll-text.text {
   color: #beaa7c;
 }
 
-/* line 269, ../scss/_myaccount.scss */
+/* line 276, ../scss/_myaccount.scss */
 .box-product-sale__list .box-product-sale_item:nth-child(4n+1) {
   border-bottom: 10px solid #ff6666;
 }
-/* line 273, ../scss/_myaccount.scss */
+/* line 280, ../scss/_myaccount.scss */
 .box-product-sale__list .box-product-sale_item:nth-child(4n+2) {
   border-bottom: 10px solid #ee4f63;
 }
-/* line 276, ../scss/_myaccount.scss */
+/* line 283, ../scss/_myaccount.scss */
 .box-product-sale__list .box-product-sale_item:nth-child(4n+3) {
   border-bottom: 10px solid #df3860;
 }
-/* line 280, ../scss/_myaccount.scss */
+/* line 287, ../scss/_myaccount.scss */
 .box-product-sale__list .box-product-sale_item:nth-child(4n+4) {
   border-bottom: 10px solid #d2215d;
 }
-/* line 284, ../scss/_myaccount.scss */
+/* line 291, ../scss/_myaccount.scss */
 .box-product-sale__list .box-product-sale__title {
   font-weight: 700;
 }
-/* line 289, ../scss/_myaccount.scss */
+/* line 296, ../scss/_myaccount.scss */
 .box-product-sale__list .number sup {
   font-size: 35px;
 }
-/* line 293, ../scss/_myaccount.scss */
+/* line 300, ../scss/_myaccount.scss */
 .box-product-sale__list .no-price {
   font-size: 20px;
   font-weight: 700;
@@ -790,12 +797,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-transform: uppercase;
 }
 
-/* line 300, ../scss/_myaccount.scss */
+/* line 307, ../scss/_myaccount.scss */
 .feature-text-height {
   line-height: 60px;
 }
 
-/* line 307, ../scss/_myaccount.scss */
+/* line 314, ../scss/_myaccount.scss */
 .box-cta-book__content p {
   font-size: 25px;
   color: #fff;
@@ -804,53 +811,53 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   word-spacing: 5px;
 }
 
-/* line 316, ../scss/_myaccount.scss */
+/* line 323, ../scss/_myaccount.scss */
 .scroll-icon {
   margin-top: 30px;
 }
 
-/* line 322, ../scss/_myaccount.scss */
+/* line 329, ../scss/_myaccount.scss */
 .form-schedule-feature .box-from-contact__button input.button, .button {
   background-image: url(../images/iconbookingnow.png);
   background-repeat: no-repeat;
   background-position: right 8px center;
 }
 
-/* line 330, ../scss/_myaccount.scss */
+/* line 337, ../scss/_myaccount.scss */
 .box-sidebar-faq {
   width: 20%;
   float: left;
   font-size: 12px;
 }
-/* line 335, ../scss/_myaccount.scss */
+/* line 342, ../scss/_myaccount.scss */
 .box-sidebar-faq h3.sidebar-faq-title {
   background: #fff;
   color: #333;
   padding: 20px;
   border-radius: 15px;
 }
-/* line 341, ../scss/_myaccount.scss */
+/* line 348, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-list,
 .box-sidebar-faq .sidebar-faq-extend {
   padding-left: 20px;
 }
-/* line 346, ../scss/_myaccount.scss */
+/* line 353, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-question {
   padding: 15px 0;
   cursor: pointer;
 }
-/* line 350, ../scss/_myaccount.scss */
+/* line 357, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-question p {
   margin: 0;
 }
-/* line 355, ../scss/_myaccount.scss */
+/* line 362, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-list {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #555866;
   position: relative;
 }
-/* line 361, ../scss/_myaccount.scss */
+/* line 368, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-list:before {
   content: "";
   width: 100%;
@@ -861,11 +868,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   left: 0;
   right: 0;
 }
-/* line 374, ../scss/_myaccount.scss */
+/* line 381, ../scss/_myaccount.scss */
 .box-sidebar-faq .sidebar-faq-extend {
   color: #beaa7c;
 }
-/* line 378, ../scss/_myaccount.scss */
+/* line 385, ../scss/_myaccount.scss */
 .box-sidebar-faq .faq-message-link a {
   padding: 5px 20px;
   color: #beaa7c;
@@ -878,29 +885,29 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 390, ../scss/_myaccount.scss */
+/* line 397, ../scss/_myaccount.scss */
 .box-sidebar-faq .faq-message-link a:hover {
   opacity: .6;
 }
 
-/* line 396, ../scss/_myaccount.scss */
+/* line 403, ../scss/_myaccount.scss */
 .box-faq {
   width: 80%;
   float: right;
   padding-left: 60px;
 }
-/* line 401, ../scss/_myaccount.scss */
+/* line 408, ../scss/_myaccount.scss */
 .box-faq h3.box-faq-title {
   font-size: 20px;
   letter-spacing: 5px;
   word-spacing: 10px;
 }
-/* line 407, ../scss/_myaccount.scss */
+/* line 414, ../scss/_myaccount.scss */
 .box-faq .box-faq-question {
   border-bottom: 1px solid #585b68;
   position: relative;
 }
-/* line 411, ../scss/_myaccount.scss */
+/* line 418, ../scss/_myaccount.scss */
 .box-faq .box-faq-question:before {
   content: "";
   width: 100%;
@@ -911,7 +918,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   left: 0;
   right: 0;
 }
-/* line 421, ../scss/_myaccount.scss */
+/* line 428, ../scss/_myaccount.scss */
 .box-faq .box-faq-question p {
   margin: 0;
   background-color: #404352;
@@ -926,25 +933,25 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   bottom: -8px;
   font-size: 20px;
 }
-/* line 437, ../scss/_myaccount.scss */
+/* line 444, ../scss/_myaccount.scss */
 .box-faq .box-faq-inner {
   margin-bottom: 40px;
 }
-/* line 441, ../scss/_myaccount.scss */
+/* line 448, ../scss/_myaccount.scss */
 .box-faq .box-faq-answer.content-show {
   color: #fff;
   font-size: 20px;
 }
 
-/* line 449, ../scss/_myaccount.scss */
+/* line 456, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale_item {
   border-bottom: 0 solid transparent;
 }
-/* line 452, ../scss/_myaccount.scss */
+/* line 459, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale_item:hover:before {
   border-bottom: 10px solid #ff4040;
 }
-/* line 456, ../scss/_myaccount.scss */
+/* line 463, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale_item:before {
   background-image: url(../images/box-shadowglossmenu.png);
   content: "";
@@ -958,7 +965,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-size: contain;
   background-position: bottom;
 }
-/* line 472, ../scss/_myaccount.scss */
+/* line 479, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale__title {
   position: relative;
   font-size: 20px;
@@ -968,33 +975,44 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   transform: inherit;
   margin-bottom: 5px;
 }
-/* line 482, ../scss/_myaccount.scss */
+/* line 489, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale__desc {
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
   line-height: 1.7;
 }
-/* line 489, ../scss/_myaccount.scss */
+/* line 496, ../scss/_myaccount.scss */
 .box-product-sale .service_product-glossmenu .box-product-sale__content {
   bottom: 25px;
   z-index: 9;
   padding: 0 10px;
 }
 
-/* line 498, ../scss/_myaccount.scss */
+/* line 505, ../scss/_myaccount.scss */
 .page-gloss-menu .main-content {
   padding-bottom: 0;
 }
 
-/* line 502, ../scss/_myaccount.scss */
+/* line 509, ../scss/_myaccount.scss */
 button.slick-prev.slick-arrow {
   left: 20px;
 }
 
-/* line 506, ../scss/_myaccount.scss */
+/* line 513, ../scss/_myaccount.scss */
 button.slick-next.slick-arrow {
   right: 50px;
+}
+
+/* line 519, ../scss/_myaccount.scss */
+.box-feature__iamge {
+  max-height: 550px;
+}
+
+/* line 523, ../scss/_myaccount.scss */
+.menu-footer li a,
+.menu-footer li.btn a {
+  font-size: 15px;
 }
 
 /* line 69, ../scss/customs.scss */
