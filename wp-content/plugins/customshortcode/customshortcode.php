@@ -63,3 +63,75 @@ function cs_create_get_tax($attrs) {
   return $content;
   wp_reset_postdata();
 }
+
+// Subscriber
+add_shortcode( 'cs_subscriber', 'create_cs_subscriber' );
+function create_cs_subscriber($attrs) {
+  extract(shortcode_atts (array(
+    'message' => ''
+  ), $attrs));
+
+  ob_start();
+
+    $subscribe_email_arr = array();
+    $args = array(
+      'post_type' => 'user_subscribe',
+      'post_status' => 'any',
+      'posts_per_page'  => -1
+    );
+    $subscribe = new WP_Query($args);
+    if( $subscribe->have_posts() ) {
+      while ( $subscribe->have_posts() ) {
+        $subscribe->the_post();
+        $post_title = get_the_title();
+
+        $title_float = str_replace(array('@', '.', ' '),"",$post_title);
+        $title_convert = hash('adler32', $title_float);
+        $subscribe_email_arr[] = $title_convert;
+      }
+      wp_reset_postdata();
+    }
+
+    $context = Timber::get_context();
+    $context['message'] = $message;
+
+    if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'cs-submit-subscribe' ) {
+      //print_r($_POST);
+      if( isset($_POST['email'], $_POST['post_code']) ) {
+        $subs_email     = $_POST['email'];
+        $subs_postcode  = $_POST['post_code'];
+      }
+
+      if ( empty($subs_email) || empty($subs_postcode) ) {
+        setcookie("subs_false", 1, time() + 5, '/'); // 86400 = 1 day
+        $context['message'] = __('Email or Post Code is not empty!', 'cs_plugin');
+      } else {
+        $email_float = str_replace(array('@', '.', ' '), "", $subs_email);
+        $email_convert = hash('adler32', $email_float);
+
+        if( in_array($email_convert, $subscribe_email_arr) ) {
+          setcookie("subs_false", 1, time() + 5, '/'); // 86400 = 1 day
+          $context['message_email'] = __('Email ' . $subs_email . ' is existed!', 'cs_plugin');
+        } else {
+          setcookie("subs_submited", 1, time() + 5, '/'); // 86400 = 1 day
+
+          $new_post = array(
+            'post_title'    =>   $subs_email,
+            'post_status'   =>   'pending',
+            'post_type'     =>   'user_subscribe'
+          );
+
+          // SAVE THE POST
+          $pid = wp_insert_post($new_post);
+          update_post_meta($pid, '_cmb_post_code', $subs_postcode);
+        }
+      }
+    }
+
+    Timber::render( 'subscriber.twig', $context );
+
+    $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+  wp_reset_postdata();
+}

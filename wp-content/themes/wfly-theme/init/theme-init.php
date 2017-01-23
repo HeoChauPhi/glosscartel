@@ -231,4 +231,3 @@ function wf_twig_data($data){
 
   return $data;
 }
-?>

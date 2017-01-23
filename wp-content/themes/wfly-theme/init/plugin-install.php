@@ -54,4 +54,3 @@ function wf_plugin_activation() {
   );
   tgmpa( $plugins, $config );
 }
-?>

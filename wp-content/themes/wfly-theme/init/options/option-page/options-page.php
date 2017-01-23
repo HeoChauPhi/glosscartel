@@ -42,4 +42,3 @@ function framework_page($name = '') {
   $value = get_post_meta( $post->ID, '_cmb_' . $name, true );
   return $value;
 }
-?>

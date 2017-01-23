@@ -37,10 +37,15 @@
   }
 
   function colorbox() {
-    if($( window ).width() < 480) {
+    /*if($( window ).width() < 480) {
       $(".popup-login a, .box-cta-book a").colorbox({inline:true, width:"100%"});
     } else {
       $(".popup-login a, .box-cta-book a").colorbox({inline:true, width:"590px"});
+    }*/
+    $('#site-message a').colorbox({inline:true, width:"100%"});
+    if( !!$.cookie("subs_false") ){
+      var returnchoose    = $.cookie("subs_false");
+      $('#site-message a').trigger("click");
     }
   }
 
@@ -206,7 +211,7 @@
     shadowFeature();
     verticalSlick();
     // popuplogin();
-    // colorbox();
+    colorbox();
     footerjs();
     loginForm();
     matchHeight();

@@ -82,6 +82,12 @@ function fb_mce_before_init( $settings ) {
       'classes' => 'text_mall',
       'wrapper' => false
     ),
+    array(
+      'title' => 'Popup Class',
+      'block' => 'div',
+      'classes' => 'popup_link',
+      'wrapper' => false
+    ),
   );
   $settings['style_formats'] = json_encode( $style_formats );
   return $settings;

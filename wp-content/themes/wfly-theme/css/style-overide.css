@@ -1,6 +1,14 @@
+.site-popup {
+  display: none;
+}
+
 .branding,
 .group-header-menu {
   margin-top: 30px;
+}
+
+.group-header-menu {
+  letter-spacing: 2px;
 }
 
 .home .header-main {
@@ -207,4 +215,8 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.box-service__item__title {
+  padding: 0 20px;
 }

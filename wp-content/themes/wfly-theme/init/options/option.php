@@ -6,4 +6,4 @@ function wf_meta_boxes() {
   }
 }
 require_once dirname(__FILE__) . '/option-page/options-page.php';
-?>
+require_once dirname(__FILE__) . '/option-post/options-post.php';

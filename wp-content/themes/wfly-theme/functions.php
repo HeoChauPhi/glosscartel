@@ -64,11 +64,11 @@ add_action('admin_init', 'wf_admin_styles');
 
 /* Add custom post type */
 function wf_create_custom_post_types() {
-  /*register_post_type( 'wf_product',
+  register_post_type( 'slideshow',
     array(
       'labels' => array(
-        'name' => __( 'Product' ),
-        'singular_name' => __( 'Product' )
+        'name' => __( 'Slideshow' ),
+        'singular_name' => __( 'Slideshow' )
       ),
       'supports' => array(
         'title'
@@ -77,24 +77,11 @@ function wf_create_custom_post_types() {
       'has_archive' => true,
     )
   );
-  register_post_type( 'wf_package',
+  register_post_type( 'user_subscribe',
     array(
       'labels' => array(
-        'name' => __( 'Packages' ),
-        'singular_name' => __( 'Packages' )
-      ),
-      'supports' => array(
-        'title'
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );*/
-  register_post_type( 'slideshow',
-    array(
-      'labels' => array(
-        'name' => __( 'Slideshow' ),
-        'singular_name' => __( 'Slideshow' )
+        'name' => __( 'User Subscribe' ),
+        'singular_name' => __( 'User Subscribe' )
       ),
       'supports' => array(
         'title'

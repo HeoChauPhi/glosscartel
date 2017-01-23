@@ -1,0 +1,21 @@
+<div class="popup-form">
+  <form id="subscribe-popup" class="form-subscribe-popup" name="subscribe-popup" method="post" action="">
+    <div class="form-item">
+      <input type="email" name="email" placeholder="Email Address" class="input">
+      {% if message_email %}
+      <div class="form-item-message">{{ message_email }}</div>
+      {% endif %}
+    </div>
+    <div class="form-item">
+      <input type="text" name="post_code" placeholder="Post code" class="input">
+    </div>
+
+    <div class="box-from-contact__button">
+      <button class="button">Submit</button>
+      <input type="hidden" name="action" value="cs-submit-subscribe" class="button">
+    </div>
+  </form>
+  {% if message %}
+  <div class="form-message">{{ message }}</div>
+  {% endif %}
+</div>
