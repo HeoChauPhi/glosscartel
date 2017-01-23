@@ -216,3 +216,66 @@
 .box-service__item__title {
   padding: 0 20px;
 }
+
+/* Popup */
+.site-popup {    
+  background-color: #404352;
+  color: #fff;
+  margin: 0 auto;
+  padding: 30px 75px;
+  width: 590px;
+  border-radius: 5px;
+}
+
+div#cboxWrapper:before {
+  z-index: 9999;
+}
+
+.form-subscribe-popup {
+  background-color: transparent;
+}
+
+.form-subscribe-popup .form-item input,
+.form-subscribe-popup .box-from-contact__button {
+  text-align: center;
+}
+
+.form-subscribe-popup .form-item input::-webkit-input-placeholder ,
+.form-subscribe-popup .form-item input::-moz-placeholder,
+.form-subscribe-popup .form-item input:-ms-input-placeholder,
+.form-subscribe-popup .form-item input:-moz-placeholder {
+  color: #beaa7c !important;
+  text-transform: uppercase;
+}
+
+.form-subscribe-popup .box-from-contact__button {
+  margin-top: 20px !important;
+}
+
+.form-subscribe-popup .box-from-contact__button .button {
+  background-image: none;
+  background-color: #30323e;
+  border: none;
+  padding: 10px 20%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-subscribe-popup .box-from-contact__button .button:hover {
+  background-image: none;
+  background-color: #ff4040;
+  border: none;
+}
+
+.form-subscribe-popup .form-item-message,
+.form-subscribe-popup .form-message {
+  color: red;
+}
+
+button#cboxClose {
+  background-size: cover;
+}
+
+.site-popup-submited {
+  text-transform: uppercase;
+}

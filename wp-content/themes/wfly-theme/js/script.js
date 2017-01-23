@@ -42,9 +42,16 @@
     } else {
       $(".popup-login a, .box-cta-book a").colorbox({inline:true, width:"590px"});
     }*/
-    $('#site-message a').colorbox({inline:true, width:"100%"});
+    $('#site-message a').colorbox({inline:true});
+    
+    if( !!$.cookie("subs_submited") ){
+      $('.site-popup .site-popup-text, .site-popup .popup-form').remove();
+      $('.site-popup .site-popup-submited').show();
+      $('#site-message a').trigger("click");
+    }
+
     if( !!$.cookie("subs_false") ){
-      var returnchoose    = $.cookie("subs_false");
+      $('.site-popup .site-popup-submited').remove();
       $('#site-message a').trigger("click");
     }
   }
