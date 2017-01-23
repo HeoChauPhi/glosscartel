@@ -1,30 +1,76 @@
 {% if faq_sidebar %}
   <div class="box-sidebar-faq">
-    <h3 class="sidebar-faq-title">{{ box_faq_title }}</h3>
-    {% if box_faq_list %}
+    {% for faq in faq_groups %}
+    <div class="sidebar-{{faq.acf_fc_layout}}-{{loop.index}}" data-accordion="{{faq.acf_fc_layout}}-{{loop.index}}">
+      <h3 class="sidebar-faq-title">{{ faq.box_faq_title }}</h3>
+      {% if faq.box_faq_list %}
       <div class="sidebar-faq-list" data-accordion="box-faq-list">
-      {% for item in box_faq_list %}
-        <div class="sidebar-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
-      {% endfor %}
+        {% for item in faq.box_faq_list %}
+          <div class="sidebar-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
+        {% endfor %}
       </div>
-    {% endif %}
+      {% endif %}
+    </div>
+    {% endfor %}
+
     <div class="sidebar-faq-extend">
-      <div class="faq-extend-message">STILL CAN’T FIND ANANSWER TO YOUR QUESTION?</div>
-      <div class="faq-message-link"><a href="//glosscartel.com/contact/">Contact Us</a></div>
+      <div class="faq-extend-message">{{ faq_sidebar_contact_message }}</div>
+      <div class="faq-message-link"><a href="{{ faq_sidebar_contact_link }}">Contact Us</a></div>
     </div>
   </div>
 {% endif %}
 
 <div class="box-faq">
-  <h3 class="box-faq-title">{{ box_faq_title }}</h3>
-  {% if box_faq_list %}
-    <div class="box-faq-list">
-    {% for item in box_faq_list %}
-      <div class="box-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
-      <div class="box-faq-inner">
-        <div class="box-faq-answer {% if loop.index == 1 %}content-show{% endif %}" data-answer-for="question-{{ loop.index }}">{{ item.faq_answer }}</div>
+  {% for faq in faq_groups %}
+    {% set faq_first = loop.index %}
+    <div class="{{faq.acf_fc_layout}}-{{loop.index}}">
+      <h3 class="box-faq-title">{{ faq.box_faq_title }}</h3>
+      {% if faq.box_faq_list %}
+        <div class="box-faq-list">
+        {% for item in faq.box_faq_list %}
+          {% set item_index = loop.index %}
+          <div class="box-faq-question" data-question="question-{{ loop.index }}"><p>{{ item.faq_question }}</p></div>
+          <div class="box-faq-inner">
+            <div class="box-faq-answer {% if (faq_first == 1) and (item_index == 1) %}content-show{% endif %}" data-answer-for="question-{{ loop.index }}">{{ item.faq_answer }}</div>
+          </div>
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+{#<div class="box-faq-wrapper">
+  {% if faq_sidebar %}
+    <div class="box-sidebar-faq">
+      <h3 class="sidebar-faq-title">{{ box_faq_title }}</h3>
+      {% if box_faq_list %}
+        <div class="sidebar-faq-list" data-accordion="box-faq-list">
+        {% for item in box_faq_list %}
+          <div class="sidebar-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
+        {% endfor %}
+        </div>
+      {% endif %}
+      {% if faq_sidebar_contact %}
+      <div class="sidebar-faq-extend">
+        <div class="faq-extend-message">{{ faq_sidebar_contact_message }}</div>
+        <div class="faq-message-link"><a href="{{ faq_sidebar_contact_link }}">Contact Us</a></div>
       </div>
-    {% endfor %}
+      {% endif %}
     </div>
   {% endif %}
-</div>
+
+  <div class="box-faq">
+    <h3 class="box-faq-title">{{ box_faq_title }}</h3>
+    {% if box_faq_list %}
+      <div class="box-faq-list">
+      {% for item in box_faq_list %}
+        <div class="box-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
+        <div class="box-faq-inner">
+          <div class="box-faq-answer" data-answer-for="question-{{ loop.index }}">{{ item.faq_answer }}</div>
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>#}

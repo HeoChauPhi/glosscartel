@@ -694,42 +694,23 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_58807bc7decab",
-                            "label": "Box FAQ title",
-                            "name": "box_faq_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            }
-                        },
-                        {
                             "layouts": [
                                 {
-                                    "key": "5880799cb22f6",
-                                    "name": "faq_list",
-                                    "label": "FAQ List",
+                                    "key": "58857c4bc55ce",
+                                    "name": "faq_group",
+                                    "label": "FAQ Group",
                                     "display": "block",
                                     "sub_fields": [
                                         {
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 1,
                                             "default_value": "",
-                                            "delay": 0,
-                                            "key": "field_588079c68e015",
-                                            "label": "FAQ Question",
-                                            "name": "faq_question",
-                                            "type": "wysiwyg",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_58807bc7decab",
+                                            "label": "Box FAQ title",
+                                            "name": "box_faq_title",
+                                            "type": "text",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -740,15 +721,63 @@
                                             }
                                         },
                                         {
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 1,
-                                            "default_value": "",
-                                            "delay": 0,
-                                            "key": "field_588079e88e016",
-                                            "label": "FAQ Answer",
-                                            "name": "faq_answer",
-                                            "type": "wysiwyg",
+                                            "layouts": [
+                                                {
+                                                    "key": "5880799cb22f6",
+                                                    "name": "faq_list",
+                                                    "label": "FAQ List",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "default_value": "",
+                                                            "new_lines": "",
+                                                            "maxlength": "",
+                                                            "placeholder": "",
+                                                            "rows": 3,
+                                                            "key": "field_588079c68e015",
+                                                            "label": "FAQ Question",
+                                                            "name": "faq_question",
+                                                            "type": "textarea",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            }
+                                                        },
+                                                        {
+                                                            "tabs": "all",
+                                                            "toolbar": "full",
+                                                            "media_upload": 1,
+                                                            "default_value": "",
+                                                            "delay": 0,
+                                                            "key": "field_588079e88e016",
+                                                            "label": "FAQ Answer",
+                                                            "name": "faq_answer",
+                                                            "type": "wysiwyg",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            }
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": ""
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "button_label": "Add FAQs",
+                                            "key": "field_588079728e014",
+                                            "label": "Box FAQ List",
+                                            "name": "box_faq_list",
+                                            "type": "flexible_content",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -765,10 +794,10 @@
                             ],
                             "min": "",
                             "max": "",
-                            "button_label": "Add FAQs",
-                            "key": "field_588079728e014",
-                            "label": "Box FAQ List",
-                            "name": "box_faq_list",
+                            "button_label": "Add Group FAQ",
+                            "key": "field_58857c3887e7a",
+                            "label": "FAQ Groups",
+                            "name": "faq_groups",
                             "type": "flexible_content",
                             "instructions": "",
                             "required": 0,
@@ -782,7 +811,7 @@
                         {
                             "default_value": 1,
                             "message": "Disable\/Enable Sidebar FAQs",
-                            "ui": 0,
+                            "ui": 1,
                             "ui_on_text": "",
                             "ui_off_text": "",
                             "key": "field_58807a198e017",
@@ -792,6 +821,60 @@
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_5885767cad5be",
+                            "label": "FAQ Sidebar Contact Message",
+                            "name": "faq_sidebar_contact_message",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58807a198e017",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_588576c3ad5bf",
+                            "label": "FAQ Sidebar Contact Link",
+                            "name": "faq_sidebar_contact_link",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58807a198e017",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1015,5 +1098,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484967556
+    "modified": 1485143329
 }
