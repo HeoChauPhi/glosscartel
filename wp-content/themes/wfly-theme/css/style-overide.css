@@ -15,6 +15,18 @@
   z-index: 9;
 }
 
+.box-feature {
+  min-height: 100vh;
+}
+
+.box-feature__iamge {
+  max-height: 100vh;
+}
+
+.box-book-now {
+  position: absolute !important;
+}
+
 #back-to-top {
   position: fixed;
   bottom: 110px;
@@ -224,7 +236,7 @@
 }
 
 /* Popup */
-.site-popup {    
+.site-popup {
   background-color: #404352;
   color: #fff;
   margin: 0 auto;

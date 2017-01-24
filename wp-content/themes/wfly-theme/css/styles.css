@@ -536,9 +536,9 @@ button.slick-prev.slick-arrow {
     width: 100%;
     z-index: 0; }
     .box-feature__iamge:before {
-      background-image: url("../images/bg-shadow.png");
+      background-image: url("../images/imgpsh_fullsize.png");
       background-position: bottom left;
-      background-repeat: no-repeat;
+      background-repeat: repeat-x;
       background-size: 100%;
       bottom: 0;
       content: "";
