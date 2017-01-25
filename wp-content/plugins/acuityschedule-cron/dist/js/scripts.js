@@ -19,7 +19,7 @@
       data : {action: "datetime", datetime: date_value, app_id: select_id },
       beforeSend: function() {
         $('.datetime-chose').html('');
-        $('.datetime-chose').before('<div class="ajax-load-icon">load items</div>');
+        $('.datetime-chose').before('<div class="ajax-load-icon">Loading Items</div>');
       },
       success: function(response) {
         $('.ajax-load-icon').remove();

@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Example Shortcode
 /**
 add_shortcode( 'asc_scheduling', 'asc_acuityscheduling' );
@@ -17,14 +18,12 @@ function asc_acuityscheduling( $atts ) {
 add_action( 'wp_ajax_datetime', 'datetime_callback' );
 add_action( 'wp_ajax_nopriv_datetime', 'datetime_callback' );
 function datetime_callback() {
-  $values = $_REQUEST;
+  $options  = get_option('asc_board_settings');
+  $values   = $_REQUEST;
 
-  $userID = '12648352';
-  $key = '7a929774222d17671054d7cc5199f029';
-
-  // $userID = $options_asc['asc_user_id'];
-  // $key = $options_asc['asc_user_key'];
-  $url = 'https://acuityscheduling.com/api/v1/availability/times?appointmentTypeID='.$values['app_id'].'&date='.$values['datetime'];
+  $userID = $options['asc_user_id'];
+  $key    = $options['asc_user_key'];
+  $url    = 'https://acuityscheduling.com/api/v1/availability/times?appointmentTypeID='.$values['app_id'].'&date='.$values['datetime'];
 
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
@@ -56,40 +55,28 @@ function datetime_callback() {
 // Feature choose
 add_shortcode( 'asc_scheduling', 'ASC_acuityscheduling' );
 function ASC_acuityscheduling( $atts ) {
-  $options = get_option('asc_board_settings');
-
   extract( shortcode_atts( array(
-    /*'user_id'       => $options['asc_user_id'],
-    'user_key'      => $options['asc_user_key'],
-    'url_api'       => $options['asc_url_api'],
-    'product_url'   => $options['asc_product_url']*/
   ), $atts ) );
   ob_start();
-
     $link_signup = home_url('appointment-scheduling-registor');
     $link_paynow = home_url('appointment-scheduling-client-choose');
 
     $args_app = array(
-      'post_type'       => 'asc_appointment',
-      'orderby'         => 'date',
-      'order'           => 'ASC',
-      'posts_per_page'  => -1
+      'parent' => 0
     );
 
     $context = Timber::get_context();
-    $post_app = Timber::get_posts($args_app);
-    $context['post_app'] = $post_app;
-    $context['cat_app'] = Timber::get_terms('service_product');
+    $context['cat_app'] = Timber::get_terms('service_product', $args_app);
 
-    /*if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Book Now' ) {
+    if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Book Now' ) {
       if( isset($_POST['client_area'], $_POST['client_service'], $_POST['client_date'], $_POST['client_time']) ) {
         $client_area        = $_POST['client_area'];
         $client_service     = $_POST['client_service'];
+        $client_date        = $_POST['client_date'];
         $client_time        = $_POST['client_time'];
-
-        $client_date_input  = date_create($_POST['client_date']);
-        $client_date        = date_format($client_date_input, 'Y-m-d');
       }
+
+      //echo $client_service;
 
       if( empty($client_area) || empty($client_service) || empty($client_date) || empty($client_time) ) {
         $context['area_message']    = __('Please enter Your Area', 'asc');
@@ -98,22 +85,18 @@ function ASC_acuityscheduling( $atts ) {
         $context['time_message']    = __('Please choose Time', 'asc');
         wp_redirect('');
       } else if( !empty($client_area) || !empty($client_service) || !empty($client_date) || !empty($client_time) ) {
-        unset($_COOKIE['returnchoose']);
-        setcookie('returnchoose', null, -1, '/');
+        $_SESSION['client_area']    = $client_area;
+        $_SESSION['client_service'] = $client_service;
+        $_SESSION['client_date']    = $client_date;
+        $_SESSION['client_time']    = $client_time;
 
-        setcookie("Client", "", -1, '/'); // 86400 = 1 day
-        setcookie("Client[Area]", $client_area, time() + 3600, '/'); // 86400 = 1 day
-        setcookie("Client[Service]", $client_service, time() + 3600, '/'); // 86400 = 1 day
-        setcookie("Client[Date]", $client_date, time() + 3600, '/'); // 86400 = 1 day
-        setcookie("Client[Time]", $client_time, time() + 3600, '/'); // 86400 = 1 day
-
-        if(isset($_COOKIE['signin']['email'])) {
+        if(isset($_SESSION['signin_email'])) {
           wp_redirect($link_paynow);
         } else {
           wp_redirect($link_signup);
         }
       }
-    }*/
+    }
 
     Timber::render('templates/form-book-feature.twig', $context);
 
@@ -142,11 +125,7 @@ function ASC_signup( $atts ) {
       while ( $asc_user->have_posts() ) {
         $asc_user->the_post();
         $post_title = get_the_title();
-        $post_password = asc_post_meta('asc_pass');
-
-        $title_float = str_replace(array('@', '.', ' '),"",$post_title);
-        $title_convert = hash('adler32', $title_float);
-        $title[] = $title_convert;
+        $title[] = $post_title;
       }
     }
 
@@ -171,16 +150,13 @@ function ASC_signup( $atts ) {
         $context['signup_password']     = __('Password is Require!', 'asc');
         $context['signup_re_password']  = __('Password is not correct!', 'asc');
       } else {
-        $email_float = str_replace(array('@', '.', ' '), "", $signup_email);
-        $email_convert = hash('adler32', $email_float);
 
-        if( in_array($email_convert, $title) ) {
+        if( in_array($signup_email, $title) ) {
           $context['message_signup'] = __('Email ' . $signup_email . ' is existed!', 'asc');
         } elseif( $signup_password != $signup_re_password ) {
           $context['signup_re_password']  = __('Re-Password is not correct!', 'asc');
         } else {
-          setcookie("signin", "", time() - 86400, '/'); // 86400 = 1 day
-          setcookie("signin[email]", $signup_email, time() + 86400, '/'); // 86400 = 1 day
+          $_SESSION['signin_email'] = $signup_email;
 
           $new_post = array(
             'post_title'  =>   $signup_email,
@@ -195,7 +171,7 @@ function ASC_signup( $atts ) {
           update_post_meta($pid, '_cmb2_asc_email', $signup_email);
           update_post_meta($pid, '_cmb2_asc_pass', $signup_password);
 
-          if(isset($_COOKIE['Client']['Service'])) {
+          if(isset($_SESSION['client_service'])) {
             wp_redirect($link_paynow);
           } else {
             wp_redirect($link_signin);
@@ -204,8 +180,8 @@ function ASC_signup( $atts ) {
       }
     }
 
-    if( isset($_COOKIE['signin']['email']) && !empty($_COOKIE['signin']['email'])) {
-      $context['user_email'] = $_COOKIE['signin']['email'];
+    if( isset($_SESSION['signin_email']) ) {
+      $context['user_email'] = $_SESSION['signin_email'];
     } else {
       $context['user_email'] = "";
     }
@@ -296,14 +272,19 @@ function ASC_signin( $atts ) {
 // Block User
 add_shortcode( 'asc_block_user', 'ASC_block_user' );
 function ASC_block_user( $atts ) {
+    add_filter( 'body_class', function( $classes ) {
+      $classes['appointment_user'];
+      return $classes;
+    });
   extract( shortcode_atts( array(
   ), $atts ) );
 
   ob_start();
+
     $context = Timber::get_context();
 
-    if( isset($_COOKIE['signin']['email']) && !empty($_COOKIE['signin']['email'])) {
-      $context['user_login'] = $_COOKIE['signin']['email'];
+    if( isset($_SESSION['signin_email']) ) {
+      $context['user_login'] = $_SESSION['signin_email'];
     } else {
       $context['user_login'] = "";
     }

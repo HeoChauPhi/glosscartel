@@ -9,18 +9,16 @@
   <div class="form-item">
     <select name="client_service" class="select-two client-service">
       <option selected="" disabled="" value="">Choose a service</option>
-      {% for category in cat_app %}
-        {% set cat_id = category.id %}
-        <optgroup label="{{ category.name }}">
-          {% for post in post_app %}
-            {% set postcat_id = post.terms('service_product').0.id %}
-            {% if postcat_id == cat_id %}
-            <option data-id="{{ post._cmb2_asc_app_id }}" value="{{ post.id }}">{{ post.title }}</option>
-            {% endif %}
-          {% endfor %}
+      {% for item in cat_app %}
+        {% set term = TimberTerm(item.term_id) %}
+        <optgroup label="{{ item.name }}">
+        {% for post in term.get_posts %}
+          <option data-id="{{ post._cmb2_asc_app_id }}" value="{{ post.id }}">{{ post.title }}</option>
+        {% endfor %}
         </optgroup>
       {% endfor %}
     </select>
+
     {% if service_message %}
       <div class="message">{{ service_message }}</div>
     {% endif %}
@@ -34,14 +32,6 @@
   </div>
 
   <div class="form-item">
-    {#<select name="client_time" class="select-two">
-      <option selected="" disabled="" value="">Choose Times</option>
-      {% for hour in 7..20 %}
-        {% for time in ['00', '15', '30', '45'] %}
-          <option>{{ hour }}:{{ time }}</option>
-        {% endfor %}
-      {% endfor %}
-    </select>#}
     <div class="datetime-chose">
       <span>Find A Time</span>
     </div>

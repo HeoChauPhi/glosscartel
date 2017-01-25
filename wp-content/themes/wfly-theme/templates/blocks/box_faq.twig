@@ -39,38 +39,3 @@
     </div>
   {% endfor %}
 </div>
-
-{#<div class="box-faq-wrapper">
-  {% if faq_sidebar %}
-    <div class="box-sidebar-faq">
-      <h3 class="sidebar-faq-title">{{ box_faq_title }}</h3>
-      {% if box_faq_list %}
-        <div class="sidebar-faq-list" data-accordion="box-faq-list">
-        {% for item in box_faq_list %}
-          <div class="sidebar-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
-        {% endfor %}
-        </div>
-      {% endif %}
-      {% if faq_sidebar_contact %}
-      <div class="sidebar-faq-extend">
-        <div class="faq-extend-message">{{ faq_sidebar_contact_message }}</div>
-        <div class="faq-message-link"><a href="{{ faq_sidebar_contact_link }}">Contact Us</a></div>
-      </div>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  <div class="box-faq">
-    <h3 class="box-faq-title">{{ box_faq_title }}</h3>
-    {% if box_faq_list %}
-      <div class="box-faq-list">
-      {% for item in box_faq_list %}
-        <div class="box-faq-question" data-question="question-{{ loop.index }}">{{ item.faq_question }}</div>
-        <div class="box-faq-inner">
-          <div class="box-faq-answer" data-answer-for="question-{{ loop.index }}">{{ item.faq_answer }}</div>
-        </div>
-      {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-</div>#}
