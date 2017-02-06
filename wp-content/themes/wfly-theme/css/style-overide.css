@@ -335,3 +335,7 @@ button#cboxClose {
 .page-title h1 {
   margin-top: 0;
 }
+
+.box-cta-book a.button {
+  letter-spacing: 7px;
+}
