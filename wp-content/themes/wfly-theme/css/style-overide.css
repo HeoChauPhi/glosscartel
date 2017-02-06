@@ -27,6 +27,35 @@
   position: absolute !important;
 }
 
+.form-schedule-feature .form-item {
+  position: relative;
+  overflow: visible;
+}
+
+.form-schedule-feature .form-item .message {
+  background-color: #C1B274;
+  border-radius: 100px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 100%;
+  width: 100%;
+}
+
+.form-schedule-feature .form-item .message:before {
+  color: #C1B274;
+  content: "\25E4";
+  font-size: inherit;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  transform: rotate(45deg);
+}
+
 #back-to-top {
   position: fixed;
   bottom: 110px;

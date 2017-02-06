@@ -26,7 +26,7 @@
       fade: true,
       cssEase: 'linear',
       adaptiveHeight: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
     });
   }
@@ -96,7 +96,7 @@
       speed: 500,
       cssEase: 'linear',
       adaptiveHeight: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
     });
 
@@ -108,7 +108,7 @@
       speed: 500,
       cssEase: 'linear',
       adaptiveHeight: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
     });
   }

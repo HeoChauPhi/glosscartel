@@ -13,6 +13,7 @@
               <h2 class="box-product-sale__title"><a href="{{ term.link }}">{{term.name}}</a></h2>
               <div class="box-product-sale__desc">{{term.description}}</div>
             </div>
+            <a class="link-hidden" href="{{ term.link }}">{{term.name}}</a>
             {% endif %}
           {% else %}
               <h2 class="box-product-sale__title"><a href="{{term.link}}">{{term.name}}</a></h2>
@@ -26,6 +27,7 @@
                   {% endif %}
                 </div>
               </div>
+              <a class="link-hidden" href="{{ term.link }}">{{term.name}}</a>
           {% endif %}
         </div>
       {% endfor %}
