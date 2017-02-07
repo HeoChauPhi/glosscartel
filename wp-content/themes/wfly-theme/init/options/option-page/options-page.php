@@ -1,41 +1,39 @@
 <?php
 function be_sample_metaboxes( $meta_boxes ) {
   $prefix = '_cmb_'; // Prefix for all fields
-  $meta_boxes['page_option'] = array(
-    'id' => 'page_option',
-    'title' => 'Page Options',
-    'pages' => array('page'), // post type
-    'context' => 'normal',
-    'priority' => 'high',
-    'show_names' => true, // Show field names on the left
-    'fields' => array(
-      array(
-        'name' => 'Disable title',
-        'desc' => 'Check this disable this page title',
-        'id' => $prefix . 'title',
-        'type'    => 'checkbox',
-        'options' => array(
-          'hide'       => __( 'Hide this page title', 'cmb' ),
-        ),
-      ),
 
-      array(
-        'name' => 'Layout page option',
-        'desc' => 'Check to set this page layout',
-        'id' => $prefix . 'layout_page',
-        'type'    => 'radio',
-        'options' => array(
-          'full'       => __( 'Page full layout', 'cmb' ),
-          'container'  => __( 'Page container layout', 'cmb' ),
-        ),
-        'default' => 'container'
-      ),
+  $cmb = new_cmb2_box( array(
+    'id'            => 'page_option',
+    'title'         => __( 'Page Options', 'cmb2' ),
+    'object_types'  => array( 'page', ), // Post type or any post type use: ct_list_posttype()
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'show_names'    => true,
+  ) );
+
+  // Disable title
+  $cmb->add_field( array(
+    'name'       => __( 'Disable title', 'cmb2' ),
+    'desc'       => __( 'Check it if you want disable this page title', 'cmb2' ),
+    'id'         => $prefix . 'title',
+    'type'       => 'checkbox'
+  ) );
+
+  // Layout Option
+  $cmb->add_field( array(
+    'name'              => __('Layout page option', 'cmb2'),
+    'desc'              => __('Check to setting this page layout', 'cmb2'),
+    'id'                => $prefix . 'layout_page',
+    'type'              => 'radio',
+    'show_option_none'  => false,
+    'options'           => array(
+      'full'            => __( 'Page full layout', 'cmb2' ),
+      'container'       => __( 'Page container layout', 'cmb2' ),
     ),
-  );
-
-  return $meta_boxes;
+    'default'           => 'container'
+  ) );
 }
-add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
+add_action( 'cmb2_admin_init', 'be_sample_metaboxes' );
 
 function framework_page($name = '') {
   global $post;

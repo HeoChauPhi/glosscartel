@@ -16,7 +16,7 @@
     {{function('wp_head')}}
   </head>
   <body class="{{body_class}}" data-template="base.twig">
-    <div class="page-wrapper">
+    <div class="page-wrapper" {% if post.thumbnail %}style="background-image: url({{post.thumbnail.src}});"{% endif %}>
       {% block header %}
         {% include 'header.twig' %}
       {% endblock %}

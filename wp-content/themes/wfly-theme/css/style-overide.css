@@ -1,3 +1,13 @@
+.page-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#footer {
+  background-color: #fff;
+}
+
 .branding,
 .group-header-menu {
   margin-top: 30px;
@@ -345,4 +355,59 @@ button#cboxClose {
   padding-top: 20px;
   border-top: 1px solid #555866;
   position: relative;
+}
+
+.select2-selection__arrow {
+  display: none !important;
+}
+
+body[class*="page-appointment-scheduling"] .page-wrapper {
+  background-image: url("../images/page_wrapper_image.jpg");
+}
+
+body[class*="page-appointment-scheduling"] main.page-content-wrappre {
+  background: transparent;
+}
+
+body[class*="page-appointment-scheduling"] form {
+  background: transparent;
+}
+
+body[class*="page-appointment-scheduling"] .box-form-login {
+  background-color: #404352;
+  padding: 30px 40px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.box-form-login__title.form-title {
+  margin-top: 0;
+}
+
+.block-user ul,
+.block-user li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block-user .menu-myaccount,
+.block-user .picture-user {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block-user .menu-myaccount {
+  position: relative;
+}
+
+.block-user .sub-myaccount {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.block-user .menu-myaccount .has-child:hover .sub-myaccount {
+  display: block;
 }

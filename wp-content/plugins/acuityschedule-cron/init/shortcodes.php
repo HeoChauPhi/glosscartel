@@ -58,7 +58,7 @@ function ASC_acuityscheduling( $atts ) {
   extract( shortcode_atts( array(
   ), $atts ) );
   ob_start();
-    $link_signup = home_url('appointment-scheduling-registor');
+    $link_signup = home_url('appointment-scheduling-signin');
     $link_paynow = home_url('appointment-scheduling-client-choose');
 
     $args_app = array(
@@ -241,10 +241,9 @@ function ASC_signin( $atts ) {
         $email_convert = hash('adler32', $email_float);
 
         if( array_key_exists($email_convert, $title) && $signin_password == $title[$email_convert] ) {
-          setcookie("signin", "", time() - 86400, '/'); // 86400 = 1 day
-          setcookie("signin[email]", $signin_email, time() + 86400, '/'); // 86400 = 1 day
+          $_SESSION['signin_email'] = $signin_email;
 
-          if(isset($_COOKIE['Client']['Service'])) {
+          if(isset($_SESSION['client_service'])) {
             wp_redirect($link_paynow);
           } else {
             wp_redirect($link_signin);
@@ -255,8 +254,8 @@ function ASC_signin( $atts ) {
       }
     }
 
-    if( isset($_COOKIE['signin']['email']) && !empty($_COOKIE['signin']['email'])) {
-      $context['user_email'] = $_COOKIE['signin']['email'];
+    if( isset($_SESSION['signin_email']) ) {
+      $context['user_email'] = $_SESSION['signin_email'];
     } else {
       $context['user_email'] = "";
     }
