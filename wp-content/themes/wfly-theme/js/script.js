@@ -242,6 +242,6 @@
   $(window).resize(function() {
     // Call to function
     matchHeight();
-    footerjs();
+    //footerjs();
   });
 })(jQuery);

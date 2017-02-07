@@ -339,3 +339,10 @@ button#cboxClose {
 .box-cta-book a.button {
   letter-spacing: 7px;
 }
+
+.sidebar-faq-extend {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #555866;
+  position: relative;
+}
