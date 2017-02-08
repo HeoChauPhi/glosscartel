@@ -84,7 +84,7 @@ function ASC_acuityscheduling( $atts ) {
         $context['date_message']    = __('Please choose Date', 'asc');
         $context['time_message']    = __('Please choose Time', 'asc');
         wp_redirect('');
-      } else if( !empty($client_area) || !empty($client_service) || !empty($client_date) || !empty($client_time) ) {
+      } else if( !empty($client_area) && !empty($client_service) && !empty($client_date) && !empty($client_time) ) {
         $_SESSION['client_area']    = $client_area;
         $_SESSION['client_service'] = $client_service;
         $_SESSION['client_date']    = $client_date;
@@ -99,6 +99,111 @@ function ASC_acuityscheduling( $atts ) {
     }
 
     Timber::render('templates/form-book-feature.twig', $context);
+
+    $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+  wp_reset_postdata();
+}
+
+// Client Choose
+add_shortcode( 'asc_client_choose', 'ASC_client_choose' );
+function ASC_client_choose( $atts ) {
+  extract( shortcode_atts( array(
+    'tax_name'      => 'service_product'
+  ), $atts ) );
+
+  ob_start();
+    if( isset($_SESSION['client_service']) ) {
+      $confirm_end_service = $_SESSION['client_service'];
+    }
+
+    if( empty($confirm_end_service) ) {
+      session_unset();
+      session_destroy();
+
+      wp_redirect(home_url());
+    }
+
+    /*$ascb_arr = array();
+    $data = asbc_get_apoiment($user_id, $user_key, $url_api);
+    $product = asbc_get_apoiment($user_id, $user_key, $product_url);
+
+    if (is_array($product) || is_object($product)) {
+      foreach ($product as $value) {
+        array_push($data, $value);
+      }
+    }
+
+    if(isset($_COOKIE['Client']['Service'])) {
+      foreach ($data as $value) {
+        if($value['id'] == $_COOKIE['Client']['Service'] ) {
+          $data = $value;
+        }
+      }
+    }*/
+
+    $link = home_url('appointment-scheduling-confirm');
+
+    $args = array(
+      'parent' => 0,
+      'hide_empty' => false
+    );
+
+    $context = Timber::get_context();
+    $context['categories'] = Timber::get_terms($tax_name, $args);
+    //$context['data'] = $data;
+
+    /*if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Confirm') {
+      if( isset($_POST['confirm_category'], $_POST['confirm_name'], $_POST['confirm_price'], $_POST['confirm_duration'], $_POST['confirm_image']) ) {
+        $confirm_catimg   = $_POST['confirm_catimg'];
+        $confirm_category   = $_POST['confirm_category'];
+        $confirm_name       = $_POST['confirm_name'];
+        $confirm_price      = $_POST['confirm_price'];
+        $confirm_duration   = $_POST['confirm_duration'];
+        $confirm_image      = $_POST['confirm_image'];
+      }
+
+      if( isset($_COOKIE['signin']['email'], $_COOKIE['Client']['Service'], $_COOKIE['Client']['Date'], $_COOKIE['Client']['Time']) ) {
+        $confirm_end_email    = $_COOKIE['signin']['email'];
+        $confirm_end_service  = $_COOKIE['Client']['Service'];
+        $confirm_end_date     = $_COOKIE['Client']['Date'];
+        $confirm_end_time     = $_COOKIE['Client']['Time'];
+      }
+
+      if( empty($confirm_end_email) || empty($confirm_end_service) || empty($confirm_end_date) || empty($confirm_end_time) ) {
+        setcookie("returnchoose", __('Please Choose Again!', 'ascb'), time() + 5, '/'); // 86400 = 1 day
+
+        foreach ($_COOKIE['Client'] as $key => $value) {
+          unset($_COOKIE['Client['. $key . ']']);
+          setcookie('Client['. $key . ']', null, -1, '/');
+        }
+        foreach ($_COOKIE['confirm'] as $key => $value) {
+          unset($_COOKIE['confirm['. $key . ']']);
+          setcookie('confirm['. $key . ']', null, -1, '/');
+        }
+
+        wp_redirect(home_url());
+      } else {
+        setcookie("confirm", "", -1, '/'); // 86400 = 1 day
+        setcookie("confirm[Catimg]", $confirm_catimg, time() + 3600, '/'); // 86400 = 1 day
+        setcookie("confirm[Category]", $confirm_category, time() + 3600, '/'); // 86400 = 1 day
+        setcookie("confirm[Name]", $confirm_name, time() + 3600, '/'); // 86400 = 1 day
+        setcookie("confirm[Price]", $confirm_price, time() + 3600, '/'); // 86400 = 1 day
+        setcookie("confirm[Duration]", $confirm_duration, time() + 3600, '/'); // 86400 = 1 day
+        setcookie("confirm[Image]", $confirm_image, time() + 3600, '/'); // 86400 = 1 day
+
+        wp_redirect($link);
+      }
+    }*/
+
+    if( isset($_SESSION['signin_email'])) {
+      $context['user_email'] = $_SESSION['signin_email'];
+    } else {
+      $context['user_email'] = "";
+    }
+
+    Timber::render('templates/appointment-scheduling-client-choose.twig', $context);
 
     $content = ob_get_contents();
   ob_end_clean();
