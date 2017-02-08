@@ -141,6 +141,7 @@ function ASC_signup( $atts ) {
         $signup_email       = $_POST['signup_email'];
         $signup_password    = $_POST['signup_password'];
         $signup_re_password = $_POST['signup_re_password'];
+        $signup_recieve     = $_POST['signup_recieve'];
       }
 
       if( empty($signup_first_name) || empty($signup_last_name) || empty($signup_email) || empty($signup_password) || empty($signup_re_password) ) {

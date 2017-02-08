@@ -380,6 +380,10 @@ body[class*="page-appointment-scheduling"] .box-form-login {
   border-radius: 20px;
 }
 
+.box-form-login .form-item .message {
+  color: #FF5722;
+}
+
 .box-form-login__title.form-title {
   margin-top: 0;
 }
@@ -410,4 +414,12 @@ body[class*="page-appointment-scheduling"] .box-form-login {
 
 .block-user .menu-myaccount .has-child:hover .sub-myaccount {
   display: block;
+}
+
+#from_signup .form-submit {
+  margin-top: 30px;
+}
+
+.page-appointment-scheduling-forgot-password .message {
+  font-size: inherit;
 }

@@ -6,13 +6,13 @@
     </div>
 
     <form id="from_signin" name="from_signin" action="" method="post">
-      <div class="from-item form-text">
+      <div class="form-item form-text">
         <input type="email" required="" value="" placeholder="Email Address" name="signin_email" class="input" size="20">
         {% if message_email %}
           <div class="message">{{ message_email }}</div>
         {% endif %}
       </div>
-      <div class="from-item">
+      <div class="form-item">
         <input type="password" required="" placeholder="Password" name="signin_password" class="input">
         {% if message_pass %}
           <div class="message">{{ message_pass }}</div>

@@ -6,35 +6,38 @@
     </div>
 
     <form id="from_signup" name="from_signup" action="" method="post">
-      <div class="from-item">
+      <div class="form-item">
         <input type="text" value="" size="30" name="signup_first_name" class="form-text input" placeholder="First Name">
         {% if signup_first_name %}
           <div class="message">{{ signup_first_name }}</div>
         {% endif %}
       </div>
-      <div class="from-item">
+      <div class="form-item">
         <input type="text" value="" size="30" name="signup_last_name" class="form-text input" placeholder="Last Name">
         {% if signup_last_name %}
           <div class="message">{{ signup_last_name }}</div>
         {% endif %}
       </div>
-      <div class="from-item">
+      <div class="form-item">
         <input type="email" value="" size="30" name="signup_email" class="form-text input" placeholder="Your Email">
         {% if signup_email %}
           <div class="message">{{ signup_email }}</div>
         {% endif %}
       </div>
-      <div class="from-item">
+      <div class="form-item">
         <input type="password" value="" size="30" name="signup_password" class="form-text input" placeholder="Password">
         {% if signup_password %}
           <div class="message">{{ signup_password }}</div>
         {% endif %}
       </div>
-      <div class="from-item">
+      <div class="form-item">
         <input type="password" value="" size="30" name="signup_re_password" class="form-text input" placeholder="Please re-enter password">
         {% if signup_re_password %}
           <div class="message">{{ signup_re_password }}</div>
         {% endif %}
+      </div>
+      <div class="form-item">
+        <input type="checkbox" value="1" size="30" name="signup_recieve" class="form-checkbox" checked="checked"> Recieve email updates from Gloss Cartel
       </div>
 
       <div class="form-submit">
