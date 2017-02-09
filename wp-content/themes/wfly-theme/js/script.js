@@ -116,12 +116,15 @@
  function footerjs() {
     var adminbar_height = $('#wpadminbar').outerHeight(true);
     var height_window = $(window).height();
-    var height_body = $('html > body').outerHeight(true);
-    var height_header = $('.header.header-wrapper').height();
-    var height_footer = $('.footer.footer-wrapper').height();
-    var height_main = height_window - (height_header + height_footer + adminbar_height);
-    if (height_window > height_body) {
-      $('.page-content-wrappre').css('min-height', height_main);
+    var height_html = $('html').outerHeight(true);
+    var footer = $('.footer.footer-wrapper');
+    if (height_window >= height_html) {
+      footer.addClass('footer-fix');
+      $('.page-wrapper').css({'min-height': 'calc(100vh - ' + adminbar_height + 'px)', 'padding-bottom': footer.height()});
+      $('.main-content').css({'margin-bottom': footer.height()});
+    } else if (height_window < height_html) {
+      footer.removeClass('footer-fix');
+      $('.page-wrapper').css({'min-height': 'inherit', 'padding-bottom': 0});
     }
   }
 
@@ -242,6 +245,6 @@
   $(window).resize(function() {
     // Call to function
     matchHeight();
-    //footerjs();
+    footerjs();
   });
 })(jQuery);

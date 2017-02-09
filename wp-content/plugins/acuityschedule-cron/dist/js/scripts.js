@@ -122,7 +122,43 @@
       showButtonPanel: true,
       showOtherMonths: true,
       selectOtherMonths: true,
-      dateFormat: 'yy-mm-dd'
+      dateFormat: 'yy-mm-dd',
+      beforeShow: function( input ) {
+        setTimeout(function() {
+          var buttonPane = $( input )
+          .datepicker( "widget" )
+          .find( ".ui-datepicker-buttonpane .ui-datepicker-current" );
+
+          var btn = $('<button type="button" class="ui-datepicker-clear ui-state-default ui-priority-third ui-corner-all">Clear</button>');
+          btn
+          .unbind("click")
+          .bind("click", function () {
+            $.datepicker._clearDate( input );
+          });
+
+          //btn.appendTo( buttonPane );
+          buttonPane.after(btn);
+
+        }, 1 );
+      },
+      onChangeMonthYear: function( input ) {
+        setTimeout(function() {
+          var buttonPane = $( input )
+          .datepicker( "widget" )
+          .find( ".ui-datepicker-buttonpane .ui-datepicker-current" );
+
+          var btn = $('<button type="button" class="ui-datepicker-clear ui-state-default ui-priority-third ui-corner-all">Clear</button>');
+          btn
+          .unbind("click")
+          .bind("click", function () {
+            $.datepicker._clearDate( input );
+          });
+
+          //btn.appendTo( buttonPane );
+          buttonPane.after(btn);
+
+        }, 1 );
+      }
     });
 
     $('.select-two').select2();
