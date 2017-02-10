@@ -58,6 +58,20 @@ function asc_create_post_types() {
       'has_archive' => true,
     )
   );
+
+  register_post_type( 'asc_registered',
+    array(
+      'labels' => array(
+        'name' => __( 'Registered Interest', 'asc' ),
+        'singular_name' => __( 'Registered Interest', 'asc' )
+      ),
+      'supports' => array(
+        'title'
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }
 add_action( 'init', 'asc_create_post_types' );
 

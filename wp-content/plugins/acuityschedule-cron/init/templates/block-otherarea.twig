@@ -1,0 +1,32 @@
+<div class="box-form-otherarea">
+  <a href="/" class="close">Close</a>
+  <div class="content-wraper">
+    <div class="content-top">
+      <p>Apologies we currently do not service your location.</p>
+      <p>Please enter your email & postcode below and we will contact you as soon as we launch in your area.</p>
+      <p>THE <img src="//glosscartel.com/wp-content/uploads/2016/09/logo-tem.png"> TEAM</p>
+    </div>
+    <form id="otherarea" class="form-otherarea" name="otherarea" method="post" action="">
+      <div class="form-item">
+        <input type="email" value="" size="30" name="other_email" class="form-text input" placeholder="Email Address">
+        {% if other_email %}
+          <div class="message">{{ other_email }}</div>
+        {% endif %}
+      </div>
+      <div class="form-item">
+        <input type="text" value="" size="30" name="other_postcode" class="form-text input" placeholder="Post Code">
+        {% if other_postcode %}
+          <div class="message">{{ other_postcode }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="button botton button-primary button-large">Submit</button>
+        <input type="hidden" name="action" value="ASC Other Submit" class="button botton button-primary button-large">
+      </div>
+    </form>
+    {% if message_other %}
+      <div class="message">{{ message_other }}</div>
+    {% endif %}
+  </div>
+</div>

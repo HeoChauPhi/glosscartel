@@ -110,17 +110,17 @@
     },
     {
         "name": "twig/twig",
-        "version": "v1.28.2",
-        "version_normalized": "1.28.2.0",
+        "version": "v1.31.0",
+        "version_normalized": "1.31.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/twigphp/Twig.git",
-            "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c"
+            "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig/zipball/b22ce0eb070e41f7cba65d78fe216de29726459c",
-            "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+            "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
             "shasum": ""
         },
         "require": {
@@ -128,13 +128,13 @@
         },
         "require-dev": {
             "symfony/debug": "~2.7",
-            "symfony/phpunit-bridge": "~3.2@dev"
+            "symfony/phpunit-bridge": "~3.2"
         },
-        "time": "2016-11-23 18:41:40",
+        "time": "2017-01-11 19:36:15",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.28-dev"
+                "dev-master": "1.31-dev"
             }
         },
         "installation-source": "dist",
@@ -173,22 +173,22 @@
     },
     {
         "name": "asm89/twig-cache-extension",
-        "version": "1.3.0",
-        "version_normalized": "1.3.0.0",
+        "version": "1.3.2",
+        "version_normalized": "1.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/asm89/twig-cache-extension.git",
-            "reference": "37cfee1f06fe8372cbe714d2d9224db276790936"
+            "reference": "630ea7abdc3fc62ba6786c02590a1560e449cf55"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/37cfee1f06fe8372cbe714d2d9224db276790936",
-            "reference": "37cfee1f06fe8372cbe714d2d9224db276790936",
+            "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/630ea7abdc3fc62ba6786c02590a1560e449cf55",
+            "reference": "630ea7abdc3fc62ba6786c02590a1560e449cf55",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.2",
-            "twig/twig": "~1.0"
+            "twig/twig": "^1.0|^2.0"
         },
         "require-dev": {
             "doctrine/cache": "~1.0"
@@ -196,11 +196,11 @@
         "suggest": {
             "psr/cache-implementation": "To make use of PSR-6 cache implementation via PsrCacheAdapter."
         },
-        "time": "2016-06-14 09:16:57",
+        "time": "2017-01-10 22:04:15",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.2-dev"
+                "dev-master": "1.3-dev"
             }
         },
         "installation-source": "dist",

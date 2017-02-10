@@ -16,6 +16,11 @@ input:-webkit-autofill:active {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
+}
+
+#site-message p {
+  font-size: 14px;
 }
 
 #footer {
@@ -414,6 +419,10 @@ body[class*="page-appointment-scheduling"] .box-form-login .form-submit .button 
   min-width: 226px;
 }
 
+.form-schedule-feature .box-from-contact__button .button {
+  min-width: 226px;
+}
+
 .box-form-login .form-item .message {
   color: #FF5722;
 }
@@ -498,4 +507,78 @@ body[class*="page-appointment-scheduling"] .box-form-login .form-submit .button 
   font-size: 12px;
   font-family: 'BrandonGrotesqueBold';
   letter-spacing: 3px;
+}
+
+.block-colorbox {
+  background-color: rgba(255,255,255,0.8);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.block-colorbox .box-form-otherarea {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  background-color: #404352;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 30px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 590px;
+}
+
+.block-colorbox .box-form-otherarea .close {
+  background: url(../images/icon-close.png) no-repeat center center #262835;
+  border-radius: 500px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  text-indent: -9999em;
+  top: 10px;
+  width: 30px;
+}
+
+.block-colorbox .box-form-otherarea .close:hover {
+  background-color: #ff4040;
+}
+
+.block-colorbox .box-form-otherarea .content-top p {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
+.block-colorbox .box-form-otherarea .form-otherarea .form-text {
+  text-align: center;
+  text-transform: uppercase;
+  color: #beaa7c;
+}
+
+.block-colorbox .box-form-otherarea .form-otherarea .form-submit {
+  margin-top: 20px;
+}
+
+.block-colorbox .box-form-otherarea .form-otherarea .button {
+  background-color: #262835;
+  background-image: none;
+  border: none;
+  padding: 10px;
+  min-width: 226px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.block-colorbox .box-form-otherarea .form-otherarea .button:hover {
+  background-color: #ff4040;
 }

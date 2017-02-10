@@ -106,6 +106,54 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "589d437c1fab8",
+                    "name": "footer_shortcode",
+                    "label": "Footer Shortcode",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_589d43891fab9",
+                            "label": "Block Footer Shortcode",
+                            "name": "block_footer_shortcode",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_589d43a61faba",
+                            "label": "Block Footer Class",
+                            "name": "block_footer_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ],
             "min": "",
@@ -142,5 +190,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484595533
+    "modified": 1486701496
 }

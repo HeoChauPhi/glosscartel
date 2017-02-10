@@ -105,6 +105,24 @@ function asc_option_metaboxes() {
     'id'   => $prefix . 'asc_pass',
     'type' => 'text',
   ) );
+
+  /**
+  * Options for ASC Registered Interest
+  */
+  $cmb = new_cmb2_box( array(
+    'id'            => 'asc_user_registered',
+    'title'         => __( 'Acuity Scheduling User Registered Interest', 'cmb2' ),
+    'object_types'  => array( 'asc_registered', ), // Post type
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'show_names'    => true,
+  ) );
+
+  $cmb->add_field( array(
+    'name' => __('Post Code', 'cmb2'),
+    'id'   => $prefix . 'asc_postcode',
+    'type' => 'text',
+  ) );
 }
 
 function asc_post_meta($name = '') {

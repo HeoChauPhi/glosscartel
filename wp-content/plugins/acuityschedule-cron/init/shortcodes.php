@@ -377,10 +377,10 @@ function ASC_signin( $atts ) {
 // Block User
 add_shortcode( 'asc_block_user', 'ASC_block_user' );
 function ASC_block_user( $atts ) {
-    add_filter( 'body_class', function( $classes ) {
-      $classes['appointment_user'];
-      return $classes;
-    });
+  add_filter( 'body_class', function( $classes ) {
+    $classes['appointment_user'];
+    return $classes;
+  });
   extract( shortcode_atts( array(
   ), $atts ) );
 
@@ -475,6 +475,80 @@ function ASC_forgot_password( $atts ) {
 
     Timber::render('templates/appointment-scheduling-forgotpass.twig', $context);
 
+    $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+  wp_reset_postdata();
+}
+
+// Other Area
+add_shortcode( 'asc_otherarea', 'ASC_otherarea' );
+function ASC_otherarea( $atts ) {
+  $title = array();
+  $args = array(
+    'post_type' => 'asc_registered',
+    'post_status' => 'any',
+    'posts_per_page'  => -1
+  );
+  $asc_registered = new WP_Query($args);
+
+  extract( shortcode_atts( array(
+  ), $atts ) );
+  ob_start();
+    if( $asc_registered->have_posts() ) {
+      while ( $asc_registered->have_posts() ) {
+        $asc_registered->the_post();
+        $post_title = get_the_title();
+        $title[] = $post_title;
+      }
+    }
+
+    $context = Timber::get_context();
+
+    if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'ASC Other Submit') {
+      if( isset($_POST['other_email'], $_POST['other_postcode']) ) {
+        $other_email      = $_POST['other_email'];
+        $other_postcode   = $_POST['other_postcode'];
+      }
+
+      if( empty($other_email) || empty($other_postcode) ) {
+        $context['other_email']     = __('Email is Require!', 'asc');
+        $context['other_postcode']  = __('PostCode is Require!', 'asc');
+      } elseif( in_array($other_email, $title) ) {
+        $context['message_other'] = __('Email ' . $other_email . ' is existed!', 'asc');
+      } else {
+        setcookie("other_postcode", 1, time() + 5, '/'); // 86400 = 1 day
+
+        $new_post = array(
+          'post_title'  =>   $other_email,
+          'post_status' =>   'pending',
+          'post_type'   =>   'asc_registered'
+        );
+
+        // SAVE THE POST
+        $pid = wp_insert_post($new_post);
+        update_post_meta($pid, '_cmb2_asc_postcode', $other_postcode);
+      }
+
+      ?>
+      <script type="text/javascript">
+        (function($) {
+          $(document).ready(function() {
+            if( !!$.cookie("other_postcode") ){
+              $('.form-schedule-feature .client_area').val('Other').change();
+              $('.block-colorbox').hide();
+            } else {
+              $('.form-schedule-feature .client_area').val('Other').change();
+            }
+          });
+        })(jQuery);
+      </script>
+      <?php
+
+      //wp_redirect('');
+    }
+
+    Timber::render('templates/block-otherarea.twig', $context);
     $content = ob_get_contents();
   ob_end_clean();
   return $content;
