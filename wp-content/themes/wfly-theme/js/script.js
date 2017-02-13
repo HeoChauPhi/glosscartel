@@ -230,6 +230,19 @@
     });
   }
 
+  function InterestLink() {
+    $('.block-colorbox').show();
+
+    $('.block-colorbox .box-form-otherarea .close').click(function() {
+      $('.form-schedule-feature .client_area').prop('selectedIndex',0);
+      $('.form-schedule-feature .client_area').select2();
+      $('.block-colorbox').hide();
+      return false;
+    });
+
+    return false;
+  }
+
   $(document).ready(function() {
     // Call to function
     siteMessage();
@@ -239,7 +252,7 @@
     shadowFeature();
     verticalSlick();
     // popuplogin();
-    colorbox();
+    //colorbox();
     footerjs();
     loginForm();
     matchHeight();
@@ -256,6 +269,7 @@
     }
 
     $('.form-schedule-feature .client_area').on('change', OtherArea);
+    $('#site-message a').on('click', InterestLink);
   });
 
   $(window).load(function() {
