@@ -114,44 +114,18 @@ function ASC_client_choose( $atts ) {
   ), $atts ) );
 
   ob_start();
-    if( isset($_SESSION['client_service']) ) {
-      $confirm_end_service = $_SESSION['client_service'];
-    }
-
-    if( empty($confirm_end_service) ) {
-      session_unset();
-      session_destroy();
-
-      wp_redirect(home_url());
-    }
-
-    /*$ascb_arr = array();
-    $data = asbc_get_apoiment($user_id, $user_key, $url_api);
-    $product = asbc_get_apoiment($user_id, $user_key, $product_url);
-
-    if (is_array($product) || is_object($product)) {
-      foreach ($product as $value) {
-        array_push($data, $value);
-      }
-    }
-
-    if(isset($_COOKIE['Client']['Service'])) {
-      foreach ($data as $value) {
-        if($value['id'] == $_COOKIE['Client']['Service'] ) {
-          $data = $value;
-        }
-      }
-    }*/
-
     $link = home_url('appointment-scheduling-confirm');
 
-    $args = array(
-      'parent' => 0,
-      'hide_empty' => false
-    );
-
     $context = Timber::get_context();
-    $context['categories'] = Timber::get_terms($tax_name, $args);
+
+    if( isset($_SESSION['client_service']) ) {
+      $confirm_end_service = $_SESSION['client_service'];
+      $context['post'] = new TimberPost($confirm_end_service);
+    } else {
+      session_unset();
+      session_destroy();
+      wp_redirect(home_url());
+    }
     //$context['data'] = $data;
 
     /*if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'Confirm') {

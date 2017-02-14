@@ -270,6 +270,10 @@
 
     $('.form-schedule-feature .client_area').on('change', OtherArea);
     $('#site-message a').on('click', InterestLink);
+    $('.asc-box-client-choose .client-choose-look .group-content .file-upload #confirm_image').on('change', function(){
+      var file_url = $(this).val();
+      $(this).next('.confirm_image_value').val(file_url);
+    });
   });
 
   $(window).load(function() {

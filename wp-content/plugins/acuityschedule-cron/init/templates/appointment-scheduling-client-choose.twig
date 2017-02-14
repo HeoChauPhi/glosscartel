@@ -1,54 +1,56 @@
-{{user_email}}
 {% if ( user_email is empty ) or ( user_email == 'null' ) %}
   {% include "form-signup.twig" %}
 {% else %}
-  {% set cat_img = '' %}
-  {% for cat_item in categories %}
-    {% if cat_item.name == data.category %}
-      {% set cat_img = cat_item.service_product_image %}
-    {% endif %}
-  {% endfor %}
-  <div class="box-form-login">
+  <div class="box-form-login asc-box-client-choose">
     <a href="/" class="back-link">Back</a>
     <h2 class="box-form-login__title form-title">CHOOSE YOUR LOOK</h2>
-  <div class="client-choose-look">
-    <div class="group-image">
-      <div class="group-image__images">
-        <img src="{{ cat_img }}">
-      </div>
-      <div class="group-info">
-        <div class="group-name">
-          <h2>{{ data.name }}</h2>
-          <span>{{ data.category }}</span>
-        </div>
-        <div class="group-price">
-          <span class="price"> <sup>$</sup> {{ data.price }}</span>
-          <div class="duration">{{ data.duration }} min</div>
-        </div>
-      </div>
-    </div>
+    <form id="form_confirm" class="form-confirm" name="form_confirm" method="post" action="">
+      <div class="client-choose-look">
 
-    <div class="group-content">
-      <form id="form_confirm" class="form-confirm" name="form_confirm" method="post" action="">
-        <div class="description">
-          <input type="checkbox">
-          I've got my own look in mind - you can brief us on the day or upload an image of your style muse below.
-        </div>
-        <div class="file-upload">
-          <input type="file" name="confirm_image">
+        <div class="group-image">
+          <div class="group-image__images">
+            <img src="{{ post._cmb2_asc_app_image }}">
+          </div>
+
+          <div class="group-info">
+            <div class="group-name">
+              <h2>{{ post.post_title }}</h2>
+              {% if post._cmb2_asc_app_description %}
+              <span>{{ post._cmb2_asc_app_description }}</span>
+              {% endif %}
+              <select name="client_choose_addon" class="select-two client_choose_addon">
+                <option selected="" disabled="" value="">Select add ons</option>
+                <optgroup label="Add on">
+                  <option value="addon_value">Apply own hair extensions $15.00</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="group-price">
+              <span class="price"> <sup>$</sup> {{ post._cmb2_asc_app_price }}</span>
+              <div class="duration">{{ post._cmb2_asc_app_duration - post._cmb2_asc_app_blockoffb }} - {{ post._cmb2_asc_app_duration + post._cmb2_asc_app_blockoffa }} min</div>
+            </div>
+          </div>
         </div>
 
-        <input type="hidden" name="confirm_catimg" value="{{ cat_img }}">
-        <input type="hidden" name="confirm_category" value="{{ data.category }}">
-        <input type="hidden" name="confirm_name" value="{{ data.name }}">
-        <input type="hidden" name="confirm_price" value="{{ data.price }}">
-        <input type="hidden" name="confirm_duration" value="{{ data.duration }}">
+        <div class="group-content">
+          <div class="description">
+            <input id="confirm_descriptions" type="checkbox" name="confirm_descriptions" value="1">
+            <label for="confirm_descriptions"><span style="color: #df3860" >I've got my own look in mind -</span> you can brief us on the day or upload an image of your style muse below.</label>
+          </div>
 
-        <div class="box-from-contact__button">
-        <input type="submit" name="action" value="Confirm" class="wpcf7-form-control wpcf7-submit button">
+          <div class="file-upload">
+            <label for="confirm_image">Choose file...</label>
+            <input id="confirm_image" type="file" name="confirm_image">
+            <input class="confirm_image_value" placeholder="Choose File" disabled="disabled" />
+          </div>
+
+          <div class="box-from-contact__button">
+            <input type="submit" name="action" value="Confirm" class="wpcf7-form-control wpcf7-submit button">
+          </div>
+        </div>
+
       </div>
-      </form>
-    </div>
-    </div>
+    </form>
   </div>
 {% endif %}
